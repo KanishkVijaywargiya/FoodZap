@@ -32,6 +32,7 @@ struct HomeView: View {
                     // horizontal scroll cards
                     QuickAndEasy()
                     
+                    
                     // indian cuisines
                     IndianCuisines()
                     
