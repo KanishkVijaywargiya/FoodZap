@@ -53,6 +53,7 @@
 		049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE674271C2B080008F8ED /* Persistence.swift */; };
 		049BE68B271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
 		049BE68C271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
+		FD99043A271C643700F725FC /* AwesomeToast in Frameworks */ = {isa = PBXBuildFile; productRef = FD990439271C643700F725FC /* AwesomeToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD99043A271C643700F725FC /* AwesomeToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +216,9 @@
 			dependencies = (
 			);
 			name = "FoodZap (iOS)";
+			packageProductDependencies = (
+				FD990439271C643700F725FC /* AwesomeToast */,
+			);
 			productName = "FoodZap (iOS)";
 			productReference = 049BE67A271C2B0B0008F8ED /* FoodZap.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 049BE66A271C2B070008F8ED;
+			packageReferences = (
+				FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */,
+			);
 			productRefGroup = 049BE67B271C2B0B0008F8ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -471,7 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -501,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -612,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/manasdevslopes/AwesomeToastPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD990439271C643700F725FC /* AwesomeToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */;
+			productName = AwesomeToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		049BE670271C2B070008F8ED /* FoodZap.xcdatamodeld */ = {
