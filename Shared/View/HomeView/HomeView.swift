@@ -25,7 +25,7 @@ struct HomeView: View {
                         
                         Spacer()
                         
-                        SearchButton()
+                        SearchButton(iconName: "magnifyingglass")
                         ProfileButton()
                     }
                     
