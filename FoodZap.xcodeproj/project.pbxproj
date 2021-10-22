@@ -53,6 +53,10 @@
 		049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE674271C2B080008F8ED /* Persistence.swift */; };
 		049BE68B271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
 		049BE68C271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
+		04EFCFDB27205CDB009795CC /* FoodsCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* FoodsCollections.swift */; };
+		04EFCFDC27205CDB009795CC /* FoodsCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* FoodsCollections.swift */; };
+		04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
+		04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
 		FD404FF2272304BE004754EA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF1272304BE004754EA /* ListRow.swift */; };
 		FD404FF4272304D0004754EA /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF3272304D0004754EA /* RecipeList.swift */; };
 		FD99043A271C643700F725FC /* AwesomeToast in Frameworks */ = {isa = PBXBuildFile; productRef = FD990439271C643700F725FC /* AwesomeToast */; };
@@ -85,6 +89,8 @@
 		049BE67A271C2B0B0008F8ED /* FoodZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049BE680271C2B0B0008F8ED /* FoodZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049BE682271C2B0B0008F8ED /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		04EFCFDA27205CDB009795CC /* FoodsCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCollections.swift; sourceTree = "<group>"; };
+		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FD404FF3272304D0004754EA /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				0482450B271C3EAB00E27160 /* DummyData.swift */,
+				04EFCFDA27205CDB009795CC /* FoodsCollections.swift */,
+				04EFCFE7272164DD009795CC /* FoodsCollections.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049BE68B271C2B0B0008F8ED /* Assets.xcassets in Resources */,
+				04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049BE68C271C2B0B0008F8ED /* Assets.xcassets in Resources */,
+				04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +343,7 @@
 				0482452A271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824530271C52FE00E27160 /* BigCards.swift in Sources */,
 				04824518271C49CD00E27160 /* FestiveSpecials.swift in Sources */,
+				04EFCFDB27205CDB009795CC /* FoodsCollections.swift in Sources */,
 				049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				0482451E271C49E600E27160 /* SoupsCuisines.swift in Sources */,
 				0482450F271C411800E27160 /* Gradient.swift in Sources */,
@@ -363,6 +374,7 @@
 				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				04824519271C49CD00E27160 /* FestiveSpecials.swift in Sources */,
+				04EFCFDC27205CDB009795CC /* FoodsCollections.swift in Sources */,
 				049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				0482451F271C49E600E27160 /* SoupsCuisines.swift in Sources */,
 				04824510271C411800E27160 /* Gradient.swift in Sources */,
