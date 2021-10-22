@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct SearchButton: View {
+    var iconName = "magnifyingglass"
     // MARK: Search Button
     
     var body: some View {
-        Image(systemName: "magnifyingglass")
+        Image(systemName: iconName)
             .renderingMode(.template)
             .font(.system(size: 16))
             .foregroundColor(.primary)
