@@ -36,7 +36,7 @@ struct RecipeList: View {
                         .padding(.leading, 8)
                 }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 8)
             
             ScrollView {
                 ForEach(0 ..< 20) {_ in
