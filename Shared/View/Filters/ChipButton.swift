@@ -20,11 +20,11 @@ struct ChipButton: View {
                 self.generateContent(in: geometry)
             }
             
-            Text("Hello \(isSelectedValue)")
-                .padding(.top, 150)
-                .onTapGesture {
-                    isSelectedValue = ""
-                }
+//            Text("Hello \(isSelectedValue)")
+//                .padding(.top, 150)
+//                .onTapGesture {
+//                    isSelectedValue = ""
+//                }
         }
         .frame(height: totalHeight)
         .padding(8)
