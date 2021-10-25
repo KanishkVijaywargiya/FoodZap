@@ -12,56 +12,31 @@ struct HomeView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 0) {
-                Group {
-                    // hello username
-                    helloUsername()
+                // hello username
+                helloUsername()
+                
+                // title, search, profile button
+                HStack(spacing: 0) {
+                    Text("Quick & Easy")
+                        .font(.largeTitle).bold()
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 16)
                     
-                    // title, search, profile button
-                    HStack(spacing: 0) {
-                        Text("Quick & Easy")
-                            .font(.largeTitle).bold()
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 16)
-                        
-                        Spacer()
-                        
-                        SearchButton(iconName: "magnifyingglass")
-                        ProfileButton()
-                    }
+                    Spacer()
                     
-                    // horizontal scroll cards
-                    QuickAndEasy()
-                    
-                    
-                    // indian cuisines
-                    IndianCuisines()
-                    
-                    // foreign cuisines
-                    ForeignCuisines().padding(.top, 26)
-                    
-                    // festive specials
-                    FestiveSpecials().padding(.top, 26)
+                    SearchButton(iconName: "magnifyingglass")
+                    ProfileButton()
                 }
                 
-                Group {
-                    // stay fit
-                    StayFit().padding(.top, 26)
-                    
-                    // soups cuisines
-                    SoupsCuisines().padding(.top, 26)
-                    
-                    // shakes cuisines
-                    ShakesCuisines().padding(.top, 26)
-                    
-                    // mood recipies
-                    MoodRecipe().padding(.top, 26)
-                    
-                    // street foods
-                    StreetFoods().padding(.top, 26)
-                    
-                    // Indian specials
-                    IndianSpecials().padding(.top, 26)
-                }
+                // horizontal scroll cards
+                QuickAndEasy()
+                
+                SeeMoreButton()
+                
+                // Indian specials
+                IndianSpecials().padding(.top, 26)
+                
+                SeeMoreButton().padding(.top, 26)
                 
                 Spacer()
             }
