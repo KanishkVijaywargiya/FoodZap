@@ -1551,10 +1551,346 @@
         "fat": "1g"
     },
     
-    // pending
     {
         "id": "23",
-        "title": "Kala Chana Ghugni",
+        "title": "Thekua",
+        "description": "Thekua are crisp crunchy cookies flavored with traditional Indian spices. These delicious fennel and cardamom scented deep fried cookies are a family favorite. If crunchy cookies are your preference, try this traditional Indian recipe today!",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Sweets",
+        "time": "40 mins",
+        "difficultyLevel": "Easy",
+        
+        "ingridients": [
+            "1.25 cup whole wheat flour – 155 to 160 grams",
+            "1 pinch salt",
+            "1 teaspoon fennel seeds (saunf)",
+            "1 tablespoon fresh grated coconut or desiccated coconut",
+            "½ teaspoon cardamom powder or 4 to 5 green cardamoms crushed in mortar-pestle",
+            "3 tablespoons Ghee – 25 grams",
+            "½ cup chopped Jaggery or about 85 grams",
+            "¼ cup water or add as required",
+            "1.5 cups oil – for deep frying, any neutral tasting oil"
+        ],
+        
+        "procedure": [
+            "Take the wheat flour, salt, fennel seeds, grated coconut and cardamom powder in a mixing bowl. Mix well and set aside.",
+            "In small bowl or pan, melt ghee until hot.",
+            "Add this hot ghee into the dry ingredients and mix with a spoon.",
+            "Then using your fingers mix the ghee with the flour till you get a breadcrumb consistency. When you press the mixture it should form a lump.",
+            "In a saucepan take jaggery and water.",
+            "Heat until all the jaggery melts.",
+            "Add hot jaggery solution in parts to the flour and mix with a spoon first.",
+            "Keep on adding in parts and mixing and then begin to bring the dough together and knead lightly.",
+            "Make a firm or semi-soft dough.",
+            "Cover the dough with a kitchen towel and rest for 15 minutes.",
+
+            "Later make small balls from the dough.",
+            "Lightly flatten the dough balls with your palms or with a rolling pin.",
+            "Press the flattened discs with a peda maker, cookie design press or using a toothpick, fork or bamboo skewers make design patterns.",
+            "Keep covered with a kitchen napkin or kitchen towel.",
+
+            "Heat 1.5 cups oil in a kadai or wok.",
+            "Add a small piece of dough in the oil. If it is comes up gradually on top, the oil is hot.",
+            "Keep the heat to a medium-low and place the discs in hot oil.",
+            "When one side is golden, gently turn over and fry the second side. Be very careful when turning and do it gently with a dinner spoon so that they do not break.",
+            "Fry till golden and crisp. Due to jaggery these have a deeper golden color.",
+            "Place on kitchen paper towels.",
+
+            "When cooled at room temperature store in an airtight container.",
+            "Serve thekua as a tea time cookie."
+        ],
+        
+        "healthPreference": "",
+        "calories": "85kcal",
+        "carbohydrates": "11g",
+        "protein": "1g",
+        "fat": "4g"
+    },
+    
+    {
+        "id": "24",
+        "title": "Sattu Ladoo",
+        "description": "Sattu ladoo recipe - quick and easy sattu ladoo made from roasted chana flour, jaggery and ghee.",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Sweets",
+        "time": "15 mins",
+        "difficultyLevel": "Easy",
+        
+        "ingridients": [
+            "1 cup heaped sattu flour",
+            "½ cup jaggery powder or grated jaggery",
+            "3 tablespoons Ghee (clarified butter)",
+            "¼ teaspoon cardamom powder (choti elaichi powder)"
+        ],
+        
+        "procedure": [
+            "Heat 1 tablespoon ghee in a kadai or pan.",
+            "Then add 1 heaped cup sattu flour. Mix the flour with the ghee and begin to roast sattu flour on a low flame.",
+            "Stir often while roasting. The sattu just needs to be lightly roasted. Roast sattu for 2 minutes on a low flame.",
+            "Remove in a separate bowl.",
+
+            "Add 1/2 cup jaggery powder. You can also add grated jaggery. Even powdered sugar can be used.",
+            "Add 1/4 teaspoon cardamom powder.",
+            "Mix very well.",
+            "Then add 2 tablespoons ghee. The ghee can be at room temperature.",
+            "Begin to mix very well. If there are small granules in the jaggery powder, then you can just run the ladoo mixture in the mixer-grinder till the mixture becomes smooth. Or you can run the jaggery powder in the mixer before you add to the sattu flour.",
+            "Shape into ladoos while the mixture is still warm. If you are unable to form ladoos, then add a few teaspoons more of the ghee.",
+            "Serve sattu laddu as a sweet snack. These ladoos stay good at room temperature for a week. If its too hot and humid in your city, then do refrigerate these ladoos."
+        ],
+        
+        "healthPreference": "",
+        "calories": "85kcal",
+        "carbohydrates": "11g",
+        "protein": "1g",
+        "fat": "4g"
+    },
+    
+    {
+        "id": "25",
+        "title": "Litti Chokha",
+        "description": "Litti chokha is a rustic and traditional dish of stuffed whole wheat dough balls, where the stuffing is a spiced mix of roasted gram flour or sattu.",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Main Course",
+        "time": "1 hour 45 mins",
+        "difficultyLevel": "Moderate",
+        
+        "ingridients": [
+            "2 cups whole wheat flour or 240 grams whole wheat flour",
+            "¼ teaspoon salt",
+            "1 tablespoon Ghee or oil",
+            "¾ to 1 cup water or add as required",
+
+            "1 cup sattu (roasted gram flour)",
+            "½ teaspoon cumin seeds",
+            "½ teaspoon saunf (fennel seeds or aniseeds)",
+            "½ teaspoon ajwain (carom seeds or bishops weed)",
+            "½ teaspoon nigella seeds (kalonji or onion seeds)",
+            "½ teaspoon red chilli powder",
+            "1 to 2 teaspoons chopped green chilies",
+            "1 teaspoon finely chopped ginger",
+            "1 teaspoon finely chopped garlic",
+            "2 tablespoons chopped coriander leaves",
+            "¼ teaspoon black salt",
+            "regular salt as per taste",
+            "2 teaspoons lemon juice",
+            "2 teaspoons mustard oil",
+            "1 to 2 tablespoons of water or add as required",
+
+            "baingan chokha",
+            "tomato chokha",
+            "aloo chokha",
+            "¼ cup melted ghee or use as required"
+        ],
+        
+        "procedure": [
+            "In a mixing bowl, take 2 cups whole wheat flour/atta (240 grams) and 1/4 teaspoon salt. Also add 1 tablespoon ghee or oil.",
+            "Now add water in parts and knead to a smooth soft dough. I added 3/4 cup water. Depending on the quality of flour, you can add 3/4 to 1 cup water.",
+            "Knead till smooth and soft. Cover the dough and keep aside.",
+
+            "In a mortar-pestle take 1/2 teaspoon cumin seeds and 1/2 teaspoon saunf (fennel seeds). Lightly crush them and keep aside.",
+            "Take 1 cup sattu/roasted gram flour in a mixing bowl or pan.",
+            "Add the slightly crushed cumin seeds and fennel seeds.",
+
+            "Now add 1/2 teaspoon ajwain, 1/2 teaspoon nigella seeds and 1/2 teaspoon red chilli powder, 1 to 2 teaspoons chopped green chilies, 1 teaspoon finely chopped ginger, 1 teaspoon finely chopped garlic, 2 tablespoons chopped coriander leaves and 1/4 teaspoon black salt. Also add regular salt as per taste.",
+            "Also add 2 teaspoons lemon juice and 2 teaspoons mustard oil",
+            "Mix very well.",
+            "Sprinkle 1 to 2 tablespoons water all over and mix the flour with water evenly. Do add more water if required. The sattu stuffing mixture should not be too dry or too wet. If the mixture is dry, then the dryness is felt when eating littis.",
+
+            "After 30 minutes, now make small or medium sized balls from the dough.",
+            "Sprinkling some flour, roll each dough ball to a circle of about 5 to 6 inches.",
+            "Place 2 to 3 tablespoons of the stuffing in the center.",
+            "Pleat and then join the edges. Press the joined part and lightly roll the stuffed dough balls in your palms, so as to get a round shape. Keep aside.",
+            "Another method is to flatten the the dough ball with your palms and make a shallow cup.",
+            "Now place the stuffing.",
+            "Gently bring together the outer dough cover in the center, while pressing the stuffing. Join and then seal the edges. This is a bit tricky method. So please use the method which suits you.",
+            "Keep the prepared littis under a cotton towel or napkin, so that the dough does not dry out.",
+            "Prepare all stuffed littis this way and place them on a baking tray, which has been greased with some oil. Do grease baking tray well, otherwise the littis can stuck to the tray.",
+
+            "Place the littis in a preheated oven at 200 degrees celsius. Preheat the oven for 20 minutes at 200 degree celsius prior to baking.",
+            "After 10 to 15 minutes of baking, remove the tray and flip each litti. Keep the tray back in the oven.",
+            "Again after 10 to 15 minutes, remove the baking tray and flip each litti. Place the tray back in the oven. This has to be done once or twice more for even baking of littis.",
+            "Bake till the crust looks done with some light brown or golden brown spots on them. Timing will vary upon the size and litres of oven. It took me about 45 minutes for these to bake.",
+            "Brush the littis with some melted ghee all over.",
+            "This step is optional and only to get charred spots on the litti. Secure the litti in a pair of tongs and place it on fire. Rotate for a few seconds till you see some charred spots on littis.",
+            "Serve these bihari style litti with baingan chokha, aloo chokha and tamatar chokha accompanied with a small bowl of melted ghee. The litti is broken, dipped in ghee and then had with the chokha.",
+
+            "Rinse 1 large baingan/eggplant/aubergine (420 grams) in water. Place it on a wired rack on a stove top or you can place it directly on fire.",
+            "Keep turning the eggplant after 2 to 3 minutes on the flame, so that its evenly cooked.",
+            "Roast the baingan till its completely cooked and tender. With a knife check the doneness. The knife should slid easily in baingan without any resistance. Remove the baingan and immerse in a bowl of water till it cools down.",
+            "Then peel it and chop.",
+            "Add the chopped baingan in a mixing bowl along with its juices.",
+            "Then add ⅓ cup chopped onions, ½ teaspoon chopped green chilies, ½ teaspoon chopped garlic and 1 to 2 tablespoons chopped coriander leaves.",
+            "Add 1 teaspoon mustard oil. If you want, you can add ¼ to ½ teaspoon lemon juice for a slight tang. Season with salt.",
+            "Mix everything very well.",
+
+            "Rinse 2 medium to large tomatoes (200 grams) very well in water first. Then place them on a wired grill rack and begin to roast the tomatoes. You can also place them directly on the stove top. You can also grill the tomatoes or roast in the oven. But then you won't get the smoky flavor.",
+            "Turn them after a few minutes for even roasting. The tomatoes should get charred.",
+            "Roast the tomatoes till they are completely cooked from within. With a knife check the doneness. The knife should slid easily in the tomatoes without any resistance.",
+            "Once the tomatoes cool, then peel them and remove the charred skin. Chop them and add the chopped tomatoes along with its juices in a mixing bowl.",
+            "Add ½ teaspoon chopped green chilies, ½ teaspoon chopped garlic, 1 tablespoon chopped coriander leaves, ½ teaspoon mustard oil and ½ teaspoon lemon juice.",
+            "Season with salt as per taste. Mix very well.",
+            "Check the taste and add more lemon juice or mustard oil or green chilies or salt if required.",
+
+            "First boil or steam 2 medium potatoes (160 grams) till they are thoroughly cooked. Allow them to become warm. You can steam them in a pan or electric rice cooker or pressure cook them in 1.25 to 1.5 cups water for 5 to 6 whistles.",
+            "When the potatoes become warm, peel and mash them.",
+            "Add ⅓ cup chopped onion, ½ teaspoon chopped green chilies, ½ teaspoon finely chopped garlic, ½ teaspoon mustard oil and ½ teaspoon lemon juice.",
+            "Mix very well. Check the taste and add more salt, lemon juice or green chilies if required."
+        ],
+        
+        "healthPreference": "",
+        "calories": "",
+        "carbohydrates": "",
+        "protein": "",
+        "fat": ""
+    },
+    
+    {
+        "id": "26",
+        "title": "Baingan Ka Chokha",
+        "description": "Baingan chokha is a delicious fire roasted mashed eggplant dish that is served with littis or sattu ka paratha",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Side Dish",
+        "time": "15 mins",
+        "difficultyLevel": "Easy",
+        
+        "ingridients": [
+            "420 grams large eggplant (baingan) or 1 large bharta baingan",
+            " ⅓ cup chopped onions or 1 medium onion - chopped or 50 grams onion",
+            " ½ teaspoon chopped green chilies",
+            " ½ teaspoon chopped garlic",
+            " 1 to 2 tablespoons chopped coriander leaves (cilantro leaves)",
+            " 1 teaspoon mustard oil",
+            " ¼ to ½ teaspoon lemon juice (optional)",
+            "salt as required"
+        ],
+        
+        "procedure": [
+            "Rinse the baingan (eggplant) in water. Place it on a wired rack on a stove top or you can place it directly on fire.",
+            "Keep turning the eggplant after 2 to 3 minutes on the flame, so that its evenly cooked.",
+            "Roast the baingan till its completely cooked and tender.",
+            "With a knife check the doneness. The knife should slid easily in baingan without any resistance. Remove the baingan and immerse in a bowl of water till it cools down.",
+            "Then peel it and chop.",
+
+            "Add the chopped baingan in a mixing bowl along with its juices.",
+            "Then add 1/3 cup chopped onions, 1/2 teaspoon chopped green chilies, 1/2 teaspoon chopped garlic and 1 to 2 tablespoons chopped coriander leaves.",
+            "Add 1 teaspoon mustard oil. If you want, you can add 1/4 to 1/2 teaspoon lemon juice for a slight tang.",
+            "Season with salt. Mix everything very well.",
+            "Serve baingan ka chokha with litti chokha or rotis."
+        ],
+        
+        "healthPreference": "",
+        "calories": "56kcal",
+        "carbohydrates": "10g",
+        "protein": "1g",
+        "fat": "4g"
+    },
+    
+    {
+        "id": "27",
+        "title": "Sattu Ka Ghol",
+        "description": "Namkeen sattu is a savory summer drink made with roasted black chickpeas flour, black salt, herbs & spices.",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Beverages",
+        "time": "5 mins",
+        "difficultyLevel": "Easy",
+        
+        "ingridients": [
+            "750 ml chilled water",
+            "4 tablespoon sattu (roasted black chickpea flour)",
+            "½ teaspoon black salt or add as required",
+            "½ teaspoon roasted cumin powder (bhuna jeera powder)",
+            "¼ teaspoon black pepper powder (kali mirch powder) - optional",
+            "3 teaspoon lemon juice or juice of 1 small lemon or lime",
+            "2 teaspoon chopped coriander leaves (dhania patta)",
+            "2 teaspoon chopped mint leaves (pudina patta)"
+        ],
+        
+        "procedure": [
+            "In a mug or pan, add 4 tbsp sattu.",
+            "Add 1/2 tsp roasted cumin powder.",
+            "Add 3 tsp lemon juice.",
+            "Add 1/2 tsp black salt.",
+            "Pour 750 ml chilled water.",
+            "With a spoon, stir and mix well. Break small lumps if any with the spoon.",
+            "Lastly add 2 tsp each of chopped mint and coriander leaves. You can skip one of them, if you do not have. You can also add green chilies and finely chopped onions if you prefer. You can also add black pepper powder.",
+            "Pour in glasses and serve sattu drink. You can also keep in refrigerator and then serve later."
+        ],
+        
+        "healthPreference": "",
+        "calories": "",
+        "carbohydrates": "",
+        "protein": "",
+        "fat": ""
+    },
+    
+    {
+        "id": "28",
+        "title": "Aloo Chokha",
+        "description": "Aloo ka chokha is spiced mashed potatoes dish from the Bihari cusine.",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Side Dish",
+        "time": "20 mins",
+        "difficultyLevel": "Easy",
+        
+        "ingridients": [
+            "2 medium potatoes or 160 grams of potatoes",
+            "⅓ cup chopped onion or 1 medium onion - chopped or 50 grams onion",
+            "½ teaspoon chopped green chilies",
+            "2 to 3 teaspoons chopped coriander leaves (cilantro leaves)",
+            "½ teaspoon finely chopped garlic",
+            "½ teaspoon mustard oil",
+            "½ teaspoon lemon juice",
+            "salt as required"
+        ],
+        
+        "procedure": [
+            "First boil or steam 2 medium potatoes (160 grams) till they are thoroughly cooked. Allow them to become warm. You can steam them in a pan or electric rice cooker or pressure cook them in 1.25 to 1.5 cups water for 5 to 6 whistles.",
+            "When the potatoes become warm, peel and mash them.",
+            "Add 1/3 cup chopped onion, 1/2 teaspoon chopped green chilies, 1/2 teaspoon finely chopped garlic, 2 teaspoon chopped coriander leaves, 1/2 teaspoon mustard oil and 1/2 teaspoon lemon juice.",
+            "Mix very well. Check the taste and add more salt, lemon juice or green chilies if required.",
+            "Serve aloo chokha with litti chokha or as a side dish with any north indian meal."
+        ],
+        
+        "healthPreference": "",
+        "calories": "68kcal",
+        "carbohydrates": "12g",
+        "protein": "2g",
+        "fat": "1g"
+    },
+    
+    {
+        "id": "29",
+        "title": "Ghugni",
         "description": "This is a Bihari style ghugni recipe which is a delicious curry made with black or brown chickpeas. The recipe comes from the Bihari cuisine.",
         
         "backgroundImg": "",
@@ -1563,66 +1899,120 @@
         "category": "Veg",
         "cusine": "Bihari",
         "course": "Main Course",
-        "time": "40 mins",
-        "difficultyLevel": "Moderate",
+        "time": "8 hours 20 mins",
+        "difficultyLevel": "Easy",
         
         "ingridients": [
-            "1 cup kashmiri rajma (kidney beans)",
-            "2 cups water for pressure cooking",
-            "¼ teaspoon salt, optional",
-
-            "1 medium sized onion or 60 grams onions",
-            "2 medium to large tomatoes or 170 grams tomatoes",
-
+            "1 cup black chickpeas or 200 grams black chickpeas (kala chana)",
+            "2 tablespoons mustard oil",
             "½ teaspoon cumin seeds",
-            "½ teaspoon caraway seeds",
+            "1 tej patta (indian bay leaf)",
             "1 inch cinnamon",
-            "2 green cardamoms",
-            "3 cloves",
-            "seeds of 1 black cardamom",
-            "3 single strands of mace (javitri)",
-            "⅛ teaspoon nutmeg powder or 1 to 2 pinch of nutmeg powder or grated nutmeg",
-
-            "1 teaspoon Ginger-Garlic Paste",
-            "½ teaspoon kashmiri red chilli powder",
-            "½ teaspoon coriander powder",
+            "2 cloves - optional",
+            "150 grams onions or 2 medium to large onions or 1.3 cups finely chopped onions",
+            "160 grams tomatoes or 2 medium to large tomatoes or 1 cup finely chopped tomatoes",
+            "½ teaspoon Ginger-Garlic Paste",
+            "½ teaspoon turmeric powder",
+            "½ teaspoon red chilli powder",
+            "1 teaspoon cumin powder",
+            "1 tablespoon coriander powder",
+            "½ teaspoon Garam Masala Powder",
             "salt as required",
-            "½ cup water to be added later"
+            "2 cups water for pressure cooking",
+            
+            "⅓ cup finely chopped onions",
+            "1 to 2 green chilies - finely chopped",
+            "⅓ cup chopped coriander leaves (cilantro leaves)",
+            "1 medium sized lemon or lime"
         ],
         
         "procedure": [
-            "Rinse and then soak 1 cup kashmiri rajma in enough water overnight or for 8 to 9 hours.",
-            "Next day, drain the water. Then rinse the soaked rajma very well in running water. Add the rajma in a pressure cooker along with ¼ teaspoon salt and 2 cups water.",
-            "You can also skip the salt if you want at this step and just cook the rajma beans with the water.",
-            "Pressure cook the kashmiri rajma beans for 16 to 18 whistles or for 18 to 20 minutes on a medium flame.",
-            "The time taken for the rajma beans to cook depends on the age and quality of rajma.",
-            
-            "When the rajma is cooking, take the whole spices mentioned above (in the ingredient list) and keep aside. Also roughly chop the onions and tomatoes.",
-            "In a grinder jar, take the chopped onions, tomatoes and all the whole spices.",
-            "Grind to a smooth fine paste without adding any water. Keep the masala paste aside.",
-            "When the pressure settles down in the cooker, check the rajma beans, if they have softened.",
-            "They should be cooked completely and should not have any firmness or bite in them. If the rajma are not cooked completely, then pressure cook for some more time.",
+            "Rinse black chickpeas with water a couple of times. Then soak the black chickpeas overnight or for 7 to 8 hours in enough water. Drain the water and keep the chickpeas aside.",
 
-            "Melt 2 tablespoons ghee in a pan. You can also add 3 tablespoons ghee.",
-            "Once the ghee melts, switch off the flame then add the ground onion-tomato-spice paste. This mixture splutters a lot, hence the burner can be switched off or kept on sim or low.",
-            "Then cover the pan with a lid and switch on the burner. Keep the flame to a low.",
-            "On a low flame cook till the masala paste stops spluttering. Do check when the masala is getting cooked, so that it does not stick to the base of the pan.",
-            "When the mixture has stopped spluttering, then remove the lid and add 1 teaspoon ginger-garlic paste.",
-            "Next add ½ teaspoon kashmiri red chilli powder and ½ teaspoon coriander powder.",
-            "Mix everything very well and saute the masala paste till you see ghee releasing from the sides.",
-            "Saute on a low or medium-low flame and stir often. The masala paste should thicken, leaves sides of the pan and you will see ghee being released at the sides.",
-            "Once the masala paste is sautéed well and you see ghee at the sides, then add the cooked kashmiri rajma beans along with its stock - the water in which the rajma beans was cooked.",
-            "Stir and mix well. Season with salt as per taste.",
-            "Now add ½ cup water. You can add water as required. Mix again.",
-            "On a medium flame bring the curry to a boil. Also mash some rajma beans. This will help to thicken the rajma curry.",
-            "The consistency of the curry should not be watery or broth like. It should be smooth and have a medium consistency. Switch off the flame.",
-            "Serve jammu rajma on a bed of steamed rice and top with some ghee. If you want you can garnish with some coriander leaves."
+            "In a pressure cooker, heat 2 tablespoons mustard oil. Once the mustard oil begins to smoke, then lower the flame.",
+            "Add ½ teaspoon cumin seeds, 1 tej patta, 1 inch cinnamon and 2 cloves (optional). The oil will be hot and the spices will crackle in fraction of seconds.",
+            "Then immediately add 1.3 cups finely chopped onions.",
+            "Saute onions till they turn light brown.",
+            "Next add ½ teaspoon ginger-garlic paste and saute till their raw aroma goes away.",
+            "Next add 1 cup finely chopped tomatoes.",
+            "Saute till the tomatoes turn mushy and you see oil releasing from the sides of the onion-tomato masala.",
+            "Now add all the spice powders one by one - ½ teaspoon turmeric powder, ½ teaspoon red chilli powder, 1 teaspoon cumin powder and 1 tablespoon coriander powder.",
+            "Mix the spice powders very well with the onion-tomato base.",
+            "Add the soaked kala chana and mix them very well with the masala.",
+            "Now add 2 cups water.",
+            "Season with salt and mix well.",
+            "Pressure cook on medium flame for 15 to 20 minutes or till the chana is cooked. The time of cooking will vary on the quality of chana. In case the chana is not cooked, then continue to pressure cook for some more minutes.",
+            "Once the pressure settles down on its own, remove the lid and keep the cooker on stove top. Simmer the ghugni gravy on a low to medium flame till it thickens slightly. Mash some chana pieces with the spoon as this helps in thickening the gravy.",
+            "Once the ghugni gravy has thickened to a medium consistency, add ½ teaspoon garam masala powder and mix very well. Switch off the flame.",
+            "Serve kala chana ghugni garnished with some finely chopped onion, chopped coriander leaves, finely chopped green chilies and drizzled with some lemon juice. You can also accompany a simple mix of ⅓ cup finely chopped onions, 1 or 2 green chilies (chopped), ¼ cup coriander leaves and lemon wedges. Serve ghugni with chapatis, pooris or with steamed rice."
         ],
         
         "healthPreference": "",
-        "calories": "192kcal",
-        "carbohydrates": "36g",
-        "protein": "12g",
+        "calories": "68kcal",
+        "carbohydrates": "12g",
+        "protein": "2g",
         "fat": "1g"
+    },
+    
+    {
+        "id": "30",
+        "title": "Dal Pitha",
+        "description": "Bihari Dal Pitha Recipe (Traditional Bihari Delicacy) is a popular rice flour dumplings in Bihari Cuisine. Pithas are either stuffed with sweet or spicy filling. Bihari Dal Pitha is prepared using fresh rice flour and spicy masala lentil filling. Pithas served along with Hari Dhaniya ki Chutney, Tomato Chutney or Mint Chutney can be a delightful starter or a specialty dinner option. ",
+        
+        "backgroundImg": "",
+        "procedureVideo": "",
+        
+        "category": "Veg",
+        "cusine": "Bihari",
+        "course": "Snack",
+        "time": "70 mins",
+        "difficultyLevel": "Moderate",
+        
+        "ingridients": [
+            "1 cup Rice , soaked for 4 hours or 1/2 cup rice flour",
+            "1 teaspoon Oil",
+            "1 pinch Salt",
+            "Water , to cook",
+
+            "3/4 cup Chana dal (Bengal Gram Dal) , soaked for 3 hours",
+            "2 Green Chillies , chopped",
+            "1 inch Ginger , peeled and chopped",
+            "3 cloves Garlic",
+            "1/2 teaspoon Cumin seeds (Jeera)",
+            "1/4 teaspoon Whole Black Peppercorns",
+            "1/2 teaspoon Ajwain (Carom seeds)",
+            "1 teaspoon Oil",
+            "Salt , to taste",
+            "Coriander (Dhania) Leaves , finely chopped for garnish",
+            "1 teaspoon Oil , for greasing"
+        ],
+        
+        "procedure": [
+            "To prepare Bihari Dal Pitha Recipe (Traditional Bihari Delicacy), first gather all the ingredients.",
+
+            "Grind the soaked rice to a smooth paste using water (approximately 1/2 cup)",
+            "Dilute the ground batter by adding water (approximately 1.5 - 2 cups) to get a thin batter consistency.",
+            "Add salt and oil to the batter and mix well.",
+            "Transfer the batter to a heavy bottom kadai or vessel and start cooking over low heat.",
+            "Keep stirring the batter to prevent lumps and cook the rice flour batter till it turns into a soft dough. It might look as if the dough is turning lumpy and sticking to the ladle, but keep stirring till the entire batter cooks. This step will take at least 12 -15 minutes over low flame.",
+
+            "Drain the excess water from soaked dal and grind dal along with green chillies, ginger, garlic, salt, carom seeds cumin seeds and pepper corns to make a coarse paste.",
+            "Heat a kadai/wok over low flame, with a teaspoon of oil and add the ground paste.",
+            "Keep stirring till the dal cooks well and they get a powdered/crumbly texture. This step will approximately take 7-10 minutes.",
+            "Switch off and add the chopped cilantro leaves. Your stuffing for Bihari Dal Pitha is now ready.",
+            "Instruction to shape Pithas",
+            "Grease a steamer vessel with oil. Grease your hands with oil and take lemon size portions of the rice dough and using your hand shape them into balls. Work when the rice dough is still warm for better result. Keep the rice dough covered with a damp cloth or a lid to keep it moist while you are making balls.",
+            "Taking one ball at a time, pinch the corners and shape the balls to make a cup and spoon the dal stuffing. You can also use gujiya mould to shape the pithas. Also can shape the pithas like dimsums/wontons /kozhukattai/modak .",
+            "Seal gently by pinching the ends using greased fingers.",
+            "Repeat the same for the entire batch.",
+            "Place the pithas in the greased steamer and steam them for 8-10 minutes. You can also cook the pitha by dunking them in boiling hot water. Cook till they rise up to the surface, drain and serve. Make sure to seal the pithas properly to avoid leakage.",
+            "Your delicious, healthy Bihar Dal Pitha Recipe (Traditional Bihari Delicacy) is ready to be served hot along with your choice of chutneys or sauces to make a yummy spicy filling tea-time snack."
+        ],
+        
+        "healthPreference": "Gluten Free",
+        "calories": "",
+        "carbohydrates": "",
+        "protein": "",
+        "fat": ""
     },
 ]

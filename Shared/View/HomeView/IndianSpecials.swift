@@ -10,17 +10,9 @@ import SwiftUI
 struct IndianSpecials: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack(spacing: 0) {
-                Text("Indian Specials")
-                    .font(.title).bold()
-                    .padding(.horizontal, 20)
-                
-                Spacer()
-                
-                Text("See all")
-                    .padding(.horizontal, 20)
-            }
-            .padding(.bottom, 16)
+            Text("Indian Specials")
+                .font(.title).bold()
+                .padding(.horizontal, 20)
             
             LazyVStack {
                 ForEach(DummyData.dummyData) { item in
