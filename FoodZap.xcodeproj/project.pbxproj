@@ -63,6 +63,7 @@
 		04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
 		FD404FF2272304BE004754EA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF1272304BE004754EA /* ListRow.swift */; };
 		FD404FF4272304D0004754EA /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF3272304D0004754EA /* RecipeList.swift */; };
+		FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */; };
 		FD99043A271C643700F725FC /* AwesomeToast in Frameworks */ = {isa = PBXBuildFile; productRef = FD990439271C643700F725FC /* AwesomeToast */; };
 		FDF235AE2726F38500EAE8D3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */; };
 		FDF235AF2726F38500EAE8D3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */; };
@@ -134,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD99043A271C643700F725FC /* AwesomeToast in Frameworks */,
+				FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +334,7 @@
 			name = "FoodZap (iOS)";
 			packageProductDependencies = (
 				FD990439271C643700F725FC /* AwesomeToast */,
+				FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */,
 			);
 			productName = "FoodZap (iOS)";
 			productReference = 049BE67A271C2B0B0008F8ED /* FoodZap.app */;
@@ -383,6 +386,7 @@
 			mainGroup = 049BE66A271C2B070008F8ED;
 			packageReferences = (
 				FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */,
+				FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 049BE67B271C2B0B0008F8ED /* Products */;
 			projectDirPath = "";
@@ -764,6 +768,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/manasdevslopes/AwesomeToastPackage.git";
@@ -775,6 +787,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		FD990439271C643700F725FC /* AwesomeToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */;
