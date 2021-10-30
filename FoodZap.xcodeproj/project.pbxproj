@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0407A7DF272D5BF400F0F209 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7DE272D5BF400F0F209 /* GlassButton.swift */; };
 		0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7DE272D5BF400F0F209 /* GlassButton.swift */; };
+		0407A7E2272D69C000F0F209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */; };
+		0407A7E3272D69C000F0F209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */; };
 		048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FF271C3BD100E27160 /* QuickAndEasy.swift */; };
@@ -84,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		0407A7DE272D5BF400F0F209 /* GlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
+		0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		048244FC271C3B9900E27160 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		048244FF271C3BD100E27160 /* QuickAndEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAndEasy.swift; sourceTree = "<group>"; };
 		04824502271C3C4100E27160 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
@@ -227,6 +230,7 @@
 				048244F7271C381B00E27160 /* ViewModel */,
 				049BE672271C2B080008F8ED /* FoodZapApp.swift */,
 				049BE674271C2B080008F8ED /* Persistence.swift */,
+				0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */,
 				049BE675271C2B0B0008F8ED /* Assets.xcassets */,
 				049BE670271C2B070008F8ED /* FoodZap.xcdatamodeld */,
 			);
@@ -397,6 +401,7 @@
 			files = (
 				049BE68B271C2B0B0008F8ED /* Assets.xcassets in Resources */,
 				04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */,
+				0407A7E2272D69C000F0F209 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +411,7 @@
 			files = (
 				049BE68C271C2B0B0008F8ED /* Assets.xcassets in Resources */,
 				04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */,
+				0407A7E3272D69C000F0F209 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
