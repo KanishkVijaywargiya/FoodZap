@@ -13,7 +13,7 @@ struct FoodZapApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RecipeList()
+            HomeView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

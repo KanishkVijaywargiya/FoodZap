@@ -22,9 +22,9 @@ struct DetailView: View {
                         .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
                         .overlay(
                             FavButton()
-                                .offset(x: 170, y: 150)
+                                .position(x: UIScreen.main.bounds.width - 35, y: 300)
                         )
-
+                    
                     Spacer()
                     
                     // food title, clock icon, total time
@@ -43,11 +43,12 @@ struct DetailView: View {
                                 
                                 Text("70 mins")
                                     .font(.system(size: 18, weight: .semibold))
-                                    .overlay(
-                                        Image("streetfoods")
-                                            .padding(.top, 90)
-                                            .padding(.trailing, 52)
-                                    )
+//                                    .overlay(
+//                                        Image("streetfoods")
+//                                            .padding(.top, 90)
+//                                            .padding(.trailing, 52)
+//                                    )
+                                
                             }
                         }
                         .padding(.top, 30)
@@ -57,6 +58,19 @@ struct DetailView: View {
                         Text("Vegetarian")
                             .font(.callout)
                             .padding(.horizontal, 16)
+                        
+                        
+                        CuisineLabel(colorBg: "#0A79DF")
+                            .position(x: UIScreen.main.bounds.width + 48, y: 19)
+                            .offset(x: -14, y: -10)
+                            .overlay(
+                                Text("Street Food")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 18, weight: .bold))
+//                                    .position(x: UIScreen.main.bounds.width + 48, y: 19)
+                                    .offset(x: 125, y: -18)
+                                    
+                            )
                         
                         // protein, carbohydrates, calories, fats stats
                         VStack(alignment: .leading) {
@@ -255,6 +269,7 @@ struct DetailView: View {
                                 .padding(.bottom)
                             }
                         }
+                        .padding(.top, -16)
                     }
                 }
             }
