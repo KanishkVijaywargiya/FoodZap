@@ -10,38 +10,45 @@ import CoreData
 
 struct HomeView: View {
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 0) {
-                // hello username
-                helloUsername()
-                
-                // title, search, profile button
-                HStack(spacing: 0) {
-                    Text("Quick & Easy")
-                        .font(.largeTitle).bold()
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 16)
+        ZStack {
+            Color(hex: Colors.backgroundCol).ignoresSafeArea()
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 0) {
+                    // hello username
+                    helloUsername()
+                    
+                    // title, search, profile button
+                    HStack(spacing: 0) {
+                        Text("Quick & Easy")
+                            .font(.largeTitle).bold()
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 16)
+                        
+                        Spacer()
+                        
+                        SearchButton(iconName: "magnifyingglass")
+                        ProfileButton()
+                    }
+                    
+                    // horizontal scroll cards
+                    QuickAndEasy()
+                    
+                    NavigationLink(destination: RecipeList()) {
+                        SeeMoreButton()
+                    }
+                    
+                    // Indian specials
+                    IndianSpecials().padding(.top, 26)
+                    
+                    NavigationLink(destination: RecipeList()) {
+                        SeeMoreButton().padding(.top, 26)
+                    }
                     
                     Spacer()
-                    
-                    SearchButton(iconName: "magnifyingglass")
-                    ProfileButton()
                 }
-                
-                // horizontal scroll cards
-                QuickAndEasy()
-                
-                SeeMoreButton()
-                
-                // Indian specials
-                IndianSpecials().padding(.top, 26)
-                
-                SeeMoreButton().padding(.top, 26)
-                
-                Spacer()
             }
+            .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
     }
 }
 

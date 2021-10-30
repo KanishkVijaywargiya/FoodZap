@@ -8,43 +8,60 @@
 import SwiftUI
 
 struct RecipeList: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack {
-            HStack(spacing: 0) {
-                Text("Recipes")
-                    .font(.largeTitle).bold()
-                    .padding(.bottom, 16)
-                
-                Spacer()
-                
-                SearchButton(iconName: "magnifyingglass")
-                if #available(iOS 15.0, *) {
-                    Image(systemName: "line.3.horizontal.decrease.circle")
-                        .font(.system(size: 32))
-                        .padding(.leading, 8)
-                        .symbolVariant(.circle)
-                        .symbolRenderingMode(.palette)
-                        .foregroundStyle(
-                            Color.black.opacity(0.5)
-                        )
-                } else {
-                    // Fallback on earlier versions
-                    Image(systemName: "line.3.horizontal.decrease.circle")
-                        .renderingMode(.template)
-                        .font(.system(size: 32))
-                        .foregroundColor(.primary)
-                        .padding(.leading, 8)
-                }
-            }
-            .padding(.horizontal, 8)
+        ZStack {
+            Color(hex: Colors.backgroundCol).ignoresSafeArea()
             
-            ScrollView {
-                ForEach(0 ..< 20) {_ in
-                    ListRow()
-                        .padding(.bottom, 8)
+            VStack {
+                HStack(spacing: 0) {
+                    GlassButton(iconName: "chevron.backward")
+                        .onTapGesture {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    
+                    VStack {}.padding(.horizontal, 20)
+                    
+                    Spacer()
+                    
+                    Text("Recipes")
+                        .font(.largeTitle).bold()
+                    
+                    Spacer()
+                    
+                    SearchButton(iconName: "magnifyingglass")
+                    if #available(iOS 15.0, *) {
+                        Image(systemName: "line.3.horizontal.decrease.circle")
+                            .font(.system(size: 32))
+                            .padding(.leading, 8)
+                            .symbolVariant(.circle)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(
+                                Color.black.opacity(0.5)
+                            )
+                    } else {
+                        // Fallback on earlier versions
+                        Image(systemName: "line.3.horizontal.decrease.circle")
+                            .renderingMode(.template)
+                            .font(.system(size: 32))
+                            .foregroundColor(.primary)
+                            .padding(.leading, 8)
+                    }
+                }
+                .padding(.horizontal, 8)
+                
+                ScrollView {
+                    ForEach(0 ..< 20) {_ in
+                        NavigationLink(destination: DetailView()) {
+                            ListRow()
+                                .padding(.bottom, 8)
+                        }
+                    }
                 }
             }
-            Spacer()
+            .navigationBarHidden(true)
+            .foregroundColor(.black)
         }
     }
 }
