@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0407A7DF272D5BF400F0F209 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7DE272D5BF400F0F209 /* GlassButton.swift */; };
+		0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7DE272D5BF400F0F209 /* GlassButton.swift */; };
 		048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FF271C3BD100E27160 /* QuickAndEasy.swift */; };
@@ -81,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0407A7DE272D5BF400F0F209 /* GlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
 		048244FC271C3B9900E27160 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		048244FF271C3BD100E27160 /* QuickAndEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAndEasy.swift; sourceTree = "<group>"; };
 		04824502271C3C4100E27160 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 				0482450E271C411800E27160 /* Gradient.swift */,
 				0482452C271C4A5A00E27160 /* Cards.swift */,
 				0482452F271C52FE00E27160 /* BigCards.swift */,
+				0407A7DE272D5BF400F0F209 /* GlassButton.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -425,6 +429,7 @@
 				FD404FF4272304D0004754EA /* RecipeList.swift in Sources */,
 				FDF235C42726F40600EAE8D3 /* ChipButton.swift in Sources */,
 				048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */,
+				0407A7DF272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04824506271C3C8E00E27160 /* HorizontalScrollCards.swift in Sources */,
 				04824509271C3D3100E27160 /* BlurView.swift in Sources */,
 				FDF235C62726F40600EAE8D3 /* Filters.swift in Sources */,
@@ -467,6 +472,7 @@
 				04824501271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
 				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
+				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04824519271C49CD00E27160 /* FestiveSpecials.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* FoodsCollections.swift in Sources */,
 				049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,

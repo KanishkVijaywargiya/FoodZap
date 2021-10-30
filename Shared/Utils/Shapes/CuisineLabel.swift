@@ -24,7 +24,7 @@ struct CuisineLabel: View {
                 path.addLine(to: CGPoint(x: 30, y: -16))
                 path.addLine(to: CGPoint(x: 0, y: -32))
             }
-            .fill(Color.white)
+            .fill(Color(hex: Colors.backgroundCol))
         }
     }
 }

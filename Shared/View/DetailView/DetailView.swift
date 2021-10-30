@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct DetailView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Color(red: 242, green: 239, blue: 228).ignoresSafeArea()
+            Color(hex: Colors.backgroundCol).ignoresSafeArea()
             
             VStack(alignment: .leading, spacing: 0) {
                 ScrollView {
@@ -276,46 +278,28 @@ struct DetailView: View {
             
             // back & share button
             HStack(alignment: .top) {
-                BackButton()
-                    .padding(.leading, 16)
-                    .padding(.top)
+                GlassButton(iconName: "chevron.backward")
+                    .padding(.leading, 8)
+                    .padding(.top, 45)
+                    .onTapGesture {
+                        presentationMode.wrappedValue.dismiss()
+                    }
                 
                 Spacer()
                 
-                ShareButton()
-                    .padding(.trailing, 16)
-                    .padding(.top)
+                GlassButton(iconName: "square.and.arrow.up")
+                    .padding(.trailing, 8)
+                    .padding(.top, 45)
             }
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView()
-    }
-}
-
-struct ShareButton: View {
-    var body: some View {
-        Image(systemName: "square.and.arrow.up")
-            .font(.system(size: 17, weight: .bold))
-            .foregroundColor(.white)
-            .padding(.all, 10)
-            .background(BlurView(style: .systemMaterialDark))
-            .mask(Circle())
-    }
-}
-
-struct BackButton: View {
-    var body: some View {
-        Image(systemName: "chevron.backward")
-            .font(.system(size: 17, weight: .bold))
-            .foregroundColor(.white)
-            .padding(.all, 10)
-            .background(BlurView(style: .systemMaterialDark))
-            .mask(Circle())
     }
 }
 
