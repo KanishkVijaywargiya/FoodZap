@@ -18,7 +18,7 @@ struct SeeMoreButton: View {
                 .font(.headline)
                 .frame(width: 200, height: 50)
                 .background(
-                    Color.white
+                    Color(hex: Colors.backgroundCol)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 50)

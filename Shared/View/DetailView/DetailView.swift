@@ -135,7 +135,7 @@ struct DetailView: View {
                                             .foregroundColor(.green)
                                     }
                                     .frame(width: 150, height: 50)
-                                    .background(Color.white)
+                                    .background(Color(hex: Colors.backgroundCol))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.black, lineWidth: 1.9)
@@ -155,7 +155,7 @@ struct DetailView: View {
                                             .foregroundColor(.green)
                                     }
                                     .frame(width: 150, height: 50)
-                                    .background(Color.white)
+                                    .background(Color(hex: Colors.backgroundCol))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.black, lineWidth: 1.9)
@@ -175,7 +175,7 @@ struct DetailView: View {
                                             .foregroundColor(.green)
                                     }
                                     .frame(width: 150, height: 50)
-                                    .background(Color.white)
+                                    .background(Color(hex: Colors.backgroundCol))
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.black, lineWidth: 1.9)
