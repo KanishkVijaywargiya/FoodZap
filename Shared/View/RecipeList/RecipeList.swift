@@ -53,7 +53,8 @@ struct RecipeList: View {
                 
                 ScrollView {
                     ForEach(0 ..< 20) {_ in
-                        NavigationLink(destination: DetailView()) {
+//                        NavigationLink(destination: DetailView()) {
+                        NavigationLink(destination: Text("Search")) {
                             ListRow()
                                 .padding(.bottom, 8)
                         }

@@ -9,6 +9,10 @@ import SwiftUI
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode
+    @StateObject var imageLoader = ImageLoaderService()
+    @State private var image: UIImage = UIImage()
+    
+    var dishesData: QuickNEasy
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -16,7 +20,7 @@ struct DetailView: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 ScrollView {
-                    Image("pavbhaji")
+                    Image(uiImage: image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: UIScreen.main.bounds.width, height: 300)
@@ -26,13 +30,19 @@ struct DetailView: View {
                             FavButton()
                                 .position(x: UIScreen.main.bounds.width - 35, y: 300)
                         )
+                        .onReceive(imageLoader.$image) { image in
+                            self.image = image
+                        }
+                        .onAppear {
+                            imageLoader.loadImage(for: dishesData.backgroundImg)
+                        }
                     
                     Spacer()
                     
                     // food title, clock icon, total time
                     VStack(alignment: .leading) {
                         HStack(alignment: .center, spacing: 0) {
-                            Text("Pav Bhaji")
+                            Text(dishesData.title)
                                 .font(.largeTitle)
                                 .bold()
                             
@@ -43,7 +53,7 @@ struct DetailView: View {
                                     .font(.system(size: 22, weight: .bold))
                                     .padding(.trailing)
                                 
-                                Text("70 mins")
+                                Text(dishesData.time)
                                     .font(.system(size: 18, weight: .semibold))
 //                                    .overlay(
 //                                        Image("streetfoods")
@@ -57,7 +67,7 @@ struct DetailView: View {
                         .padding(.horizontal, 16)
                         
                         // category name
-                        Text("Vegetarian")
+                        Text(dishesData.category)
                             .font(.callout)
                             .padding(.horizontal, 16)
                         
@@ -66,7 +76,7 @@ struct DetailView: View {
                             .position(x: UIScreen.main.bounds.width + 48, y: 19)
                             .offset(x: -14, y: -10)
                             .overlay(
-                                Text("Street Food")
+                                Text(dishesData.cusine)
                                     .foregroundColor(Color.white)
                                     .font(.system(size: 18, weight: .bold))
 //                                    .position(x: UIScreen.main.bounds.width + 48, y: 19)
@@ -87,7 +97,7 @@ struct DetailView: View {
                                 VStack {
                                     Text("Proteins")
                                         .font(.system(size: 16, weight: .bold))
-                                    Text("19g")
+                                    Text(dishesData.protein)
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.green)
                                 }
@@ -95,7 +105,7 @@ struct DetailView: View {
                                 VStack {
                                     Text("Carbs")
                                         .font(.system(size: 16, weight: .bold))
-                                    Text("90g")
+                                    Text(dishesData.carbohydrates)
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.green)
                                 }
@@ -103,7 +113,7 @@ struct DetailView: View {
                                 VStack {
                                     Text("Cals")
                                         .font(.system(size: 16, weight: .bold))
-                                    Text("646kcal")
+                                    Text(dishesData.calories)
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.green)
                                 }
@@ -111,7 +121,7 @@ struct DetailView: View {
                                 VStack {
                                     Text("Fats")
                                         .font(.system(size: 16, weight: .bold))
-                                    Text("24g")
+                                    Text(dishesData.fat)
                                         .font(.system(size: 20, weight: .bold))
                                         .foregroundColor(.green)
                                 }
@@ -130,7 +140,7 @@ struct DetailView: View {
                                     VStack {
                                         Text("Course")
                                             .font(.system(size: 16, weight: .bold))
-                                        Text("Main Course")
+                                        Text(dishesData.course)
                                             .font(.system(size: 20, weight: .bold))
                                             .foregroundColor(.green)
                                     }
@@ -140,7 +150,7 @@ struct DetailView: View {
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.black, lineWidth: 1.9)
                                             .blendMode(.normal)
-                                            .opacity(0.7)
+                                            .opacity(0.3)
                                     )
                                     .cornerRadius(50)
                                     .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
@@ -150,7 +160,7 @@ struct DetailView: View {
                                     VStack {
                                         Text("Health")
                                             .font(.system(size: 16, weight: .bold))
-                                        Text("Glutten Free")
+                                        Text(dishesData.healthPreference)
                                             .font(.system(size: 20, weight: .bold))
                                             .foregroundColor(.green)
                                     }
@@ -160,7 +170,7 @@ struct DetailView: View {
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.black, lineWidth: 1.9)
                                             .blendMode(.normal)
-                                            .opacity(0.7)
+                                            .opacity(0.3)
                                     )
                                     .cornerRadius(50)
                                     .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
@@ -170,7 +180,7 @@ struct DetailView: View {
                                     VStack {
                                         Text("Difficulty")
                                             .font(.system(size: 16, weight: .bold))
-                                        Text("Moderate")
+                                        Text(dishesData.difficultyLevel)
                                             .font(.system(size: 20, weight: .bold))
                                             .foregroundColor(.green)
                                     }
@@ -180,7 +190,7 @@ struct DetailView: View {
                                         RoundedRectangle(cornerRadius: 50)
                                             .stroke(Color.black, lineWidth: 1.9)
                                             .blendMode(.normal)
-                                            .opacity(0.7)
+                                            .opacity(0.3)
                                     )
                                     .cornerRadius(50)
                                     .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
@@ -199,7 +209,7 @@ struct DetailView: View {
                                 VStack(alignment: .leading, spacing: 12) {
                                     Text("Overview").font(.largeTitle.bold())
                                     
-                                    Text("This Dal Makhani recipe is a restaurant style version with subtle smoky flavors and creaminess of the lentils. Dal Makhani is one of the most popular lentil recipes from the North Indian cuisine made with whole urad dal (black gram) and kidney beans.")
+                                    Text(dishesData.description)
                                         .font(.system(size: 18, weight: .medium))
                                     
                                     Rectangle()
@@ -214,13 +224,13 @@ struct DetailView: View {
                                     Text("Ingridients")
                                         .font(.largeTitle.bold())
                                     
-                                    ForEach(0..<5) { _ in
-                                        HStack {
+                                    ForEach(dishesData.ingridients, id: \.self) { item in
+                                        HStack(alignment: .top) {
                                             Circle()
                                                 .frame(width: 15, height: 15)
-                                                .padding(.bottom)
+                                                .padding(.top, 4)
                                             
-                                            Text("1 cup dried white chickpeas [canned chickpeas can also be used]").font(.system(size: 18, weight: .medium))
+                                            Text(item).font(.system(size: 18, weight: .medium))
                                         }
                                         .padding(.horizontal, 16)
                                     }
@@ -237,13 +247,13 @@ struct DetailView: View {
                                     Text("Procedures")
                                         .font(.largeTitle.bold())
                                     
-                                    ForEach(0..<5) { _ in
-                                        HStack {
+                                    ForEach(dishesData.procedure, id: \.self) { item in
+                                        HStack(alignment: .top) {
                                             Circle()
                                                 .frame(width: 15, height: 15)
-                                                .padding(.bottom)
+                                                .padding(.top, 4)
                                             
-                                            Text("1 cup dried white chickpeas [canned chickpeas can also be used]").font(.system(size: 18, weight: .medium))
+                                            Text(item).font(.system(size: 18, weight: .medium))
                                         }
                                         .padding(.horizontal, 16)
                                     }
@@ -297,11 +307,13 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+//struct DetailView_Previews: PreviewProvider {
+//    let quick = QuickNEasy(backgroundImg: "", calories: "", carbohydrates: "", category: "", course: "", cusine: "", description: "", difficultyLevel: "", fat: "", healthPreference: "", procedureVideo: "", protein: "", time: "", title: "", ingridients: [], procedure: [])
+//
+//    static var previews: some View {
+//        DetailView(dishesData: quick)
+//    }
+//}
 
 struct FavButton: View {
     var body: some View {

@@ -12,6 +12,7 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
+            
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 0) {
                     // hello username
