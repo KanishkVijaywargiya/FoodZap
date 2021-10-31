@@ -38,8 +38,9 @@ final class QuickNEasyViewModel: ObservableObject {
                 let title = data["title"] as? String ?? ""
                 let ingridients = data["ingridients"] as? [String] ?? []
                 let procedure = data["procedure"] as? [String] ?? []
+                let isFav = data["isFav"] as? Bool ?? false
                 
-                let quickNEasyDt = QuickNEasy(backgroundImg: backgroundImg, calories: calories, carbohydrates: carbohydrates, category: category, course: course, cusine: cusine, description: description, difficultyLevel: difficultyLevel, fat: fat, healthPreference: healthPreference, procedureVideo: procedureVideo, protein: protein, time: time, title: title, ingridients: ingridients, procedure: procedure)
+                let quickNEasyDt = QuickNEasy(backgroundImg: backgroundImg, calories: calories, carbohydrates: carbohydrates, category: category, course: course, cusine: cusine, description: description, difficultyLevel: difficultyLevel, fat: fat, healthPreference: healthPreference, procedureVideo: procedureVideo, protein: protein, time: time, title: title, ingridients: ingridients, procedure: procedure, isFav: isFav)
                 
                 self.quickNEasy.append(quickNEasyDt)
             }

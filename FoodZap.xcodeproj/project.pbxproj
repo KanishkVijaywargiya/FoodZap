@@ -31,22 +31,6 @@
 		0482450D271C3EAB00E27160 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482450B271C3EAB00E27160 /* DummyData.swift */; };
 		0482450F271C411800E27160 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482450E271C411800E27160 /* Gradient.swift */; };
 		04824510271C411800E27160 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482450E271C411800E27160 /* Gradient.swift */; };
-		04824512271C49AF00E27160 /* IndianCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824511271C49AF00E27160 /* IndianCuisines.swift */; };
-		04824513271C49AF00E27160 /* IndianCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824511271C49AF00E27160 /* IndianCuisines.swift */; };
-		04824515271C49BE00E27160 /* ForeignCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824514271C49BE00E27160 /* ForeignCuisines.swift */; };
-		04824516271C49BE00E27160 /* ForeignCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824514271C49BE00E27160 /* ForeignCuisines.swift */; };
-		04824518271C49CD00E27160 /* FestiveSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824517271C49CD00E27160 /* FestiveSpecials.swift */; };
-		04824519271C49CD00E27160 /* FestiveSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824517271C49CD00E27160 /* FestiveSpecials.swift */; };
-		0482451B271C49D800E27160 /* StayFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482451A271C49D800E27160 /* StayFit.swift */; };
-		0482451C271C49D800E27160 /* StayFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482451A271C49D800E27160 /* StayFit.swift */; };
-		0482451E271C49E600E27160 /* SoupsCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482451D271C49E600E27160 /* SoupsCuisines.swift */; };
-		0482451F271C49E600E27160 /* SoupsCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482451D271C49E600E27160 /* SoupsCuisines.swift */; };
-		04824521271C49F200E27160 /* ShakesCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824520271C49F200E27160 /* ShakesCuisines.swift */; };
-		04824522271C49F200E27160 /* ShakesCuisines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824520271C49F200E27160 /* ShakesCuisines.swift */; };
-		04824524271C4A0000E27160 /* MoodRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824523271C4A0000E27160 /* MoodRecipe.swift */; };
-		04824525271C4A0000E27160 /* MoodRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824523271C4A0000E27160 /* MoodRecipe.swift */; };
-		04824527271C4A1000E27160 /* StreetFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824526271C4A1000E27160 /* StreetFoods.swift */; };
-		04824528271C4A1000E27160 /* StreetFoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824526271C4A1000E27160 /* StreetFoods.swift */; };
 		0482452A271C4A1B00E27160 /* IndianSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824529271C4A1B00E27160 /* IndianSpecials.swift */; };
 		0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824529271C4A1B00E27160 /* IndianSpecials.swift */; };
 		0482452D271C4A5A00E27160 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452C271C4A5A00E27160 /* Cards.swift */; };
@@ -104,14 +88,6 @@
 		04824508271C3D3100E27160 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		0482450B271C3EAB00E27160 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		0482450E271C411800E27160 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		04824511271C49AF00E27160 /* IndianCuisines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianCuisines.swift; sourceTree = "<group>"; };
-		04824514271C49BE00E27160 /* ForeignCuisines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignCuisines.swift; sourceTree = "<group>"; };
-		04824517271C49CD00E27160 /* FestiveSpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestiveSpecials.swift; sourceTree = "<group>"; };
-		0482451A271C49D800E27160 /* StayFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayFit.swift; sourceTree = "<group>"; };
-		0482451D271C49E600E27160 /* SoupsCuisines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoupsCuisines.swift; sourceTree = "<group>"; };
-		04824520271C49F200E27160 /* ShakesCuisines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakesCuisines.swift; sourceTree = "<group>"; };
-		04824523271C4A0000E27160 /* MoodRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecipe.swift; sourceTree = "<group>"; };
-		04824526271C4A1000E27160 /* StreetFoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFoods.swift; sourceTree = "<group>"; };
 		04824529271C4A1B00E27160 /* IndianSpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianSpecials.swift; sourceTree = "<group>"; };
 		0482452C271C4A5A00E27160 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		0482452F271C52FE00E27160 /* BigCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCards.swift; sourceTree = "<group>"; };
@@ -208,16 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				049BE673271C2B080008F8ED /* HomeView.swift */,
-				0482451A271C49D800E27160 /* StayFit.swift */,
 				048244FC271C3B9900E27160 /* ProfileButton.swift */,
 				048244FF271C3BD100E27160 /* QuickAndEasy.swift */,
-				04824511271C49AF00E27160 /* IndianCuisines.swift */,
-				04824514271C49BE00E27160 /* ForeignCuisines.swift */,
-				04824517271C49CD00E27160 /* FestiveSpecials.swift */,
-				0482451D271C49E600E27160 /* SoupsCuisines.swift */,
-				04824520271C49F200E27160 /* ShakesCuisines.swift */,
-				04824523271C4A0000E27160 /* MoodRecipe.swift */,
-				04824526271C4A1000E27160 /* StreetFoods.swift */,
 				04824529271C4A1B00E27160 /* IndianSpecials.swift */,
 			);
 			path = HomeView;
@@ -441,11 +409,8 @@
 				04824503271C3C4100E27160 /* SearchButton.swift in Sources */,
 				FDF235AE2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,
 				FDF235B42726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
-				0482451B271C49D800E27160 /* StayFit.swift in Sources */,
-				04824524271C4A0000E27160 /* MoodRecipe.swift in Sources */,
 				FDF235BF2726F3F000EAE8D3 /* Colors.swift in Sources */,
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
-				04824512271C49AF00E27160 /* IndianCuisines.swift in Sources */,
 				049BE683271C2B0B0008F8ED /* FoodZap.xcdatamodeld in Sources */,
 				049BE689271C2B0B0008F8ED /* Persistence.swift in Sources */,
 				FD404FF4272304D0004754EA /* RecipeList.swift in Sources */,
@@ -459,19 +424,14 @@
 				0482452A271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				FDF235CB2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */,
 				04824530271C52FE00E27160 /* BigCards.swift in Sources */,
-				04824518271C49CD00E27160 /* FestiveSpecials.swift in Sources */,
 				04EFCFDB27205CDB009795CC /* QuickNEasy.swift in Sources */,
 				FDF235BD2726F3F000EAE8D3 /* Texts.swift in Sources */,
 				049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
-				0482451E271C49E600E27160 /* SoupsCuisines.swift in Sources */,
 				FDF235B12726F39C00EAE8D3 /* DetailView.swift in Sources */,
 				0482450F271C411800E27160 /* Gradient.swift in Sources */,
 				0407A7EB272D886900F0F209 /* ImageLoader.swift in Sources */,
 				0482450C271C3EAB00E27160 /* DummyData.swift in Sources */,
 				0407A7E5272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */,
-				04824515271C49BE00E27160 /* ForeignCuisines.swift in Sources */,
-				04824527271C4A1000E27160 /* StreetFoods.swift in Sources */,
-				04824521271C49F200E27160 /* ShakesCuisines.swift in Sources */,
 				0407A7E8272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				FD404FF2272304BE004754EA /* ListRow.swift in Sources */,
 				FDF235B72726F3DA00EAE8D3 /* Tag.swift in Sources */,
@@ -484,11 +444,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04824504271C3C4100E27160 /* SearchButton.swift in Sources */,
-				0482451C271C49D800E27160 /* StayFit.swift in Sources */,
-				04824525271C4A0000E27160 /* MoodRecipe.swift in Sources */,
 				0407A7E6272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */,
 				0482452E271C4A5A00E27160 /* Cards.swift in Sources */,
-				04824513271C49AF00E27160 /* IndianCuisines.swift in Sources */,
 				049BE684271C2B0B0008F8ED /* FoodZap.xcdatamodeld in Sources */,
 				049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */,
 				048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */,
@@ -501,21 +458,16 @@
 				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
-				04824519271C49CD00E27160 /* FestiveSpecials.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */,
 				049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				FDF235C52726F40600EAE8D3 /* ChipButton.swift in Sources */,
-				0482451F271C49E600E27160 /* SoupsCuisines.swift in Sources */,
 				04824510271C411800E27160 /* Gradient.swift in Sources */,
 				FDF235CC2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */,
 				FDF235C72726F40600EAE8D3 /* Filters.swift in Sources */,
 				0482450D271C3EAB00E27160 /* DummyData.swift in Sources */,
 				FDF235C02726F3F000EAE8D3 /* Colors.swift in Sources */,
-				04824516271C49BE00E27160 /* ForeignCuisines.swift in Sources */,
-				04824528271C4A1000E27160 /* StreetFoods.swift in Sources */,
 				FDF235BE2726F3F000EAE8D3 /* Texts.swift in Sources */,
 				FDF235B52726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
-				04824522271C49F200E27160 /* ShakesCuisines.swift in Sources */,
 				FDF235B82726F3DA00EAE8D3 /* Tag.swift in Sources */,
 				049BE688271C2B0B0008F8ED /* HomeView.swift in Sources */,
 				FDF235AF2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,

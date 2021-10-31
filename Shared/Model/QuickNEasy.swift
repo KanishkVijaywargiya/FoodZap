@@ -26,5 +26,6 @@ struct QuickNEasy: Identifiable {
     var title: String
     var ingridients: [String]
     var procedure: [String]
+    var isFav: Bool
 }
 
