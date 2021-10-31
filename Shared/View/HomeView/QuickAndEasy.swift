@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct QuickAndEasy: View {
-    // MARK: Quick and Easy Horizontal Cards
+    @StateObject var quickNEasyVM = QuickNEasyViewModel()
     
+    // MARK: Quick and Easy Horizontal Cards
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                ForEach(DummyData.dummyData) { item in
+                ForEach(quickNEasyVM.quickNEasy) { item in
                     GeometryReader { geo in
-                        NavigationLink(destination: Text("Destination")) {
+                        NavigationLink(destination: DetailView(dishesData: item)) {
                             HorizontalScrollCards(dummyData: item)
                                 .rotation3DEffect(
                                     Angle(degrees: Double(geo.frame(in: .global).minX - 30) / -getAngleMultiplier(bounds: geo )),
