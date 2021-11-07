@@ -9,6 +9,11 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+    @ObservedObject var quickNEasyVM = QuickNEasyViewModel()
+    
+    @Environment(\.managedObjectContext) var viewContext
+    @FetchRequest(entity: QuickEasy.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \QuickEasy.title, ascending: true)]) var results: FetchedResults<QuickEasy>
+    
     var body: some View {
         ZStack {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
@@ -32,7 +37,8 @@ struct HomeView: View {
                     }
                     
                     // horizontal scroll cards
-                    QuickAndEasy()
+                    QuickAndEasy(quickNEasyData: quickNEasyVM.quickNEasy)
+                    
                     
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton()
@@ -44,11 +50,13 @@ struct HomeView: View {
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton().padding(.top, 26)
                     }
-                    
                     Spacer()
                 }
             }
             .navigationBarHidden(true)
+        }
+        .onAppear {
+            quickNEasyVM.fetchQuickNEasyData(context: viewContext)
         }
     }
 }
