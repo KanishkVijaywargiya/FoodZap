@@ -9,11 +9,13 @@ import SwiftUI
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-//    @State private var image: UIImage = UIImage()
+    //    @State private var image: UIImage = UIImage()
+    
+    @State private var isSharingSheetShowing: Bool = false
     
     var dishesData: QuickNEasy
     let transaction = Transaction(animation: Animation.easeIn(duration: 5.0))
-        
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
@@ -70,7 +72,7 @@ struct DetailView: View {
                                 .font(.largeTitle)
                                 .bold()
                                 .lineLimit(2)
-                                
+                            
                             
                             Spacer()
                             
@@ -342,10 +344,33 @@ struct DetailView: View {
                 GlassButton(iconName: "square.and.arrow.up")
                     .padding(.trailing, 8)
                     .padding(.top, 45)
+                    .onTapGesture {
+                        shareBtn()
+                    }
             }
         }
         .ignoresSafeArea()
-                .navigationBarHidden(true)
+        .navigationBarHidden(true)
+    }
+    
+    func shareBtn() {
+        isSharingSheetShowing.toggle()
+        
+//        let image = body.snapshot()
+//        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        let dishesTitle = "Name - \(dishesData.title)"
+        let dishesCategory = "Category - \(dishesData.category)"
+        let dishesCusine = "Cusine - \(dishesData.cusine)"
+        let dishesProtein = "Protein - \(dishesData.protein)"
+        let dishesCarbohydrates = "Carbohydrates - \(dishesData.carbohydrates)"
+        let dishesCalories = "Calories - \(dishesData.calories)"
+        let openFullRecipe = "To know more, please download our app. See the full recipe ⤵️"
+        let url = URL(string: "https://apple.com")
+        let av = UIActivityViewController(activityItems: [dishesTitle, dishesCategory, dishesCusine, dishesProtein, dishesCarbohydrates, dishesCalories, openFullRecipe, url!], applicationActivities: nil)
+        
+        // keyWindowPresentedController is form extension of UIApplication        
+        UIApplication.shared.keyWindowPresentedController?.present(av, animated: true, completion: nil)
     }
 }
 
