@@ -29,8 +29,6 @@ struct HorizontalScrollCards: View {
                     Image(uiImage: imageLoader.image!)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                    
-                    
                 } else if imageLoader.errorMessage != nil {
                     Text(imageLoader.errorMessage!)
                 } else {

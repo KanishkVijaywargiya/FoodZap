@@ -24,7 +24,6 @@ struct ProfileButton: View {
             Image(systemName: "person.crop.circle")
                 .renderingMode(.template)
                 .font(.system(size: 20))
-                .foregroundColor(.primary)
                 .padding(12)
                 .padding(.horizontal, 20)
                 .background(

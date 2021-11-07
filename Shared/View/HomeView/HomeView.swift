@@ -36,17 +36,9 @@ struct HomeView: View {
                         ProfileButton()
                     }
                     
-//                    if results.isEmpty{
-//                        if quickNEasyVM.quickNEasy.isEmpty {
-//                            ProgressView()
-//                        } else {
-                            // horizontal scroll cards
+                    // horizontal scroll cards
                     QuickAndEasy(quickNEasyData: quickNEasyVM.quickNEasy)
-//                        }
-//                    } else {
-                        // horizontal scroll cards
-//                        QuickAndEasy(quickNEasyData: results)
-//                    }
+                    
                     
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton()

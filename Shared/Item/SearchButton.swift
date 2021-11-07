@@ -15,7 +15,6 @@ struct SearchButton: View {
         Image(systemName: iconName)
             .renderingMode(.template)
             .font(.system(size: 16))
-            .foregroundColor(.primary)
             .padding(8)
             .background(
                 BlurView(style: .light)

@@ -9,14 +9,11 @@ import SwiftUI
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-//    @StateObject var imageLoader = ImageLoaderService()
-    @State private var image: UIImage = UIImage()
+//    @State private var image: UIImage = UIImage()
     
     var dishesData: QuickNEasy
     let transaction = Transaction(animation: Animation.easeIn(duration: 5.0))
-    
-//    @GestureState private var dragOffset = CGSize.zero
-    
+        
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
@@ -27,6 +24,7 @@ struct DetailView: View {
                         switch imagePhase {
                         case .empty:
                             ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
                         case .success(let image):
                             image
                                 .resizable()
@@ -72,6 +70,7 @@ struct DetailView: View {
                                 .font(.largeTitle)
                                 .bold()
                                 .lineLimit(2)
+                                
                             
                             Spacer()
                             
@@ -325,6 +324,7 @@ struct DetailView: View {
                         }
                         .padding(.top, -16)
                     }
+                    .foregroundColor(.black)
                 }
             }
             
@@ -346,13 +346,6 @@ struct DetailView: View {
         }
         .ignoresSafeArea()
                 .navigationBarHidden(true)
-//        .navigationBarBackButtonHidden(true)
-//        .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
-//             if(value.startLocation.x < 20 &&
-//                        value.translation.width > 50) {
-//                 self.presentationMode.wrappedValue.dismiss()
-//             }
-//        }))
     }
 }
 
