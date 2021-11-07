@@ -37,8 +37,6 @@
 		0482452E271C4A5A00E27160 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452C271C4A5A00E27160 /* Cards.swift */; };
 		04824530271C52FE00E27160 /* BigCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452F271C52FE00E27160 /* BigCards.swift */; };
 		04824531271C52FE00E27160 /* BigCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452F271C52FE00E27160 /* BigCards.swift */; };
-		049BE683271C2B0B0008F8ED /* FoodZap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 049BE670271C2B070008F8ED /* FoodZap.xcdatamodeld */; };
-		049BE684271C2B0B0008F8ED /* FoodZap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 049BE670271C2B070008F8ED /* FoodZap.xcdatamodeld */; };
 		049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE672271C2B080008F8ED /* FoodZapApp.swift */; };
 		049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE672271C2B080008F8ED /* FoodZapApp.swift */; };
 		049BE687271C2B0B0008F8ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE673271C2B080008F8ED /* HomeView.swift */; };
@@ -51,8 +49,13 @@
 		04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* QuickNEasy.swift */; };
 		04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
 		04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
+		FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
+		FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
 		FD404FF2272304BE004754EA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF1272304BE004754EA /* ListRow.swift */; };
 		FD404FF4272304D0004754EA /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF3272304D0004754EA /* RecipeList.swift */; };
+		FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */; };
+		FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */; };
+		FD57EF942737A7D7007072FA /* NavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */; };
 		FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */; };
 		FD99043A271C643700F725FC /* AwesomeToast in Frameworks */ = {isa = PBXBuildFile; productRef = FD990439271C643700F725FC /* AwesomeToast */; };
 		FDF235AE2726F38500EAE8D3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */; };
@@ -91,7 +94,6 @@
 		04824529271C4A1B00E27160 /* IndianSpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianSpecials.swift; sourceTree = "<group>"; };
 		0482452C271C4A5A00E27160 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		0482452F271C52FE00E27160 /* BigCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCards.swift; sourceTree = "<group>"; };
-		049BE671271C2B070008F8ED /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		049BE672271C2B080008F8ED /* FoodZapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodZapApp.swift; sourceTree = "<group>"; };
 		049BE673271C2B080008F8ED /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		049BE674271C2B080008F8ED /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -101,8 +103,10 @@
 		049BE682271C2B0B0008F8ED /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		04EFCFDA27205CDB009795CC /* QuickNEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNEasy.swift; sourceTree = "<group>"; };
 		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
+		FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodZaps.xcdatamodel; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FD404FF3272304D0004754EA /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExt.swift; sourceTree = "<group>"; };
 		FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		FDF235B02726F39C00EAE8D3 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FDF235B32726F3AC00EAE8D3 /* SeeMoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				FD99043A271C643700F725FC /* AwesomeToast in Frameworks */,
 				FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */,
 			);
@@ -197,6 +202,7 @@
 				049BE66F271C2B070008F8ED /* Shared */,
 				049BE681271C2B0B0008F8ED /* macOS */,
 				049BE67B271C2B0B0008F8ED /* Products */,
+				FD51D5E92736A00500B66D91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,7 +219,7 @@
 				049BE674271C2B080008F8ED /* Persistence.swift */,
 				0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */,
 				049BE675271C2B0B0008F8ED /* Assets.xcassets */,
-				049BE670271C2B070008F8ED /* FoodZap.xcdatamodeld */,
+				FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -244,10 +250,18 @@
 			path = RecipeList;
 			sourceTree = "<group>";
 		};
+		FD51D5E92736A00500B66D91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDF235AC2726F38500EAE8D3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */,
+				FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +329,7 @@
 			packageProductDependencies = (
 				FD990439271C643700F725FC /* AwesomeToast */,
 				FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */,
+				FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = "FoodZap (iOS)";
 			productReference = 049BE67A271C2B0B0008F8ED /* FoodZap.app */;
@@ -411,7 +426,6 @@
 				FDF235B42726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				FDF235BF2726F3F000EAE8D3 /* Colors.swift in Sources */,
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
-				049BE683271C2B0B0008F8ED /* FoodZap.xcdatamodeld in Sources */,
 				049BE689271C2B0B0008F8ED /* Persistence.swift in Sources */,
 				FD404FF4272304D0004754EA /* RecipeList.swift in Sources */,
 				FDF235C42726F40600EAE8D3 /* ChipButton.swift in Sources */,
@@ -422,6 +436,7 @@
 				FDF235C62726F40600EAE8D3 /* Filters.swift in Sources */,
 				04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
 				0482452A271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
+				FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				FDF235CB2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */,
 				04824530271C52FE00E27160 /* BigCards.swift in Sources */,
 				04EFCFDB27205CDB009795CC /* QuickNEasy.swift in Sources */,
@@ -435,6 +450,7 @@
 				0407A7E8272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				FD404FF2272304BE004754EA /* ListRow.swift in Sources */,
 				FDF235B72726F3DA00EAE8D3 /* Tag.swift in Sources */,
+				FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
 				049BE687271C2B0B0008F8ED /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +462,6 @@
 				04824504271C3C4100E27160 /* SearchButton.swift in Sources */,
 				0407A7E6272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */,
 				0482452E271C4A5A00E27160 /* Cards.swift in Sources */,
-				049BE684271C2B0B0008F8ED /* FoodZap.xcdatamodeld in Sources */,
 				049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */,
 				048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */,
 				FDF235B22726F39C00EAE8D3 /* DetailView.swift in Sources */,
@@ -455,11 +470,13 @@
 				04824501271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
 				0407A7E9272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				0407A7EC272D886900F0F209 /* ImageLoader.swift in Sources */,
+				FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
 				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */,
 				049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
+				FD57EF942737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				FDF235C52726F40600EAE8D3 /* ChipButton.swift in Sources */,
 				04824510271C411800E27160 /* Gradient.swift in Sources */,
 				FDF235CC2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */,
@@ -603,7 +620,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,7 +650,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -757,6 +774,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
 		FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -770,13 +792,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		049BE670271C2B070008F8ED /* FoodZap.xcdatamodeld */ = {
+		FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				049BE671271C2B070008F8ED /* Shared.xcdatamodel */,
+				FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */,
 			);
-			currentVersion = 049BE671271C2B070008F8ED /* Shared.xcdatamodel */;
-			path = FoodZap.xcdatamodeld;
+			currentVersion = FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */;
+			path = FoodZaps.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -9,6 +9,11 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+    @ObservedObject var quickNEasyVM = QuickNEasyViewModel()
+    
+    @Environment(\.managedObjectContext) var viewContext
+    @FetchRequest(entity: QuickEasy.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \QuickEasy.title, ascending: true)]) var results: FetchedResults<QuickEasy>
+    
     var body: some View {
         ZStack {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
@@ -31,8 +36,17 @@ struct HomeView: View {
                         ProfileButton()
                     }
                     
-                    // horizontal scroll cards
-                    QuickAndEasy()
+//                    if results.isEmpty{
+//                        if quickNEasyVM.quickNEasy.isEmpty {
+//                            ProgressView()
+//                        } else {
+                            // horizontal scroll cards
+                    QuickAndEasy(quickNEasyData: quickNEasyVM.quickNEasy)
+//                        }
+//                    } else {
+                        // horizontal scroll cards
+//                        QuickAndEasy(quickNEasyData: results)
+//                    }
                     
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton()
@@ -44,11 +58,13 @@ struct HomeView: View {
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton().padding(.top, 26)
                     }
-                    
                     Spacer()
                 }
             }
             .navigationBarHidden(true)
+        }
+        .onAppear {
+            quickNEasyVM.fetchQuickNEasyData(context: viewContext)
         }
     }
 }

@@ -6,43 +6,56 @@
 //
 
 import SwiftUI
+import CoreData
 import Firebase
 
 final class QuickNEasyViewModel: ObservableObject {
-    @Published var quickNEasy: [QuickNEasy] = []
+    @Published var quickNEasy = [QuickNEasy]()
     
-    init() {
-        fetchQuickNEasyData()
+    // save to Core Data
+    func saveData(context: NSManagedObjectContext) {
+                quickNEasy.forEach { data in
+                    let dishesDataToSave = QuickEasy(context: context)
+                    dishesDataToSave.title = data.title
+        //            dishesDataToSave.id = UUID()
+                    dishesDataToSave.backgroundImg = data.backgroundImg
+                    dishesDataToSave.calories = data.calories
+                    dishesDataToSave.carbohydrates = data.carbohydrates
+                    dishesDataToSave.category = data.category
+                    dishesDataToSave.course = data.course
+                    dishesDataToSave.cusine = data.cusine
+                    dishesDataToSave.descriptions = data.descriptions
+                    dishesDataToSave.difficultyLevel = data.difficultyLevel
+                    dishesDataToSave.fat = data.fat
+                    dishesDataToSave.healthPreference = data.healthPreference
+                    dishesDataToSave.procedureVideo = data.procedureVideo
+                    dishesDataToSave.protein = data.protein
+                    dishesDataToSave.time = data.time
+                    dishesDataToSave.ingridients = data.ingridients as NSObject
+                    dishesDataToSave.procedure = data.procedure as NSObject
+                    dishesDataToSave.isFav = data.isFav
+                    
+                    print("dishesDataToSave-----", dishesDataToSave)
+                }
+        
+        // saving all data at once to core data
+        do {
+            try context.save()
+            print("Save Array to Core Data - Success")
+        } catch {
+            print("Error Core Data not saved- \(error.localizedDescription)")
+        }
     }
     
-    func fetchQuickNEasyData() {
-        QUICK_AND_EASY.getDocuments { querySnapshot, _ in
+    func fetchQuickNEasyData(context: NSManagedObjectContext) {
+        QUICK_AND_EASY
+//            .order(by: "title", descending: false)
+            .getDocuments { querySnapshot, _ in
             guard let documents = querySnapshot?.documents else { return }
             
-            for document in documents {
-                let data = document.data()
-                
-                let backgroundImg = data["backgroundImg"] as? String ?? ""
-                let calories = data["calories"] as? String ?? ""
-                let carbohydrates = data["carbohydrates"] as? String ?? ""
-                let category = data["category"] as? String ?? ""
-                let course = data["course"] as? String ?? ""
-                let cusine = data["cusine"] as? String ?? ""
-                let description = data["description"] as? String ?? ""
-                let difficultyLevel = data["difficultyLevel"] as? String ?? ""
-                let fat = data["fat"] as? String ?? ""
-                let healthPreference = data["healthPreference"] as? String ?? ""
-                let procedureVideo = data["procedureVideo"] as? String ?? ""
-                let protein = data["protein"] as? String ?? ""
-                let time = data["time"] as? String ?? ""
-                let title = data["title"] as? String ?? ""
-                let ingridients = data["ingridients"] as? [String] ?? []
-                let procedure = data["procedure"] as? [String] ?? []
-                let isFav = data["isFav"] as? Bool ?? false
-                
-                let quickNEasyDt = QuickNEasy(backgroundImg: backgroundImg, calories: calories, carbohydrates: carbohydrates, category: category, course: course, cusine: cusine, description: description, difficultyLevel: difficultyLevel, fat: fat, healthPreference: healthPreference, procedureVideo: procedureVideo, protein: protein, time: time, title: title, ingridients: ingridients, procedure: procedure, isFav: isFav)
-                
-                self.quickNEasy.append(quickNEasyDt)
+            DispatchQueue.main.async {
+                self.quickNEasy = documents.compactMap({ try? $0.data(as: QuickNEasy.self) })
+                self.saveData(context: context)
             }
         }
     }

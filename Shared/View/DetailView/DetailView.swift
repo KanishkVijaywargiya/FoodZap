@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct DetailView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @StateObject var imageLoader = ImageLoaderService()
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+//    @StateObject var imageLoader = ImageLoaderService()
     @State private var image: UIImage = UIImage()
     
     var dishesData: QuickNEasy
+    let transaction = Transaction(animation: Animation.easeIn(duration: 5.0))
+    
+//    @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -20,22 +23,45 @@ struct DetailView: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 ScrollView {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: UIScreen.main.bounds.width, height: 300)
-                        .cornerRadius(20)
-                        .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
-                        .overlay(
-                            FavButton()
-                                .position(x: UIScreen.main.bounds.width - 35, y: 300)
-                        )
-                        .onReceive(imageLoader.$image) { image in
-                            self.image = image
+                    AsyncImage(url: URL(string: dishesData.backgroundImg), scale: 1.0, transaction: transaction) { imagePhase in
+                        switch imagePhase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        case .failure(_):
+                            Rectangle()
+                                .foregroundColor(.gray.opacity(0.2))
+                                .frame(width: UIScreen.main.bounds.width, height: 300)
+                        @unknown default:
+                            EmptyView()
                         }
-                        .onAppear {
-                            imageLoader.loadImage(for: dishesData.backgroundImg)
-                        }
+                    }
+                    .frame(width: UIScreen.main.bounds.width, height: 300)
+                    .cornerRadius(20)
+                    .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
+                    .overlay(
+                        FavButton()
+                            .position(x: UIScreen.main.bounds.width - 35, y: 300)
+                    )
+                    //                    Image(uiImage: image)
+                    //                        .resizable()
+                    //                        .aspectRatio(contentMode: .fill)
+                    //                        .frame(width: UIScreen.main.bounds.width, height: 300)
+                    //                        .cornerRadius(20)
+                    //                        .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
+                    //                        .overlay(
+                    //                            FavButton()
+                    //                                .position(x: UIScreen.main.bounds.width - 35, y: 300)
+                    //                        )
+                    //                        .onReceive(imageLoader.$image) { image in
+                    //                            self.image = image
+                    //                        }
+                    //                        .onAppear {
+                    //                            imageLoader.loadImage(for: dishesData.backgroundImg)
+                    //                        }
                     
                     Spacer()
                     
@@ -225,7 +251,7 @@ struct DetailView: View {
                                 VStack(alignment: .leading, spacing: 12) {
                                     Text("Overview").font(.largeTitle.bold())
                                     
-                                    Text(dishesData.description)
+                                    Text(dishesData.descriptions)
                                         .font(.system(size: 18, weight: .medium))
                                     
                                     Rectangle()
@@ -319,7 +345,14 @@ struct DetailView: View {
             }
         }
         .ignoresSafeArea()
-        .navigationBarHidden(true)
+                .navigationBarHidden(true)
+//        .navigationBarBackButtonHidden(true)
+//        .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
+//             if(value.startLocation.x < 20 &&
+//                        value.translation.width > 50) {
+//                 self.presentationMode.wrappedValue.dismiss()
+//             }
+//        }))
     }
 }
 
