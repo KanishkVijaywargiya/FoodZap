@@ -11,12 +11,8 @@
 		0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7DE272D5BF400F0F209 /* GlassButton.swift */; };
 		0407A7E2272D69C000F0F209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */; };
 		0407A7E3272D69C000F0F209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */; };
-		0407A7E5272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7E4272D781800F0F209 /* QuickNEasyViewModel.swift */; };
-		0407A7E6272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7E4272D781800F0F209 /* QuickNEasyViewModel.swift */; };
 		0407A7E8272D78C600F0F209 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7E7272D78C600F0F209 /* FirebaseConstants.swift */; };
 		0407A7E9272D78C600F0F209 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7E7272D78C600F0F209 /* FirebaseConstants.swift */; };
-		0407A7EB272D886900F0F209 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7EA272D886900F0F209 /* ImageLoader.swift */; };
-		0407A7EC272D886900F0F209 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407A7EA272D886900F0F209 /* ImageLoader.swift */; };
 		048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FF271C3BD100E27160 /* QuickAndEasy.swift */; };
@@ -45,6 +41,10 @@
 		049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE674271C2B080008F8ED /* Persistence.swift */; };
 		049BE68B271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
 		049BE68C271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
+		04D8E4882737B46800F2524A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8E4862737B46800F2524A /* ImageLoader.swift */; };
+		04D8E4892737B46800F2524A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8E4862737B46800F2524A /* ImageLoader.swift */; };
+		04D8E48A2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */; };
+		04D8E48B2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */; };
 		04EFCFDB27205CDB009795CC /* QuickNEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* QuickNEasy.swift */; };
 		04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* QuickNEasy.swift */; };
 		04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
@@ -81,9 +81,7 @@
 /* Begin PBXFileReference section */
 		0407A7DE272D5BF400F0F209 /* GlassButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassButton.swift; sourceTree = "<group>"; };
 		0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0407A7E4272D781800F0F209 /* QuickNEasyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuickNEasyViewModel.swift; path = Shared/Item/QuickNEasyViewModel.swift; sourceTree = SOURCE_ROOT; };
 		0407A7E7272D78C600F0F209 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
-		0407A7EA272D886900F0F209 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = Shared/Utils/Constants/ImageLoader.swift; sourceTree = SOURCE_ROOT; };
 		048244FC271C3B9900E27160 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		048244FF271C3BD100E27160 /* QuickAndEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAndEasy.swift; sourceTree = "<group>"; };
 		04824502271C3C4100E27160 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
@@ -101,6 +99,8 @@
 		049BE67A271C2B0B0008F8ED /* FoodZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049BE680271C2B0B0008F8ED /* FoodZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049BE682271C2B0B0008F8ED /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		04D8E4862737B46800F2524A /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickNEasyViewModel.swift; sourceTree = "<group>"; };
 		04EFCFDA27205CDB009795CC /* QuickNEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNEasy.swift; sourceTree = "<group>"; };
 		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
 		FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodZaps.xcdatamodel; sourceTree = "<group>"; };
@@ -139,15 +139,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		048244F7271C381B00E27160 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0407A7E4272D781800F0F209 /* QuickNEasyViewModel.swift */,
-				0407A7EA272D886900F0F209 /* ImageLoader.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		048244F8271C382400E27160 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +205,7 @@
 				048244FA271C383200E27160 /* Item */,
 				048244F9271C382B00E27160 /* Model */,
 				048244F8271C382400E27160 /* View */,
-				048244F7271C381B00E27160 /* ViewModel */,
+				04D8E4852737B41F00F2524A /* ViewModel */,
 				049BE672271C2B080008F8ED /* FoodZapApp.swift */,
 				049BE674271C2B080008F8ED /* Persistence.swift */,
 				0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */,
@@ -239,6 +230,15 @@
 				049BE682271C2B0B0008F8ED /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		04D8E4852737B41F00F2524A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04D8E4862737B46800F2524A /* ImageLoader.swift */,
+				04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FD404FF027230439004754EA /* RecipeList */ = {
@@ -423,6 +423,7 @@
 			files = (
 				04824503271C3C4100E27160 /* SearchButton.swift in Sources */,
 				FDF235AE2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,
+				04D8E4882737B46800F2524A /* ImageLoader.swift in Sources */,
 				FDF235B42726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				FDF235BF2726F3F000EAE8D3 /* Colors.swift in Sources */,
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
@@ -431,6 +432,7 @@
 				FDF235C42726F40600EAE8D3 /* ChipButton.swift in Sources */,
 				048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */,
 				0407A7DF272D5BF400F0F209 /* GlassButton.swift in Sources */,
+				04D8E48A2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */,
 				04824506271C3C8E00E27160 /* HorizontalScrollCards.swift in Sources */,
 				04824509271C3D3100E27160 /* BlurView.swift in Sources */,
 				FDF235C62726F40600EAE8D3 /* Filters.swift in Sources */,
@@ -444,9 +446,7 @@
 				049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				FDF235B12726F39C00EAE8D3 /* DetailView.swift in Sources */,
 				0482450F271C411800E27160 /* Gradient.swift in Sources */,
-				0407A7EB272D886900F0F209 /* ImageLoader.swift in Sources */,
 				0482450C271C3EAB00E27160 /* DummyData.swift in Sources */,
-				0407A7E5272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */,
 				0407A7E8272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				FD404FF2272304BE004754EA /* ListRow.swift in Sources */,
 				FDF235B72726F3DA00EAE8D3 /* Tag.swift in Sources */,
@@ -460,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04824504271C3C4100E27160 /* SearchButton.swift in Sources */,
-				0407A7E6272D781800F0F209 /* QuickNEasyViewModel.swift in Sources */,
 				0482452E271C4A5A00E27160 /* Cards.swift in Sources */,
 				049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */,
 				048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */,
@@ -469,12 +468,12 @@
 				0482450A271C3D3100E27160 /* BlurView.swift in Sources */,
 				04824501271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
 				0407A7E9272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
-				0407A7EC272D886900F0F209 /* ImageLoader.swift in Sources */,
 				FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
 				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */,
+				04D8E4892737B46800F2524A /* ImageLoader.swift in Sources */,
 				049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				FD57EF942737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				FDF235C52726F40600EAE8D3 /* ChipButton.swift in Sources */,
@@ -487,6 +486,7 @@
 				FDF235B52726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				FDF235B82726F3DA00EAE8D3 /* Tag.swift in Sources */,
 				049BE688271C2B0B0008F8ED /* HomeView.swift in Sources */,
+				04D8E48B2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */,
 				FDF235AF2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
