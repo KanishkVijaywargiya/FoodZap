@@ -76,6 +76,8 @@
 		FDF235C72726F40600EAE8D3 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235C32726F40600EAE8D3 /* Filters.swift */; };
 		FDF235CB2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235CA2726F7EC00EAE8D3 /* CuisineLabel.swift */; };
 		FDF235CC2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235CA2726F7EC00EAE8D3 /* CuisineLabel.swift */; };
+		FDFA67AE2737FA9400844B4D /* Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA67AD2737FA9400844B4D /* Snapshots.swift */; };
+		FDFA67AF2737FA9400844B4D /* Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA67AD2737FA9400844B4D /* Snapshots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,7 @@
 		FDF235C22726F40600EAE8D3 /* ChipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipButton.swift; sourceTree = "<group>"; };
 		FDF235C32726F40600EAE8D3 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		FDF235CA2726F7EC00EAE8D3 /* CuisineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineLabel.swift; sourceTree = "<group>"; };
+		FDFA67AD2737FA9400844B4D /* Snapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +265,7 @@
 			children = (
 				FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */,
 				FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */,
+				FDFA67AD2737FA9400844B4D /* Snapshots.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +438,7 @@
 				0407A7DF272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04D8E48A2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */,
 				04824506271C3C8E00E27160 /* HorizontalScrollCards.swift in Sources */,
+				FDFA67AE2737FA9400844B4D /* Snapshots.swift in Sources */,
 				04824509271C3D3100E27160 /* BlurView.swift in Sources */,
 				FDF235C62726F40600EAE8D3 /* Filters.swift in Sources */,
 				04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
@@ -488,6 +493,7 @@
 				049BE688271C2B0B0008F8ED /* HomeView.swift in Sources */,
 				04D8E48B2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */,
 				FDF235AF2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,
+				FDFA67AF2737FA9400844B4D /* Snapshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +621,7 @@
 				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,6 +652,7 @@
 				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
