@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HorizontalScrollCards: View {
     @StateObject var imageLoader = ImageLoader()
-    
+     
 //    @State private var image: UIImage?
     var gradient1: [Color] = [
         Color(#colorLiteral(red: 0.007843137255, green: 0.1058823529, blue: 0.4745098039, alpha: 1)), Color(#colorLiteral(red: 0.007843137255, green: 0.1058823529, blue: 0.4745098039, alpha: 1)), Color(#colorLiteral(red: 0.4156862745, green: 0.1882352941, blue: 0.5764705882, alpha: 1))
@@ -43,9 +43,6 @@ struct HorizontalScrollCards: View {
             .onAppear {
                 imageLoader.fetch(for: dummyData.backgroundImg)
             }
-            
-            
-            
             
             //            if(image != UIImage()) {
             //                Image(uiImage: image ?? UIImage())

@@ -8,3 +8,4 @@
 import Firebase
 
 let QUICK_AND_EASY = Firestore.firestore().collection("quickneasy")
+let RECIPE_LIST = Firestore.firestore().collection("recipelist")
