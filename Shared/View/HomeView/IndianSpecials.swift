@@ -8,28 +8,33 @@
 import SwiftUI
 
 struct IndianSpecials: View {
+    var recipeData: [QuickNEasy]
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Indian Specials")
+            Text("World Cuisine's")
                 .font(.title).bold()
                 .padding(.horizontal, 20)
+                .padding(.vertical, 20)
             
-            LazyVStack {
-                ForEach(DummyData.dummyData) { item in
-                    VStack(alignment: .leading) {
-                        NavigationLink(destination: Text("Destination")) {
-                            BigCards(dummyData: item)
-                                .frame(height: 350)
-                        }
+            ForEach(recipeData) { item in
+                VStack(alignment: .leading) {
+                    NavigationLink(destination: DetailView(dishesData: item)) {
+                        BigCards(dummyData: item)
+                            .frame(height: 350)
                     }
                 }
             }
+        }
+        .onAppear {
+            URLCache.shared.memoryCapacity = 1024 * 1024 * 512
         }
     }
 }
 
 struct IndianSpecials_Previews: PreviewProvider {
+    static var recipe = QuickNEasy.quickNEasy
     static var previews: some View {
-        IndianSpecials()
+        IndianSpecials(recipeData: recipe)
     }
 }

@@ -34,7 +34,7 @@ struct QuickNEasy: Identifiable, Codable {
 extension QuickNEasy {
     static var quickNEasy: [QuickNEasy] {
         [
-            QuickNEasy(backgroundImg: "", calories: "247kcal", carbohydrates: "25g", category: "Veg", course: "Punjabi", cusine: "Main Course", descriptions: "Punjabi Kadhi sans pakoda is made with chickpea flour, yogurt, and spices. This slightly tangy and delicious dish is also known as Kadhi Chawal.", difficultyLevel: "Modarate", fat: "13g", healthPreference: "Gluten free", procedureVideo: "", protein: "10g", time: "45 mins", title: "Punjabi Kadhi", ingridients: [
+            QuickNEasy(backgroundImg: "", calories: "247kcal", carbohydrates: "25g", category: "Veg", course: "Main Course", cusine: "Punjabi", descriptions: "Punjabi Kadhi sans pakoda is made with chickpea flour, yogurt, and spices. This slightly tangy and delicious dish is also known as Kadhi Chawal.", difficultyLevel: "Modarate", fat: "13g", healthPreference: "Gluten free", procedureVideo: "", protein: "10g", time: "45 mins", title: "Punjabi Kadhi", ingridients: [
                 "For chickpea flour (besan) mixture",
                 "1 cup chickpea flour/besan",
                 "2 cups yogurt",
