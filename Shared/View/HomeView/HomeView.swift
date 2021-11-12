@@ -9,8 +9,8 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
-    @ObservedObject var quickNEasyVM = QuickNEasyViewModel()
-    @ObservedObject var RecipeListVM = RecipeListViewModel()
+    @StateObject var quickNEasyVM = QuickNEasyViewModel()
+    @StateObject var RecipeListVM = RecipeListViewModel()
     
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(entity: QuickEasy.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \QuickEasy.title, ascending: true)]) var results: FetchedResults<QuickEasy>
@@ -56,7 +56,6 @@ struct HomeView: View {
         }
         .onAppear {
             quickNEasyVM.fetchQuickNEasyData(context: viewContext)
-            RecipeListVM.fetchRecipeList()
         }
     }
 }
