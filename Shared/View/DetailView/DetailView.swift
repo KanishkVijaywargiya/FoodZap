@@ -351,6 +351,7 @@ struct DetailView: View {
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     func shareBtn() {
