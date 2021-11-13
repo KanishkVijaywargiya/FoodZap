@@ -30,14 +30,22 @@ struct HorizontalScrollCards: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 } else if imageLoader.errorMessage != nil {
-                    Text(imageLoader.errorMessage!)
+//                    Text(imageLoader.errorMessage!)
+                    Image("swiftuihandbook")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
                 } else {
                     ZStack {
-                        Color.randomColor()
+//                        Color.randomColor()
+                        Image("swiftuihandbook")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .redacted(reason: .placeholder)
                         ProgressView()
                             .scaleEffect(2, anchor: .center)
                             .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
                     }
+                    .frame(height: 200)
                 }
             }
             .onAppear {
