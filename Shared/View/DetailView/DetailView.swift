@@ -270,8 +270,8 @@ struct DetailView: View {
                                     ForEach(dishesData.ingridients, id: \.self) { item in
                                         HStack(alignment: .top) {
                                             Circle()
-                                                .frame(width: 15, height: 15)
-                                                .padding(.top, 4)
+                                                .frame(width: 8, height: 8)
+                                                .padding(.top, 6)
                                             
                                             Text(item).font(.system(size: 18, weight: .medium))
                                         }
@@ -293,8 +293,8 @@ struct DetailView: View {
                                     ForEach(dishesData.procedure, id: \.self) { item in
                                         HStack(alignment: .top) {
                                             Circle()
-                                                .frame(width: 15, height: 15)
-                                                .padding(.top, 4)
+                                                .frame(width: 8, height: 8)
+                                                .padding(.top, 6)
                                             
                                             Text(item).font(.system(size: 18, weight: .medium))
                                         }
