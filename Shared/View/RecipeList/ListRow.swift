@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ListRow: View {
+    @StateObject var imageLoader = ImageLoader()
+    var fullListItem: QuickNEasy
+    
     var body: some View {
         VStack {
             HStack(alignment: .top) {
@@ -17,26 +20,49 @@ struct ListRow: View {
                         .frame(width: 70, height: 70)
                         .cornerRadius(8)
                     
-                    Image("mengto")
-                        .resizable().aspectRatio(contentMode: .fill)
-                        .frame(width: 66, height: 66, alignment: .center)
-                        .mask(Rectangle())
-                        .cornerRadius(8)
+                    Group{
+                        if imageLoader.image != nil {
+                            Image(uiImage: imageLoader.image!)
+                                .resizable().aspectRatio(contentMode: .fill)
+                                .frame(width: 66, height: 66, alignment: .center)
+                                .mask(Rectangle())
+                                .cornerRadius(8)
+                        } else if imageLoader.errorMessage != nil {
+                            Image("swiftuihandbook")
+                                .resizable().aspectRatio(contentMode: .fill)
+                                .frame(width: 66, height: 66, alignment: .center)
+                                .mask(Rectangle())
+                                .cornerRadius(8)
+                        } else {
+                            ZStack {
+                                Color.randomColor()
+                                    .frame(width: 66, height: 66, alignment: .center)
+                                    .mask(Rectangle())
+                                    .cornerRadius(8)
+                                ProgressView()
+                                    .scaleEffect(1, anchor: .center)
+                                    .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                            }
+                        }
+                    }
+                    .onAppear {
+                        imageLoader.fetch(for: fullListItem.backgroundImg)
+                    }
                 }
                 .shadow(color: .black.opacity(0.3), radius: 20, x: 0, y: 20)
                 .padding(.top, 2)
                 
                 VStack(alignment: .leading) {
-                    Text("Title Title Title Title title Title Title Title Title title T")
+                    Text(fullListItem.title)
                         .font(.title)
                         .bold()
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                         
-                    Text("9hr 45min")
+                    Text(fullListItem.time)
                         .font(.subheadline)
                     
-                    Text("Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description")
+                    Text(fullListItem.descriptions)
                         .font(.footnote)
                         .lineLimit(4)
                         .multilineTextAlignment(.leading)
@@ -58,6 +84,6 @@ struct ListRow: View {
 
 struct ListRow_Previews: PreviewProvider {
     static var previews: some View {
-        ListRow()
+        ListRow(fullListItem: QuickNEasy.quickNEasy[0])
     }
 }

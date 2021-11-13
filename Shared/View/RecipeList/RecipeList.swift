@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeList: View {
     @Environment(\.presentationMode) var presentationMode
+    @StateObject var fullListVM = FullListViewModel()
     
     var body: some View {
         ZStack {
@@ -31,6 +32,7 @@ struct RecipeList: View {
                     Spacer()
                     
                     SearchButton(iconName: "magnifyingglass")
+                    
                     if #available(iOS 15.0, *) {
                         Image(systemName: "line.3.horizontal.decrease.circle")
                             .font(.system(size: 32))
@@ -52,10 +54,9 @@ struct RecipeList: View {
                 .padding(.horizontal, 8)
                 
                 ScrollView {
-                    ForEach(0 ..< 20) {_ in
-//                        NavigationLink(destination: DetailView()) {
-                        NavigationLink(destination: Text("Search")) {
-                            ListRow()
+                    ForEach(fullListVM.fullList) { item in
+                        NavigationLink(destination: DetailView(dishesData: item)) {
+                            ListRow(fullListItem: item)
                                 .padding(.bottom, 8)
                         }
                     }
