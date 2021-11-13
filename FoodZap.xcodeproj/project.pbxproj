@@ -112,6 +112,7 @@
 		04EFCFDA27205CDB009795CC /* QuickNEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNEasy.swift; sourceTree = "<group>"; };
 		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
 		FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodZaps.xcdatamodel; sourceTree = "<group>"; };
+		FD39C26D2740012A00BF25CF /* FoodZap--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FoodZap--iOS--Info.plist"; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FD404FF3272304D0004754EA /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExt.swift; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 		049BE66A271C2B070008F8ED = {
 			isa = PBXGroup;
 			children = (
+				FD39C26D2740012A00BF25CF /* FoodZap--iOS--Info.plist */,
 				049BE66F271C2B070008F8ED /* Shared */,
 				049BE681271C2B0B0008F8ED /* macOS */,
 				049BE67B271C2B0B0008F8ED /* Products */,
@@ -633,12 +635,14 @@
 				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) wants to save image to your gallery.";
+				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FoodZap wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -664,12 +668,14 @@
 				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "$(PRODUCT_NAME) wants to save image to your gallery.";
+				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FoodZap wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
