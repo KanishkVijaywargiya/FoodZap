@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
-    @StateObject var quickNEasyVM = QuickNEasyViewModel()
+    @ObservedObject var quickNEasyVM = QuickNEasyViewModel()
     @StateObject var RecipeListVM = RecipeListViewModel()
     
     @Environment(\.managedObjectContext) var viewContext
