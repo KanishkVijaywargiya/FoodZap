@@ -11,7 +11,7 @@ import Firebase
 @main
 struct FoodZapApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     init() {
         FirebaseApp.configure()
     }
@@ -19,9 +19,12 @@ struct FoodZapApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                    .foregroundColor(.black)
+                VStack {
+                    HomeView()
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                        .foregroundColor(.black)
+                }
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

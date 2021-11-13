@@ -25,4 +25,9 @@ final class FullListViewModel: ObservableObject {
             }
         }
     }
+    
+    func filteredFood(_ query: String) -> [QuickNEasy] {
+        let lowerCasedQuery = query.lowercased()
+        return fullList.filter({ $0.title.lowercased().contains(lowerCasedQuery) || $0.cusine.lowercased().contains(lowerCasedQuery) || $0.course.lowercased().contains(lowerCasedQuery) || $0.category.lowercased().contains(lowerCasedQuery) || $0.healthPreference.lowercased().contains(lowerCasedQuery)  })
+    }
 }
