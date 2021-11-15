@@ -25,14 +25,15 @@ final class RecipeListViewModel: ObservableObject {
                 let koreanFoods = recipeArr.filter({ $0.cusine == "Korean"}).shuffled().first
                 let italianFoods = recipeArr.filter({ $0.cusine == "Italian"}).shuffled().first
                 let chineseFoods = recipeArr.filter({ $0.cusine == "Chinese"}).shuffled().first
-                //                let indianFoods = recipeArr.filter({ $0.cusine == "Indian"}).shuffled().first
+                let indianFoods = recipeArr.filter({ $0.cusine == "Indian"}).shuffled().first
                 
-                if ((koreanFoods != nil)
-                    //                    && (italianFoods != nil) && (chineseFoods != nil)
+                if ((koreanFoods != nil) && (italianFoods != nil) && (indianFoods != nil)
+                    //                    && (chineseFoods != nil)
                 ){
-                    self.recipeList.insert(koreanFoods!, at: 0)
-                    //                    self.recipeList.insert(italianFoods!, at: 1)
-                    //                    self.recipeList.insert(chineseFoods!, at: 2)
+                    self.recipeList.insert(indianFoods!, at: 0)
+                    self.recipeList.insert(italianFoods!, at: 1)
+                    self.recipeList.insert(koreanFoods!, at: 2)
+                    //                    self.recipeList.insert(chineseFoods!, at: 3)
                 }
             }
         }
