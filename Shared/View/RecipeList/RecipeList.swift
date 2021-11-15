@@ -12,6 +12,7 @@ struct RecipeList: View {
     @StateObject var fullListVM = FullListViewModel()
     @State var searchingFor = ""
     @State var changeLayout = false
+    @State private var openDetail = false
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -19,68 +20,32 @@ struct RecipeList: View {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
             
             VStack {
-                //                HStack(spacing: 0) {
-                //                    GlassButton(iconName: "chevron.backward")
-                //                        .onTapGesture {
-                //                            presentationMode.wrappedValue.dismiss()
-                //                        }
-                //
-                //                    VStack {}.padding(.horizontal, 20)
-                //
-                //                    Spacer()
-                //
-                //                    Text("Recipes")
-                //                        .font(.largeTitle).bold()
-                //
-                //                    Spacer()
-                //
-                //                    SearchButton(iconName: "magnifyingglass")
-                //
-                //                    if #available(iOS 15.0, *) {
-                //                        Image(systemName: "line.3.horizontal.decrease.circle")
-                //                            .font(.system(size: 32))
-                //                            .padding(.leading, 8)
-                //                            .symbolVariant(.circle)
-                //                            .symbolRenderingMode(.palette)
-                //                            .foregroundStyle(
-                //                                Color.black.opacity(0.5)
-                //                            )
-                //                    } else {
-                //                        // Fallback on earlier versions
-                //                        Image(systemName: "line.3.horizontal.decrease.circle")
-                //                            .renderingMode(.template)
-                //                            .font(.system(size: 32))
-                //                            .foregroundColor(.primary)
-                //                            .padding(.leading, 8)
-                //                    }
-                //                }
-                //                .padding(.horizontal, 8)
-                
-                
-                VStack {
-                    if fullListVM.fullList.isEmpty {
-                        if changeLayout {
-                            ChangeLayoutView()
-                        } else {
-                            PlaceholderFullList()
-                        }
+                if fullListVM.fullList.isEmpty {
+                    if changeLayout {
+                        ChangeLayoutView()
                     } else {
-                        VStack {
-                            if results.isEmpty {
-                                EmptyResultView()
-                            } else {
-                                ScrollView {
-                                    ForEach(results) { item in
-                                        NavigationLink(destination: DetailView(dishesData: item)) {
-                                            ListRow(fullListItem: item)
-                                                .padding(.bottom, 8)
+                        PlaceholderFullList()
+                    }
+                } else {
+                    VStack {
+                        if results.isEmpty {
+                            EmptyResultView()
+                        } else {
+                            ScrollView {
+                                ForEach(results) { item in
+                                    ListRow(fullListItem: item)
+                                        .padding(.bottom, 8)
+                                        .onTapGesture {
+                                            self.openDetail.toggle()
                                         }
-                                    }
+                                        .fullScreenCover(isPresented: $openDetail) {
+                                            DetailView(dishesData: item)
+                                        }
                                 }
                             }
                         }
-                        .searchable(text: $searchingFor)
                     }
+                    .searchable(text: $searchingFor)
                 }
             }
             .foregroundColor(.black)
