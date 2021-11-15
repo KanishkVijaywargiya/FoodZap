@@ -18,10 +18,15 @@ extension View {
         view?.backgroundColor = .clear
         
         let renderer = UIGraphicsImageRenderer(size: targetSize)
-
+        
         return renderer.image { _ in
             view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
         }
+    }
+    
+    // corner radius
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
 }
 

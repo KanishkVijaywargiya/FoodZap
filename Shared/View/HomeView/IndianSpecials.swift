@@ -22,6 +22,7 @@ struct IndianSpecials: View {
                     NavigationLink(destination: DetailView(dishesData: item)) {
                         BigCards(dummyData: item)
                             .frame(height: 350)
+                            .padding(.bottom, 20)
                     }
                 }
             }

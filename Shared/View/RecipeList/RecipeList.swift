@@ -10,13 +10,9 @@ import SwiftUI
 struct RecipeList: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var fullListVM = FullListViewModel()
-    
     @State var searchingFor = ""
     @State var changeLayout = false
-    @State private var hasTitle = true
-    
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
-    
     
     var body: some View {
         ZStack {
@@ -75,14 +71,7 @@ struct RecipeList: View {
                             } else {
                                 ScrollView {
                                     ForEach(results) { item in
-                                        NavigationLink(destination: DetailView(dishesData: item)
-                                                        .onAppear {
-                                            self.hasTitle = false
-                                        }
-                                                        .onDisappear {
-                                            self.hasTitle = true
-                                        }
-                                        ) {
+                                        NavigationLink(destination: DetailView(dishesData: item)) {
                                             ListRow(fullListItem: item)
                                                 .padding(.bottom, 8)
                                         }
@@ -96,7 +85,7 @@ struct RecipeList: View {
             }
             .foregroundColor(.black)
         }
-        .navigationBarTitle(self.hasTitle ? Text("Recipes") : Text(""))
+        .navigationBarTitle("Recipes")
         .navigationBarItems(trailing:
                                 Image(systemName: "line.3.horizontal.decrease.circle")
                                 .font(.system(size: 20))
@@ -104,7 +93,7 @@ struct RecipeList: View {
                                 .symbolVariant(.circle)
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(
-                                    Color.black.opacity(0.5)
+                                    Color(hex: Colors.accentColors)
                                 )
         )
         .onReceive(timer) { input in

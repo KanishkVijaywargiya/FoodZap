@@ -25,6 +25,7 @@ struct FoodZapApp: App {
                         .foregroundColor(.black)
                 }
                 .navigationBarTitleDisplayMode(.inline)
+                .accentColor(Color(Colors.accentColors))
             }
         }
     }
