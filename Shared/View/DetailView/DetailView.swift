@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var imageLoader = ImageLoader()
     @State private var isSharingSheetShowing: Bool = false
-    
     var dishesData: QuickNEasy
     
     var body: some View {
@@ -25,26 +23,17 @@ struct DetailView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                     } else if imageLoader.errorMessage != nil {
-                        //              Image("swiftuihandbook")
-                        //                .resizable().aspectRatio(contentMode: .fill)
-                        //                .frame(width: 66, height: 66, alignment: .center)
-                        //                .mask(Rectangle())
-                        //                .cornerRadius(8)
                         Rectangle()
                             .foregroundColor(.gray.opacity(0.2))
                             .frame(width: UIScreen.main.bounds.width, height: 300)
                     } else {
-                        //              ZStack {
-                        //                Color.randomColor()
-                        //                  .frame(width: 66, height: 66, alignment: .center)
-                        //                  .mask(Rectangle())
-                        //                  .cornerRadius(8)
-                        //                ProgressView()
-                        //                  .scaleEffect(1, anchor: .center)
-                        //                  .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                        //              }
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.gray.opacity(0.2))
+                                .frame(width: UIScreen.main.bounds.width, height: 300)
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
+                        }
                     }
                 }
                 .frame(width: UIScreen.main.bounds.width, height: 300)
@@ -58,23 +47,6 @@ struct DetailView: View {
                     imageLoader.fetch(for: dishesData.backgroundImg)
                 }
                 
-                //                    Image(uiImage: image)
-                //                        .resizable()
-                //                        .aspectRatio(contentMode: .fill)
-                //                        .frame(width: UIScreen.main.bounds.width, height: 300)
-                //                        .cornerRadius(20)
-                //                        .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
-                //                        .overlay(
-                //                            FavButton()
-                //                                .position(x: UIScreen.main.bounds.width - 35, y: 300)
-                //                        )
-                //                        .onReceive(imageLoader.$image) { image in
-                //                            self.image = image
-                //                        }
-                //                        .onAppear {
-                //                            imageLoader.loadImage(for: dishesData.backgroundImg)
-                //                        }
-                
                 // food title, clock icon, total time
                 VStack(alignment: .leading) {
                     HStack(alignment: .top, spacing: 0) {
@@ -82,30 +54,22 @@ struct DetailView: View {
                             .font(.largeTitle)
                             .bold()
                             .lineLimit(2)
-                        
                         Spacer()
-                        
                         HStack(alignment: .center, spacing: 0) {
                             Image(systemName: "clock")
                                 .font(.system(size: 22, weight: .bold))
                                 .padding(.trailing, 4)
-                            
                             Text(dishesData.time).font(.system(size: 18, weight: .semibold))
                         }
                         .padding(.top, 8)
                     }
                     .padding(.top, 30)
                     .padding(.horizontal, 16)
-                    
                     // category name
                     Text(dishesData.category)
                         .font(.callout)
                         .padding(.horizontal, 16)
-                    
-                    CategoryLogo(shade: dishesData.category == "Vegetarian" ? Colors.vegCol : Colors.nonVegCol)
-                        .padding(.horizontal, 16)
-                    
-                    CuisineLabel(colorBg: Colors.cusineLabel)
+                    CuisineLabel(colorBg: "#0A79DF")
                         .position(x: UIScreen.main.bounds.width + 48, y: 19)
                         .offset(x: -14, y: -10)
                         .overlay(
@@ -113,9 +77,7 @@ struct DetailView: View {
                                 .foregroundColor(Color.white)
                                 .font(.system(size: 18, weight: .bold))
                                 .offset(x: 125, y: -18)
-                            
                         )
-                    
                     // protein, carbohydrates, calories, fats stats
                     VStack(alignment: .leading) {
                         Rectangle()
@@ -123,7 +85,6 @@ struct DetailView: View {
                             .foregroundColor(.black.opacity(0.3))
                             .padding(.horizontal, 16)
                             .padding(.top, 30)
-                        
                         // protein, carbs, cals, fats
                         if (!dishesData.protein.isEmpty && !dishesData.carbohydrates.isEmpty && !dishesData.calories.isEmpty && !dishesData.fat.isEmpty) {
                             HStack {
@@ -136,9 +97,7 @@ struct DetailView: View {
                                             .foregroundColor(.green)
                                     }
                                 }
-                                
                                 Spacer()
-                                
                                 if (!dishesData.carbohydrates.isEmpty) {
                                     VStack {
                                         Text("Carbs")
@@ -148,9 +107,7 @@ struct DetailView: View {
                                             .foregroundColor(.green)
                                     }
                                 }
-                                
                                 Spacer()
-                                
                                 if (!dishesData.calories.isEmpty) {
                                     VStack {
                                         Text("Cals")
@@ -160,9 +117,7 @@ struct DetailView: View {
                                             .foregroundColor(.green)
                                     }
                                 }
-                                
                                 Spacer()
-                                
                                 if (!dishesData.fat.isEmpty) {
                                     VStack {
                                         Text("Fats")
@@ -175,13 +130,11 @@ struct DetailView: View {
                             }
                             .padding([.horizontal, .vertical], 14)
                             .padding(.horizontal, 16)
-                            
                             Rectangle()
                                 .frame(height: 1)
                                 .foregroundColor(.black.opacity(0.3))
                                 .padding(.horizontal, 16)
                         }
-                        
                         // course, health, difficulty stats
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
@@ -204,9 +157,7 @@ struct DetailView: View {
                                     .cornerRadius(50)
                                     .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
                                 }
-                                
                                 Spacer()
-                                
                                 if (!dishesData.healthPreference.isEmpty) {
                                     VStack {
                                         Text("Health")
@@ -226,9 +177,7 @@ struct DetailView: View {
                                     .cornerRadius(50)
                                     .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
                                 }
-                                
                                 Spacer()
-                                
                                 if (!dishesData.difficultyLevel.isEmpty) {
                                     VStack {
                                         Text("Difficulty")
@@ -251,73 +200,60 @@ struct DetailView: View {
                             }
                             .padding([.horizontal, .vertical], 14)
                         }
-                        
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black.opacity(0.3))
                             .padding(.horizontal, 16)
-                        
                         // overview, ingridients, procedures
                         Group {
                             // overview
                             VStack(alignment: .leading, spacing: 12) {
                                 Text("Overview").font(.largeTitle.bold())
-                                
                                 Text(dishesData.descriptions)
                                     .font(.system(size: 18, weight: .medium))
-                                
                                 Rectangle()
                                     .frame(height: 1)
                                     .foregroundColor(.black.opacity(0.3))
                                     .padding(.top)
                             }
                             .padding(.horizontal, 16)
-                            
                             // ingridients
                             VStack(alignment: .leading, spacing: 12) {
                                 Text("Ingridients")
                                     .font(.largeTitle.bold())
-                                
                                 ForEach(dishesData.ingridients, id: \.self) { item in
                                     HStack(alignment: .top) {
                                         Circle()
                                             .frame(width: 8, height: 8)
                                             .padding(.top, 6)
-                                        
                                         Text(item).font(.system(size: 18, weight: .medium))
                                     }
                                     .padding(.horizontal, 16)
                                 }
-                                
                                 Rectangle()
                                     .frame(height: 1)
                                     .foregroundColor(.black.opacity(0.3))
                                     .padding(.top)
                             }
                             .padding(.horizontal, 16)
-                            
                             // procedures
                             VStack(alignment: .leading, spacing: 12) {
                                 Text("Procedures")
                                     .font(.largeTitle.bold())
-                                
                                 ForEach(dishesData.procedure, id: \.self) { item in
                                     HStack(alignment: .top) {
                                         Circle()
                                             .frame(width: 8, height: 8)
                                             .padding(.top, 6)
-                                        
                                         Text(item).font(.system(size: 18, weight: .medium))
                                     }
                                     .padding(.horizontal, 16)
                                 }
-                                
                                 // ring circle design
                                 ZStack {
                                     Rectangle()
                                         .frame(height: 1)
                                         .foregroundColor(.black.opacity(0.3))
-                                    
                                     Image(systemName: "circle.fill")
                                         .frame(width: 30, height: 30)
                                         .background(Color.white)
@@ -339,21 +275,30 @@ struct DetailView: View {
                 }
                 .foregroundColor(.black)
             }
+            
+            // back & share button
+            HStack(alignment: .top) {
+                GlassButton(iconName: "chevron.backward")
+                    .padding(.leading, 8)
+                    .padding(.top, 45)
+                    .onTapGesture {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                
+                Spacer()
+                
+                GlassButton(iconName: "square.and.arrow.up")
+                    .padding(.trailing, 8)
+                    .padding(.top, 45)
+                    .onTapGesture {
+                        shareBtn()
+                    }
+            }
         }
-        .navigationBarItems(
-            trailing:
-                Image(systemName: "square.and.arrow.up")
-                .font(.system(size: 20))
-                .padding(.leading, 8)
-                .symbolVariant(.circle)
-                .symbolRenderingMode(.palette)
-                .foregroundStyle(
-                    Color(hex: "#3498DB")
-                )
-                .onTapGesture {
-                    shareBtn()
-                }
-        )
+        .ignoresSafeArea()
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .background(Color.yellow)
     }
     
     func shareBtn() {
