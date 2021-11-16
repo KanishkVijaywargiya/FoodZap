@@ -69,6 +69,10 @@ struct DetailView: View {
                     Text(dishesData.category)
                         .font(.callout)
                         .padding(.horizontal, 16)
+                    
+                    CategoryLogo(shade: dishesData.category == "Vegetarian" ? Colors.vegCol : Colors.nonVegCol)
+                        .padding(.horizontal, 16)
+                    
                     CuisineLabel(colorBg: "#0A79DF")
                         .position(x: UIScreen.main.bounds.width + 48, y: 19)
                         .offset(x: -14, y: -10)
