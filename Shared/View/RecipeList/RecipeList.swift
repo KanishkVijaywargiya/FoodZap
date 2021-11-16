@@ -13,6 +13,10 @@ struct RecipeList: View {
     @State var searchingFor = ""
     @State var changeLayout = false
     @State private var openDetail = false
+    
+    @State var fullSheetData: QuickNEasy? = nil
+    @State private var filterSheet = false
+    
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -37,9 +41,10 @@ struct RecipeList: View {
                                         .padding(.bottom, 8)
                                         .onTapGesture {
                                             self.openDetail.toggle()
+                                            self.fullSheetData = item
                                         }
-                                        .fullScreenCover(isPresented: $openDetail) {
-                                            DetailView(dishesData: item)
+                                        .fullScreenCover(item: $fullSheetData) {items in
+                                            DetailView(dishesData: items)
                                         }
                                 }
                             }
@@ -51,18 +56,25 @@ struct RecipeList: View {
             .foregroundColor(.black)
         }
         .navigationBarTitle("Recipes")
-        .navigationBarItems(trailing:
-                                Image(systemName: "line.3.horizontal.decrease.circle")
-                                .font(.system(size: 20))
-                                .padding(.leading, 8)
-                                .symbolVariant(.circle)
-                                .symbolRenderingMode(.palette)
-                                .foregroundStyle(
-                                    Color(hex: Colors.accentColors)
-                                )
+        .navigationBarItems(
+            trailing:
+                Image(systemName: "line.3.horizontal.decrease.circle")
+                .font(.system(size: 20))
+                .padding(.leading, 8)
+                .symbolVariant(.circle)
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(
+                    Color(hex: Colors.accentColors)
+                )
+                .onTapGesture {
+                    self.filterSheet.toggle()
+                }
         )
         .onReceive(timer) { input in
             changeLayout = true
+        }
+        .sheet(isPresented: $filterSheet) {
+            Filters()
         }
     }
     
