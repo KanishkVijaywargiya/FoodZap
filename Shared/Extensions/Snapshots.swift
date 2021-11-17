@@ -69,3 +69,10 @@ extension UIApplication {
         return viewController
     }
 }
+
+// removing opacity animation in navigationLink ( seeMoreButton )
+struct FlatLinkStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+    }
+}

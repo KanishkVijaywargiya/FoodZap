@@ -41,14 +41,14 @@ struct HomeView: View {
                     
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton()
-                    }
+                    }.buttonStyle(FlatLinkStyle())
                     
                     // Indian specials
                     IndianSpecials(recipeData: RecipeListVM.recipeList)    
                     
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton().padding(.top, 26)
-                    }
+                    }.buttonStyle(FlatLinkStyle())
                     Spacer()
                 }
             }
