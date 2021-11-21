@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Filters: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     @State var tags: [Tag] = Tag.timeTags
     @State var isSelectedTime: String = ""
     
@@ -28,8 +30,26 @@ struct Filters: View {
             Color(hex: Colors.backgroundCol)
                 .ignoresSafeArea(.all)
             VStack {
-                Text(Texts.filter)
-                    .font(.largeTitle).bold()
+                HStack {
+                    Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                        Text("Cancel")
+                    }
+                    .padding(.leading, 16)
+                    .foregroundColor(.blue)
+                    
+                    Spacer()
+                    
+                    Text(Texts.filter)
+                        .font(.largeTitle).bold()
+                    
+                    Spacer()
+                    
+                    Button(action: {}) {
+                        Text("Done")
+                    }
+                    .padding(.trailing, 16)
+                    .foregroundColor(.blue)
+                }
                 
                 //            Text("Hello")
                 //                .onTapGesture {
@@ -40,7 +60,6 @@ struct Filters: View {
                 //                    isSelectedCat = ""
                 //                }
                 ScrollView {
-                    
                     VStack(alignment: .leading, spacing: 0) {
                         HStack {
                             Text(Texts.time)
@@ -119,6 +138,7 @@ struct Filters: View {
                 }
             }
         }
+        
     }
 }
 
