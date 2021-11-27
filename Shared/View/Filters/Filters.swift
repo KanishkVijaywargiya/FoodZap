@@ -11,19 +11,13 @@ struct Filters: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var tags: [Tag] = Tag.timeTags
-    @State var isSelectedTime: String = ""
+    @Binding var isSelectedTime: String
     
     @State var tags1: [Tag] = Tag.difficultTags
-    @State var isSelectedLevel: String = ""
+    @Binding var isSelectedLevel: String
     
     @State var tags2: [Tag] = Tag.cusinesTags
-    @State var isSelectedCusine: String = ""
-    
-    @State var tags3: [Tag] = Tag.healthTags
-    @State var isSelectedHealth: String = ""
-    
-    @State var tags4: [Tag] = Tag.categoriesTags
-    @State var isSelectedCat: String = ""
+    @Binding var isSelectedCusine: String
     
     var body: some View {
         ZStack {
@@ -31,7 +25,12 @@ struct Filters: View {
                 .ignoresSafeArea(.all)
             VStack {
                 HStack {
-                    Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                        isSelectedTime = ""
+                        isSelectedLevel = ""
+                        isSelectedCusine = ""
+                    }) {
                         Text("Cancel")
                     }
                     .padding(.leading, 16)
@@ -44,52 +43,46 @@ struct Filters: View {
                     
                     Spacer()
                     
-                    Button(action: {}) {
+                    Button(action: { presentationMode.wrappedValue.dismiss() }) {
                         Text("Done")
                     }
                     .padding(.trailing, 16)
                     .foregroundColor(.blue)
+//                    .disabled(
+//                        (isSelectedTime.isEmpty || isSelectedLevel.isEmpty || isSelectedCusine.isEmpty) ? true : false
+//                    )
                 }
-                
-                //            Text("Hello")
-                //                .onTapGesture {
-                //                    isSelectedTime = ""
-                //                    isSelectedLevel = ""
-                //                    isSelectedCusine = ""
-                //                    isSelectedHealth = ""
-                //                    isSelectedCat = ""
-                //                }
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack {
-                            Text(Texts.time)
-                                .font(.largeTitle).bold()
-                                .padding(.leading, 16)
-                            
-                            Spacer()
-                            Image(systemName: Texts.trashIcon)
-                                .padding(.trailing, 25)
-                                .onTapGesture {
-                                    isSelectedTime = ""
-                                }
-                        }
-                        ChipButton(tags: $tags, isSelectedValue: $isSelectedTime)
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack {
-                            Text(Texts.difficultyLevel)
-                                .font(.largeTitle).bold()
-                                .padding(.leading, 16)
-                            
-                            Spacer()
-                            Image(systemName: Texts.trashIcon)
-                                .padding(.trailing, 25)
-                                .onTapGesture {
-                                    isSelectedLevel = ""
-                                }
-                        }
-                        ChipButton(tags: $tags1, isSelectedValue: $isSelectedLevel)
-                    }
+//                    VStack(alignment: .leading, spacing: 0) {
+//                        HStack {
+//                            Text(Texts.time)
+//                                .font(.largeTitle).bold()
+//                                .padding(.leading, 16)
+//                            
+//                            Spacer()
+//                            Image(systemName: Texts.trashIcon)
+//                                .padding(.trailing, 25)
+//                                .onTapGesture {
+//                                    isSelectedTime = ""
+//                                }
+//                        }
+//                        ChipButton(tags: $tags, isSelectedValue: $isSelectedTime)
+//                    }
+//                    VStack(alignment: .leading, spacing: 0) {
+//                        HStack {
+//                            Text(Texts.difficultyLevel)
+//                                .font(.largeTitle).bold()
+//                                .padding(.leading, 16)
+//                            
+//                            Spacer()
+//                            Image(systemName: Texts.trashIcon)
+//                                .padding(.trailing, 25)
+//                                .onTapGesture {
+//                                    isSelectedLevel = ""
+//                                }
+//                        }
+//                        ChipButton(tags: $tags1, isSelectedValue: $isSelectedLevel)
+//                    }
                     VStack(alignment: .leading, spacing: 0) {
                         HStack {
                             Text(Texts.cusines)
@@ -105,36 +98,6 @@ struct Filters: View {
                         }
                         ChipButton(tags: $tags2, isSelectedValue: $isSelectedCusine)
                     }
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack {
-                            Text(Texts.healthPreference)
-                                .font(.largeTitle).bold()
-                                .padding(.leading, 16)
-                            
-                            Spacer()
-                            Image(systemName: Texts.trashIcon)
-                                .padding(.trailing, 25)
-                                .onTapGesture {
-                                    isSelectedHealth = ""
-                                }
-                        }
-                        ChipButton(tags: $tags3, isSelectedValue: $isSelectedHealth)
-                    }
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack {
-                            Text(Texts.categories)
-                                .font(.largeTitle).bold()
-                                .padding(.leading, 16)
-                            
-                            Spacer()
-                            Image(systemName: Texts.trashIcon)
-                                .padding(.trailing, 25)
-                                .onTapGesture {
-                                    isSelectedCat = ""
-                                }
-                        }
-                        ChipButton(tags: $tags4, isSelectedValue: $isSelectedCat)
-                    }
                 }
             }
         }
@@ -142,8 +105,8 @@ struct Filters: View {
     }
 }
 
-struct Filters_Previews: PreviewProvider {
-    static var previews: some View {
-        Filters()
-    }
-}
+//struct Filters_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Filters()
+//    }
+//}

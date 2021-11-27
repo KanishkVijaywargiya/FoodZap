@@ -17,6 +17,10 @@ struct RecipeList: View {
     @State var fullSheetData: QuickNEasy? = nil
     @State private var filterSheet = false
     
+    @State var isSelectedTime: String = ""
+    @State var isSelectedLevel: String = ""
+    @State var isSelectedCusine: String = ""
+    
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -44,7 +48,7 @@ struct RecipeList: View {
                                             self.fullSheetData = item
                                         }
                                         .fullScreenCover(item: $fullSheetData) {items in
-                                            DetailView(dishesData: items)
+                                            DetailView(dishesData: items, favoriteType: .allFav)
                                         }
                                 }
                             }
@@ -74,15 +78,35 @@ struct RecipeList: View {
             changeLayout = true
         }
         .sheet(isPresented: $filterSheet) {
-            Filters()
+            Filters(isSelectedTime: $isSelectedTime, isSelectedLevel: $isSelectedLevel, isSelectedCusine: $isSelectedCusine)
         }
     }
     
     var results: [QuickNEasy] {
-        return searchingFor.isEmpty ? fullListVM.fullList.sorted {
-            $0.title < $1.title
-        } : fullListVM.filteredFood(searchingFor).sorted {
-            $0.title < $1.title
+        if (
+            isSelectedTime.isEmpty &&
+            isSelectedLevel.isEmpty &&
+            isSelectedCusine.isEmpty
+        ) {
+            return searchingFor.isEmpty ? fullListVM.fullList.sorted {
+                $0.title < $1.title
+            } : fullListVM.filteredFood(searchingFor).sorted {
+                $0.title < $1.title
+            }
+        } else {
+            return searchingFor.isEmpty ?
+            fullListVM.fullList
+//                .filter({
+//                $0.time.contains(isSelectedTime)
+//            }).filter({
+//                $0.difficultyLevel.contains(isSelectedLevel)
+//            })
+            .filter({
+                $0.cusine.contains(isSelectedCusine)
+            })
+            
+            :
+            fullListVM.filterPeFilter(searchingFor, val3: isSelectedCusine)
         }
     }
 }
