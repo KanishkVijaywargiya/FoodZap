@@ -19,7 +19,7 @@ struct IndianSpecials: View {
             
             ForEach(recipeData) { item in
                 VStack(alignment: .leading) {
-                    NavigationLink(destination: DetailView(dishesData: item)) {
+                    NavigationLink(destination: DetailView(dishesData: item, favoriteType: .allFav)) {
                         BigCards(dummyData: item)
                             .frame(height: 350)
                             .padding(.bottom, 20)

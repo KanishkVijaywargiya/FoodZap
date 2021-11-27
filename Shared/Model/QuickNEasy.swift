@@ -9,9 +9,14 @@ import SwiftUI
 import Firebase
 import FirebaseFirestoreSwift
 
+enum FavType: String, Codable {
+    case quickFav
+    case allFav
+}
+
 struct QuickNEasy: Identifiable, Codable {
     @DocumentID var id: String?
-//    var id = UUID()
+    //    var id = UUID()
     var backgroundImg: String
     var calories: String
     var carbohydrates: String

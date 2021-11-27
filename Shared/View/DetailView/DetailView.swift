@@ -9,8 +9,10 @@ import SwiftUI
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var imageLoader = ImageLoader()
+    @StateObject var fullListVM = FullListViewModel()
     @State private var isSharingSheetShowing: Bool = false
     var dishesData: QuickNEasy
+    var favoriteType: FavType
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -40,8 +42,11 @@ struct DetailView: View {
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
                 .overlay(
-                    FavButton()
+                    FavButton(icon: dishesData.isFav ? "heart.fill" : "heart")
                         .position(x: UIScreen.main.bounds.width - 35, y: 300)
+//                        .onTapGesture {
+//                            dishesData.isFav ? fullListVM.addToFav(favoriteType, of: dishesData.id) : fullListVM.removeFav(favoriteType, of: dishesData.id)
+//                        }
                 )
                 .onAppear {
                     imageLoader.fetch(for: dishesData.backgroundImg)
@@ -334,8 +339,10 @@ struct DetailView: View {
 //}
 
 struct FavButton: View {
+    var icon: String
+    
     var body: some View {
-        Image(systemName: "heart.fill")
+        Image(systemName: icon)
             .font(.system(size: 17, weight: .bold))
             .foregroundColor(.white)
             .padding(.all, 10)

@@ -15,31 +15,42 @@ struct Tag: Identifiable, Hashable {
 extension Tag {
     static var timeTags: [Tag] {
         [
-            Tag(title: "10 min"),
-            Tag(title: "20 min"),
-            Tag(title: "30 min"),
-            Tag(title: "40 min"),
-            Tag(title: "50 min"),
-            Tag(title: "60 min"),
-            Tag(title: "other items")
+            Tag(title: "10 mins"),
+            Tag(title: "20 mins"),
+            Tag(title: "30 mins"),
+            Tag(title: "40 mins"),
+            Tag(title: "50 mins"),
+            Tag(title: "60 mins"),
         ]
     }
     
     static var difficultTags: [Tag] {
         [
-            Tag(title: "Beginner"),
-            Tag(title: "Intermediate"),
-            Tag(title: "Expert")
+            Tag(title: "Easy"),
+            Tag(title: "Moderate"),
+            Tag(title: "Hard")
         ]
     }
     
     static var cusinesTags: [Tag] {
         [
-            Tag(title: "Continental"),
+            Tag(title: "Punjabi"),
+            Tag(title: "Kashmiri"),
+            Tag(title: "Bihari"),
+            Tag(title: "Healthy"),
             Tag(title: "Indian"),
             Tag(title: "Korean"),
             Tag(title: "Chinese"),
-            Tag(title: "Italian")
+            Tag(title: "Italian"),
+            Tag(title: "Soups"),
+            Tag(title: "Shakes"),
+            Tag(title: "Street Foods"),
+            Tag(title: "Rajasthani"),
+            Tag(title: "Gujarati"),
+            Tag(title: "Bengali"),
+            Tag(title: "Goa"),
+            Tag(title: "Snacks"),
+            Tag(title: "Festive Specials"),
         ]
     }
     
