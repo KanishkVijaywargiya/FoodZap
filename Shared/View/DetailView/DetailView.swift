@@ -42,7 +42,7 @@ struct DetailView: View {
                 .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
                 .overlay(
-                    FavButton(icon: dishesData.isFav ? "heart.fill" : "heart")
+                    FavButton(icon: "heart.fill")
                         .position(x: UIScreen.main.bounds.width - 35, y: 300)
 //                        .onTapGesture {
 //                            dishesData.isFav ? fullListVM.addToFav(favoriteType, of: dishesData.id) : fullListVM.removeFav(favoriteType, of: dishesData.id)
