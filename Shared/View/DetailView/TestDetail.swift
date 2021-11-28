@@ -1,13 +1,13 @@
 //
-//  DetailView.swift
+//  TestDetail.swift
 //  FoodZap
 //
-//  Created by KANISHK VIJAYWARGIYA on 24/10/21.
+//  Created by MANAS VIJAYWARGIYA on 28/11/21.
 //
 
 import SwiftUI
 
-struct DetailView: View {
+struct TestDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var imageLoader = ImageLoader()
     @State private var isSharingSheetShowing: Bool = false
@@ -361,21 +361,8 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
+struct TestDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(dishesData: QuickNEasy.quickNEasy[0])
-    }
-}
-
-struct FavButton: View {
-    var icon: String
-    
-    var body: some View {
-        Image(systemName: icon)
-            .font(.system(size: 17, weight: .bold))
-            .foregroundColor(.white)
-            .padding(.all, 10)
-            .background(Color.red)
-            .clipShape(Circle())
+        TestDetail(dishesData: QuickNEasy.quickNEasy[0])
     }
 }

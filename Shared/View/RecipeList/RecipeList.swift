@@ -48,7 +48,7 @@ struct RecipeList: View {
                                             self.fullSheetData = item
                                         }
                                         .fullScreenCover(item: $fullSheetData) {items in
-                                            DetailView(dishesData: items, favoriteType: .allFav)
+                                            DetailView(dishesData: items)
                                         }
                                 }
                             }
