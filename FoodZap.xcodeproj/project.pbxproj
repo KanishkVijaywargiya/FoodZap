@@ -57,8 +57,12 @@
 		04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* QuickNEasy.swift */; };
 		04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
 		04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
+		FD0622E3275372A000EBA9F3 /* TestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0622E2275372A000EBA9F3 /* TestDetail.swift */; };
+		FD0622E4275372A000EBA9F3 /* TestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0622E2275372A000EBA9F3 /* TestDetail.swift */; };
 		FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
 		FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
+		FD1573322753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
+		FD1573332753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
 		FD404FF2272304BE004754EA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF1272304BE004754EA /* ListRow.swift */; };
 		FD404FF4272304D0004754EA /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF3272304D0004754EA /* RecipeList.swift */; };
 		FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */; };
@@ -118,7 +122,9 @@
 		04EC143C274266A200CF4DD6 /* CategoryLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLogo.swift; sourceTree = "<group>"; };
 		04EFCFDA27205CDB009795CC /* QuickNEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNEasy.swift; sourceTree = "<group>"; };
 		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
+		FD0622E2275372A000EBA9F3 /* TestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetail.swift; sourceTree = "<group>"; };
 		FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodZaps.xcdatamodel; sourceTree = "<group>"; };
+		FD1573312753903600272532 /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FD404FF3272304D0004754EA /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExt.swift; sourceTree = "<group>"; };
@@ -261,6 +267,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FD1573302753900C00272532 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD1573312753903600272532 /* TrackableScrollView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FD404FF027230439004754EA /* RecipeList */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +304,7 @@
 		FDF235B92726F3F000EAE8D3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FD1573302753900C00272532 /* Helpers */,
 				FDF235C92726F7D400EAE8D3 /* Shapes */,
 				FDF235BA2726F3F000EAE8D3 /* Constants */,
 			);
@@ -319,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF235B02726F39C00EAE8D3 /* DetailView.swift */,
+				FD0622E2275372A000EBA9F3 /* TestDetail.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -444,12 +460,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04824503271C3C4100E27160 /* SearchButton.swift in Sources */,
+				FD1573322753903600272532 /* TrackableScrollView.swift in Sources */,
 				FDF235AE2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,
 				04D8E4882737B46800F2524A /* ImageLoader.swift in Sources */,
 				FDF235B42726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				FDF235BF2726F3F000EAE8D3 /* Colors.swift in Sources */,
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
 				049BE689271C2B0B0008F8ED /* Persistence.swift in Sources */,
+				FD0622E3275372A000EBA9F3 /* TestDetail.swift in Sources */,
 				FD404FF4272304D0004754EA /* RecipeList.swift in Sources */,
 				FDF235C42726F40600EAE8D3 /* ChipButton.swift in Sources */,
 				048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */,
@@ -501,6 +519,7 @@
 				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				04D525CE273FC0AB0011DD13 /* FullListViewModel.swift in Sources */,
+				FD0622E4275372A000EBA9F3 /* TestDetail.swift in Sources */,
 				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */,
 				04D8E4892737B46800F2524A /* ImageLoader.swift in Sources */,
@@ -512,6 +531,7 @@
 				FDF235C72726F40600EAE8D3 /* Filters.swift in Sources */,
 				0482450D271C3EAB00E27160 /* DummyData.swift in Sources */,
 				FDF235C02726F3F000EAE8D3 /* Colors.swift in Sources */,
+				FD1573332753903600272532 /* TrackableScrollView.swift in Sources */,
 				04E65828274290760022C3F3 /* RoundedCorners.swift in Sources */,
 				FDF235BE2726F3F000EAE8D3 /* Texts.swift in Sources */,
 				FDF235B52726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,

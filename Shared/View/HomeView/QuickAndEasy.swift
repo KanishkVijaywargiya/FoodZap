@@ -16,7 +16,7 @@ struct QuickAndEasy: View {
             HStack(spacing: 20) {
                 ForEach(quickNEasyData) { item in
                     GeometryReader { geo in
-                        NavigationLink(destination: DetailView(dishesData: item, favoriteType: .quickFav)) {
+                        NavigationLink(destination: DetailView(dishesData: item)) {
                             HorizontalScrollCards(dummyData: item)
                                 .rotation3DEffect(
                                     Angle(degrees: Double(geo.frame(in: .global).minX - 30) / -getAngleMultiplier(bounds: geo )),
