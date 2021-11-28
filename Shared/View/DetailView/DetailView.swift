@@ -32,12 +32,16 @@ struct DetailView: View {
                                 .foregroundColor(.gray.opacity(0.2))
     //                            .frame(width: UIScreen.main.bounds.width, height: 300)
                                 .frame(width: geo.size.width, height: self.getHeightForHeaderImage(geo))
+                                .clipped()
+                                .offset(x: 0, y: self.getOffsetForHeaderImage(geo))
                         } else {
                             ZStack {
                                 Rectangle()
                                     .foregroundColor(.gray.opacity(0.2))
     //                                .frame(width: UIScreen.main.bounds.width, height: 300)
                                     .frame(width: geo.size.width, height: self.getHeightForHeaderImage(geo))
+                                    .clipped()
+                                    .offset(x: 0, y: self.getOffsetForHeaderImage(geo))
                                 ProgressView()
                                     .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
                             }
