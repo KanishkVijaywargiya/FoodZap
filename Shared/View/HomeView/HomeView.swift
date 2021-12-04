@@ -44,7 +44,7 @@ struct HomeView: View {
                     }.buttonStyle(FlatLinkStyle())
                     
                     // Indian specials
-                    IndianSpecials(recipeData: RecipeListVM.recipeList)    
+                    WorldCusines(recipeData: RecipeListVM.recipeList)    
                     
                     NavigationLink(destination: RecipeList()) {
                         SeeMoreButton().padding(.top, 26)

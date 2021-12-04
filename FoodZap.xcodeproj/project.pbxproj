@@ -27,8 +27,8 @@
 		0482450D271C3EAB00E27160 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482450B271C3EAB00E27160 /* DummyData.swift */; };
 		0482450F271C411800E27160 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482450E271C411800E27160 /* Gradient.swift */; };
 		04824510271C411800E27160 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482450E271C411800E27160 /* Gradient.swift */; };
-		0482452A271C4A1B00E27160 /* IndianSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824529271C4A1B00E27160 /* IndianSpecials.swift */; };
-		0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824529271C4A1B00E27160 /* IndianSpecials.swift */; };
+		0482452A271C4A1B00E27160 /* WorldCusines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824529271C4A1B00E27160 /* WorldCusines.swift */; };
+		0482452B271C4A1B00E27160 /* WorldCusines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04824529271C4A1B00E27160 /* WorldCusines.swift */; };
 		0482452D271C4A5A00E27160 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452C271C4A5A00E27160 /* Cards.swift */; };
 		0482452E271C4A5A00E27160 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452C271C4A5A00E27160 /* Cards.swift */; };
 		04824530271C52FE00E27160 /* BigCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452F271C52FE00E27160 /* BigCards.swift */; };
@@ -59,8 +59,6 @@
 		04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* QuickNEasy.swift */; };
 		04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
 		04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
-		FD0622E3275372A000EBA9F3 /* TestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0622E2275372A000EBA9F3 /* TestDetail.swift */; };
-		FD0622E4275372A000EBA9F3 /* TestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0622E2275372A000EBA9F3 /* TestDetail.swift */; };
 		FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
 		FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
 		FD1573322753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
@@ -105,7 +103,7 @@
 		04824508271C3D3100E27160 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		0482450B271C3EAB00E27160 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		0482450E271C411800E27160 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		04824529271C4A1B00E27160 /* IndianSpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianSpecials.swift; sourceTree = "<group>"; };
+		04824529271C4A1B00E27160 /* WorldCusines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCusines.swift; sourceTree = "<group>"; };
 		0482452C271C4A5A00E27160 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		0482452F271C52FE00E27160 /* BigCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCards.swift; sourceTree = "<group>"; };
 		049BE672271C2B080008F8ED /* FoodZapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodZapApp.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		04EC143C274266A200CF4DD6 /* CategoryLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLogo.swift; sourceTree = "<group>"; };
 		04EFCFDA27205CDB009795CC /* QuickNEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNEasy.swift; sourceTree = "<group>"; };
 		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
-		FD0622E2275372A000EBA9F3 /* TestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetail.swift; sourceTree = "<group>"; };
 		FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodZaps.xcdatamodel; sourceTree = "<group>"; };
 		FD1573312753903600272532 /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
@@ -208,7 +205,7 @@
 				049BE673271C2B080008F8ED /* HomeView.swift */,
 				048244FC271C3B9900E27160 /* ProfileButton.swift */,
 				048244FF271C3BD100E27160 /* QuickAndEasy.swift */,
-				04824529271C4A1B00E27160 /* IndianSpecials.swift */,
+				04824529271C4A1B00E27160 /* WorldCusines.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -338,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				FDF235B02726F39C00EAE8D3 /* DetailView.swift */,
-				FD0622E2275372A000EBA9F3 /* TestDetail.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -471,7 +467,6 @@
 				FDF235BF2726F3F000EAE8D3 /* Colors.swift in Sources */,
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
 				049BE689271C2B0B0008F8ED /* Persistence.swift in Sources */,
-				FD0622E3275372A000EBA9F3 /* TestDetail.swift in Sources */,
 				FD404FF4272304D0004754EA /* RecipeList.swift in Sources */,
 				FDF235C42726F40600EAE8D3 /* ChipButton.swift in Sources */,
 				048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */,
@@ -483,7 +478,7 @@
 				FDF235C62726F40600EAE8D3 /* Filters.swift in Sources */,
 				04E65827274290760022C3F3 /* RoundedCorners.swift in Sources */,
 				04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
-				0482452A271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
+				0482452A271C4A1B00E27160 /* WorldCusines.swift in Sources */,
 				04EC143D274266A200CF4DD6 /* CategoryLogo.swift in Sources */,
 				FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				FDF235CB2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */,
@@ -521,10 +516,9 @@
 				04E113A92737EF7F003CAC4B /* RecipeListViewModel.swift in Sources */,
 				0407A7E9272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
-				0482452B271C4A1B00E27160 /* IndianSpecials.swift in Sources */,
+				0482452B271C4A1B00E27160 /* WorldCusines.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				04D525CE273FC0AB0011DD13 /* FullListViewModel.swift in Sources */,
-				FD0622E4275372A000EBA9F3 /* TestDetail.swift in Sources */,
 				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */,
 				04D8E4892737B46800F2524A /* ImageLoader.swift in Sources */,

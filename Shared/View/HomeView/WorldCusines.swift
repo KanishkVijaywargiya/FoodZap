@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IndianSpecials: View {
+struct WorldCusines: View {
     var recipeData: [QuickNEasy]
     
     var body: some View {
@@ -36,6 +36,6 @@ struct IndianSpecials: View {
 struct IndianSpecials_Previews: PreviewProvider {
     static var recipe = QuickNEasy.quickNEasy
     static var previews: some View {
-        IndianSpecials(recipeData: recipe)
+        WorldCusines(recipeData: recipe)
     }
 }
