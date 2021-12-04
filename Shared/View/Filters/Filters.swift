@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Filters: View {
     @Environment(\.presentationMode) var presentationMode
-    
+    @StateObject var hapticVM = HapticViewModel()
     @State var tags: [Tag] = Tag.timeTags
     @Binding var isSelectedTime: String
     
@@ -26,6 +26,8 @@ struct Filters: View {
             VStack {
                 HStack {
                     Button(action: {
+                        hapticVM.impact(style: .light)
+                        hapticVM.haptic(type: .warning)
                         presentationMode.wrappedValue.dismiss()
                         isSelectedTime = ""
                         isSelectedLevel = ""
@@ -43,7 +45,11 @@ struct Filters: View {
                     
                     Spacer()
                     
-                    Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                    Button(action: {
+                        hapticVM.impact(style: .heavy)
+                        hapticVM.haptic(type: .success)
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
                         Text("Done")
                     }
                     .padding(.trailing, 16)
@@ -93,6 +99,8 @@ struct Filters: View {
                             Image(systemName: Texts.trashIcon)
                                 .padding(.trailing, 25)
                                 .onTapGesture {
+                                    hapticVM.impact(style: .light)
+                                    hapticVM.haptic(type: .warning)
                                     isSelectedCusine = ""
                                 }
                         }

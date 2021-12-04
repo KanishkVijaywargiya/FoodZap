@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeList: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var fullListVM = FullListViewModel()
+    @StateObject var hapticVM = HapticViewModel()
     @State var searchingFor = ""
     @State var changeLayout = false
     @State private var openDetail = false
@@ -72,6 +73,8 @@ struct RecipeList: View {
                 )
                 .onTapGesture {
                     self.filterSheet.toggle()
+                    hapticVM.impact(style: .medium)
+                    hapticVM.haptic(type: .success)
                 }
         )
         .onReceive(timer) { input in

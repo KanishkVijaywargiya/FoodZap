@@ -41,6 +41,8 @@
 		049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE674271C2B080008F8ED /* Persistence.swift */; };
 		049BE68B271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
 		049BE68C271C2B0B0008F8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049BE675271C2B0B0008F8ED /* Assets.xcassets */; };
+		04A53C90275BA6E600A64BDD /* HapticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A53C8F275BA6E600A64BDD /* HapticViewModel.swift */; };
+		04A53C91275BA6E600A64BDD /* HapticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A53C8F275BA6E600A64BDD /* HapticViewModel.swift */; };
 		04D525CD273FC0AB0011DD13 /* FullListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D525CC273FC0AB0011DD13 /* FullListViewModel.swift */; };
 		04D525CE273FC0AB0011DD13 /* FullListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D525CC273FC0AB0011DD13 /* FullListViewModel.swift */; };
 		04D8E4882737B46800F2524A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8E4862737B46800F2524A /* ImageLoader.swift */; };
@@ -113,6 +115,7 @@
 		049BE67A271C2B0B0008F8ED /* FoodZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049BE680271C2B0B0008F8ED /* FoodZap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049BE682271C2B0B0008F8ED /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		04A53C8F275BA6E600A64BDD /* HapticViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticViewModel.swift; sourceTree = "<group>"; };
 		04D525CC273FC0AB0011DD13 /* FullListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullListViewModel.swift; sourceTree = "<group>"; };
 		04D525D2274004D60011DD13 /* FoodZap--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FoodZap--iOS--Info.plist"; sourceTree = "<group>"; };
 		04D8E4862737B46800F2524A /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 				04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */,
 				04E113A72737EF7F003CAC4B /* RecipeListViewModel.swift */,
 				04D525CC273FC0AB0011DD13 /* FullListViewModel.swift */,
+				04A53C8F275BA6E600A64BDD /* HapticViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -495,6 +499,7 @@
 				FD404FF2272304BE004754EA /* ListRow.swift in Sources */,
 				FDF235B72726F3DA00EAE8D3 /* Tag.swift in Sources */,
 				04D525CD273FC0AB0011DD13 /* FullListViewModel.swift in Sources */,
+				04A53C90275BA6E600A64BDD /* HapticViewModel.swift in Sources */,
 				FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
 				049BE687271C2B0B0008F8ED /* HomeView.swift in Sources */,
 			);
@@ -536,6 +541,7 @@
 				FDF235BE2726F3F000EAE8D3 /* Texts.swift in Sources */,
 				FDF235B52726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				FDF235B82726F3DA00EAE8D3 /* Tag.swift in Sources */,
+				04A53C91275BA6E600A64BDD /* HapticViewModel.swift in Sources */,
 				049BE688271C2B0B0008F8ED /* HomeView.swift in Sources */,
 				04D8E48B2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */,
 				FDF235AF2726F38500EAE8D3 /* ColorExtensions.swift in Sources */,
@@ -673,7 +679,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FoodZap wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -689,7 +695,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -709,7 +715,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FoodZap wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -725,7 +731,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
