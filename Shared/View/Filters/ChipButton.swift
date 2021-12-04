@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChipButton: View {
+    @StateObject var hapticVM = HapticViewModel()
     @Binding var tags: [Tag]
     @Binding var isSelectedValue: String
 
@@ -70,6 +71,8 @@ struct ChipButton: View {
                         return result
                     }).onTapGesture {
                         isSelectedValue = tags[index].title
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
                     }
             }
         }.background(viewHeightReader($totalHeight))
