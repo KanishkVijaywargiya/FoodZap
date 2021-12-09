@@ -9,8 +9,11 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
+    @AppStorage("name") var name = ""
     @ObservedObject var quickNEasyVM = QuickNEasyViewModel()
     @StateObject var RecipeListVM = RecipeListViewModel()
+    @StateObject var hapticVM = HapticViewModel()
+    @State var viewAppeared = false
     
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(entity: QuickEasy.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \QuickEasy.title, ascending: true)]) var results: FetchedResults<QuickEasy>
@@ -22,7 +25,7 @@ struct HomeView: View {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 0) {
                     // hello username
-                    helloUsername()
+                    helloUsername(title: name)
                     
                     // title, search, profile button
                     HStack(spacing: 0) {
@@ -34,6 +37,13 @@ struct HomeView: View {
                         Spacer()
                         
                         ProfileButton()
+                            .onTapGesture {
+                                hapticVM.impact(style: .soft)
+                                hapticVM.haptic(type: .success)
+                                withAnimation(Animation.easeInOut(duration: 0.2)) {
+                                    self.viewAppeared = true
+                                }
+                            }
                     }
                     
                     // horizontal scroll cards
@@ -57,6 +67,10 @@ struct HomeView: View {
         .onAppear {
             quickNEasyVM.fetchQuickNEasyData(context: viewContext)
         }
+        .fullScreenCover(isPresented: $viewAppeared) {
+            ProfileView(saveName: $name)
+                .animation(Animation.spring())
+        }
     }
 }
 
@@ -67,8 +81,10 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct helloUsername: View {
+    var title: String = ""
+    
     var body: some View {
-        Text("Hello Kanishk")
+        Text("Hello \(title)")
             .font(Font.headline.bold())
             .padding(.top)
             .padding(.horizontal, 20)

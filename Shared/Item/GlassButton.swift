@@ -9,10 +9,11 @@ import SwiftUI
 
 struct GlassButton: View {
     var iconName: String = "chevron.backward"
+    var iconSize: CGFloat = 12
     
     var body: some View {
         Image(systemName: iconName)
-            .font(.system(size: 12, weight: .bold))
+            .font(.system(size: iconSize, weight: .bold))
             .foregroundColor(.white)
             .padding(.all, 10)
 //            .padding(.all, 6)
