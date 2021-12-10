@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var imageLoader = ImageLoader()
+    @StateObject var hapticVM = HapticViewModel()
     @State private var isSharingSheetShowing: Bool = false
     var dishesData: QuickNEasy
     
@@ -308,6 +309,8 @@ struct DetailView: View {
                     .padding(.trailing, 8)
                     .padding(.top, 45)
                     .onTapGesture {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
                         shareBtn()
                     }
             }
