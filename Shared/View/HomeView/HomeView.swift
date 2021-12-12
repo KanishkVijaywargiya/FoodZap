@@ -13,7 +13,9 @@ struct HomeView: View {
     @ObservedObject var quickNEasyVM = QuickNEasyViewModel()
     @StateObject var RecipeListVM = RecipeListViewModel()
     @StateObject var hapticVM = HapticViewModel()
+
     @State var viewAppeared = false
+    @State var profileImage: UIImage = retrieveImage(forKey: "ProfileImage", inStorageType: .userDefaults)
     
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(entity: QuickEasy.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \QuickEasy.title, ascending: true)]) var results: FetchedResults<QuickEasy>
@@ -36,7 +38,7 @@ struct HomeView: View {
                         
                         Spacer()
                         
-                        ProfileButton()
+                        ProfileButton(profileImg: $profileImage)
                             .onTapGesture {
                                 hapticVM.impact(style: .soft)
                                 hapticVM.haptic(type: .success)
@@ -68,7 +70,7 @@ struct HomeView: View {
             quickNEasyVM.fetchQuickNEasyData(context: viewContext)
         }
         .fullScreenCover(isPresented: $viewAppeared) {
-            ProfileView(saveName: $name)
+            ProfileView(saveName: $name, imageSelected: $profileImage)
                 .animation(Animation.spring())
         }
     }
