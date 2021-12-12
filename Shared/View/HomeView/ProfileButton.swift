@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ProfileButton: View {
+    @Binding var profileImg: UIImage
+    
     var body: some View {
         // MARK: Profile button
-        
         ZStack {
             Circle()
                 .frame(width: 45, height: 45)
@@ -21,25 +22,39 @@ struct ProfileButton: View {
                 .clipShape(Circle())
                 .offset(x: 10, y: -20)
             
-            Image(systemName: "person.crop.circle")
-                .renderingMode(.template)
-                .font(.system(size: 20))
-                .padding(12)
-                .padding(.horizontal, 20)
-                .background(
-                    BlurView(style: .light)
-                )
-                .clipShape(Circle())
-                .overlay(
-                    Circle()
-                        .stroke(Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)), lineWidth: 0.2)
-                )
+            if profileImg == UIImage() {
+                Image(systemName: "person.crop.circle")
+                    .renderingMode(.template)
+                    .font(.system(size: 20))
+                    .padding(12)
+                    .padding(.horizontal, 20)
+                    .background(
+                        BlurView(style: .light)
+                    )
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)), lineWidth: 0.2)
+                    )
+            } else {
+                Image(uiImage: profileImg)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 45, height: 45)
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(Color(#colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)), lineWidth: 0.2)
+                    )
+                    .padding(12)
+                    .padding(.horizontal, 20)
+            }
         }
     }
 }
 
 struct ProfileButton_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileButton()
+        ProfileButton(profileImg: .constant(UIImage()))
     }
 }
