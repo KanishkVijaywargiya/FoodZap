@@ -72,6 +72,8 @@
 		04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFCFDA27205CDB009795CC /* QuickNEasy.swift */; };
 		04EFCFE8272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
 		04EFCFE9272164DD009795CC /* FoodsCollections.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFCFE7272164DD009795CC /* FoodsCollections.json */; };
+		04F0291F276F438D00AAC1C8 /* NetworkCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0291E276F438D00AAC1C8 /* NetworkCheckView.swift */; };
+		04F02921276F43FE00AAC1C8 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F02920276F43FE00AAC1C8 /* NetworkReachability.swift */; };
 		FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
 		FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD0FA1222736B4C600FFD28D /* FoodZaps.xcdatamodeld */; };
 		FD1573322753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
@@ -146,6 +148,8 @@
 		04EDF0D827621ABA0094B51D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		04EFCFDA27205CDB009795CC /* QuickNEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNEasy.swift; sourceTree = "<group>"; };
 		04EFCFE7272164DD009795CC /* FoodsCollections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodsCollections.json; sourceTree = "<group>"; };
+		04F0291E276F438D00AAC1C8 /* NetworkCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCheckView.swift; sourceTree = "<group>"; };
+		04F02920276F43FE00AAC1C8 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		FD0FA1232736B4C600FFD28D /* FoodZaps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodZaps.xcdatamodel; sourceTree = "<group>"; };
 		FD1573312753903600272532 /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		048244F8271C382400E27160 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04F0291D276F436200AAC1C8 /* NetworkCheckView */,
 				FDF235C82726F56300EAE8D3 /* DetailView */,
 				FDF235C12726F40600EAE8D3 /* Filters */,
 				FD404FF027230439004754EA /* RecipeList */,
@@ -339,12 +344,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		04F0291D276F436200AAC1C8 /* NetworkCheckView */ = {
+			isa = PBXGroup;
+			children = (
+				04F0291E276F438D00AAC1C8 /* NetworkCheckView.swift */,
+			);
+			path = NetworkCheckView;
+			sourceTree = "<group>";
+		};
 		FD1573302753900C00272532 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				FD1573312753903600272532 /* TrackableScrollView.swift */,
 				043612A32765E88B00FA0632 /* ImagePicker.swift */,
 				043612A62765FBBB00FA0632 /* ProfileImageStorage.swift */,
+				04F02920276F43FE00AAC1C8 /* NetworkReachability.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -571,11 +585,13 @@
 				049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				FDF235B12726F39C00EAE8D3 /* DetailView.swift in Sources */,
 				0482450F271C411800E27160 /* Gradient.swift in Sources */,
+				04F02921276F43FE00AAC1C8 /* NetworkReachability.swift in Sources */,
 				0482450C271C3EAB00E27160 /* DummyData.swift in Sources */,
 				0407A7E8272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				FD404FF2272304BE004754EA /* ListRow.swift in Sources */,
 				04EDF0D927621ABA0094B51D /* ProfileView.swift in Sources */,
 				FDF235B72726F3DA00EAE8D3 /* Tag.swift in Sources */,
+				04F0291F276F438D00AAC1C8 /* NetworkCheckView.swift in Sources */,
 				04D525CD273FC0AB0011DD13 /* FullListViewModel.swift in Sources */,
 				04A53C90275BA6E600A64BDD /* HapticViewModel.swift in Sources */,
 				FD0FA1242736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
