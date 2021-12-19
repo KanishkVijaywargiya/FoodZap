@@ -38,6 +38,7 @@ struct NetworkCheckView: View {
                     Text("Retry")
                         .frame(maxWidth: .infinity)
                         .font(.system(size: 22, weight: .bold))
+                        .foregroundColor(.green)
                 }
                 .tint(.green)
                 .buttonStyle(.bordered)
