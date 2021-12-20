@@ -8,7 +8,8 @@
 import Foundation
 
 struct Colors {
-    static let backgroundCol = "#F2EFE4"
+    static let backgroundCol = "#E5E3D5"
+    static let profilePageCol = "#F2EFE4"
     static let vegCol = "#019031"
     static let nonVegCol = "#E83350"
     static let cusineLabel = "#0A79DF"
