@@ -25,46 +25,92 @@ struct ProfileView: View {
     @State var cameraType: CameraType = .photoLibrary
     @Binding var imageSelected: UIImage
     
+    var divider: some View {
+        Divider().background(Color.white).blendMode(.overlay)
+    }
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Color(hex: Colors.backgroundCol)
             
-            VStack(alignment: .center, spacing: 10) {
-                Button(action: {
-                    hapticVM.impact(style: .soft)
-                    hapticVM.haptic(type: .success)
-                    self.openActionSheet.toggle()
-                }) {
-                    ZStack {
-                        if imageSelected == UIImage() {
-                            Image(systemName: "person.crop.circle.badge.plus")
-                                .font(.system(size: 120))
-                                .foregroundColor(Color(hex: "#FCB6B6"))
-                        } else {
-                            Image(uiImage: imageSelected)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 120, height: 120)
-                                .clipShape(Circle())
+            VStack(alignment: .leading) {
+                VStack(alignment: .center, spacing: 10) {
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                        self.openActionSheet.toggle()
+                    }) {
+                        ZStack {
+                            if imageSelected == UIImage() {
+                                Image(systemName: "person.crop.circle.badge.plus")
+                                    .font(.system(size: 120))
+                                    .foregroundColor(Color(hex: "#FCB6B6"))
+                            } else {
+                                Image(uiImage: imageSelected)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 120, height: 120)
+                                    .clipShape(Circle())
+                            }
                         }
                     }
+                    .padding(.bottom)
+                    
+                    TextField("Enter your name", text: $saveName)
+                        .foregroundColor(.black.opacity(0.7))
+                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.black, lineWidth: 1)
+                                .blendMode(.overlay)
+                        )
+                        .onReceive(Just(saveName)) { _ in limitText(textLimit) }
                 }
-                .padding(.bottom)
+                .padding()
+                .padding(.top, 50)
                 
-                TextField("Enter your name", text: $saveName)
-                    .foregroundColor(.black.opacity(0.7))
-                    .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.black, lineWidth: 1)
-                            .blendMode(.overlay)
-                    )
-                    .onReceive(Just(saveName)) { _ in limitText(textLimit) }
+                Text("Bio")
+                    .font(.custom("American Typewriter", size: 22))
+                    .padding(.top, 8)
+                    .padding(.horizontal, 30)
+                
+                VStack {
+                    MenuRow(title: "About", leftIcon: "ellipsis.bubble")
+                        .onTapGesture {
+                            hapticVM.impact(style: .soft)
+                            hapticVM.haptic(type: .success)
+                        }
+                    divider
+                    MenuRow(title: "Rate this app", leftIcon: "star")
+                        .onTapGesture {
+                            hapticVM.impact(style: .soft)
+                            hapticVM.haptic(type: .success)
+                        }
+                    divider
+                    MenuRow(title: "Share this app", leftIcon: "square.and.arrow.up")
+                        .onTapGesture {
+                            hapticVM.impact(style: .soft)
+                            hapticVM.haptic(type: .success)
+                        }
+                    divider
+                    MenuRow(title: "The Developer", leftIcon: "signature")
+                        .onTapGesture {
+                            hapticVM.impact(style: .soft)
+                            hapticVM.haptic(type: .success)
+                        }
+                    divider
+                    MenuRow(title: "Donate", leftIcon: "heart")
+                        .onTapGesture {
+                            hapticVM.impact(style: .soft)
+                            hapticVM.haptic(type: .success)
+                        }
+                }
+                .blurBackground()
+                .padding(.top, 8)
+                .padding(.horizontal, 20)
             }
-            .padding()
-            .padding(.top, 50)
             
-            GlassButton(iconName: "square.and.arrow.down.fill", iconSize: 16)
+            GlassButton(iconName: "square.and.arrow.down.fill", iconSize: 14)
                 .padding(.trailing, 8)
                 .padding(.top, 45)
                 .onTapGesture {

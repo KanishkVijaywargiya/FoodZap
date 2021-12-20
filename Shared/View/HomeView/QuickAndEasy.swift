@@ -28,7 +28,7 @@ struct QuickAndEasy: View {
                 }
             }
             .padding(20)
-            .padding(.bottom, 30)
+            .padding(.bottom, 40)
         }
         .onAppear {
             URLCache.shared.memoryCapacity = 1024 * 1024 * 512

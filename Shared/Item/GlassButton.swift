@@ -16,7 +16,6 @@ struct GlassButton: View {
             .font(.system(size: iconSize, weight: .bold))
             .foregroundColor(.white)
             .padding(.all, 10)
-//            .padding(.all, 6)
             .background(BlurView(style: .systemMaterialDark))
             .mask(Circle())
     }

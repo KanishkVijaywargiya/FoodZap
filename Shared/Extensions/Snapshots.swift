@@ -28,6 +28,16 @@ extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
+    
+    // blur background
+    func blurBackground() -> some View {
+        self
+          .padding(16)
+          .background(BlurView(style: .light))
+          .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .stroke(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), lineWidth: 1))
+          .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
+      }
 }
 
 extension UIApplication {
