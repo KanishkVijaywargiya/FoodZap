@@ -43,7 +43,7 @@ struct DevelopersView: View {
                     }
                 }
             }
-            .padding(.top, 88)
+            .padding(.top, 40)
             .opacity(developerDetailViewModel.show ? 0 : 1)
             
             

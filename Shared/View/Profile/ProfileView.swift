@@ -77,23 +77,26 @@ struct ProfileView: View {
                     .padding(.horizontal, 30)
                 
                 VStack {
-                    MenuRow(title: "About", leftIcon: "ellipsis.bubble")
-                        .onTapGesture {
-                            hapticVM.impact(style: .soft)
-                            hapticVM.haptic(type: .success)
-                        }
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                    }) {
+                        MenuRow(title: "About", leftIcon: "ellipsis.bubble")
+                    }
                     divider
-                    MenuRow(title: "Rate this app", leftIcon: "star")
-                        .onTapGesture {
-                            hapticVM.impact(style: .soft)
-                            hapticVM.haptic(type: .success)
-                        }
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                    }) {
+                        MenuRow(title: "Rate this app", leftIcon: "star")
+                    }
                     divider
-                    MenuRow(title: "Share this app", leftIcon: "square.and.arrow.up")
-                        .onTapGesture {
-                            hapticVM.impact(style: .soft)
-                            hapticVM.haptic(type: .success)
-                        }
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                    }) {
+                        MenuRow(title: "Share this app", leftIcon: "square.and.arrow.up")
+                    }
                     divider
                     Button(action: {
                         hapticVM.impact(style: .soft)
@@ -102,14 +105,13 @@ struct ProfileView: View {
                     }) {
                         MenuRow(title: "The Developer", leftIcon: "signature")
                     }
-                    
-                    
                     divider
-                    MenuRow(title: "Donate", leftIcon: "heart")
-                        .onTapGesture {
-                            hapticVM.impact(style: .soft)
-                            hapticVM.haptic(type: .success)
-                        }
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                    }) {
+                        MenuRow(title: "Donate", leftIcon: "heart")
+                    }
                 }
                 .blurBackground()
                 .padding(.top, 8)

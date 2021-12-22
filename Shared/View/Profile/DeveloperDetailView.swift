@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DeveloperDetailView: View {
     @ObservedObject var developerDetailViewModel: DeveloperDetailViewModel
+    @StateObject var hapticVM = HapticViewModel()
     var animation: Namespace.ID
     
     var body: some View {
@@ -29,6 +30,8 @@ struct DeveloperDetailView: View {
                             .padding(.trailing, 8)
                             .padding(.top, 45)
                             .onTapGesture {
+                                hapticVM.impact(style: .soft)
+                                hapticVM.haptic(type: .success)
                                 withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0.8)) {
                                     developerDetailViewModel.show.toggle()
                                 }
@@ -85,7 +88,10 @@ struct DeveloperDetailView: View {
                 Spacer()
                 
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                    }) {
                         Text("Support me")
                             .foregroundColor(.green)
                             .frame(width: 200)
@@ -97,6 +103,8 @@ struct DeveloperDetailView: View {
                     Spacer()
                     
                     Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
                         let url = URL(string: developerDetailViewModel.selectedItem.instaHandle)!
                         let application = UIApplication.shared
                         // Check if the instagram App is installed
@@ -114,6 +122,8 @@ struct DeveloperDetailView: View {
                     .padding(.trailing, 6)
                     
                     Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
                         EmailHelper.shared.sendEmail(subject: "FoodZap | Feedback", body: "", to: "blacenova@gmail.com")
                         
                     }) {
