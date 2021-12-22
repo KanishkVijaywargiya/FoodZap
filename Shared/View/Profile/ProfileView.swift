@@ -25,6 +25,8 @@ struct ProfileView: View {
     @State var cameraType: CameraType = .photoLibrary
     @Binding var imageSelected: UIImage
     
+    @State private var openDeveloperSheet: Bool = false
+    
     var divider: some View {
         Divider().background(Color.white).blendMode(.overlay)
     }
@@ -93,11 +95,15 @@ struct ProfileView: View {
                             hapticVM.haptic(type: .success)
                         }
                     divider
-                    MenuRow(title: "The Developer", leftIcon: "signature")
-                        .onTapGesture {
-                            hapticVM.impact(style: .soft)
-                            hapticVM.haptic(type: .success)
-                        }
+                    Button(action: {
+                        hapticVM.impact(style: .soft)
+                        hapticVM.haptic(type: .success)
+                        self.openDeveloperSheet.toggle()
+                    }) {
+                        MenuRow(title: "The Developer", leftIcon: "signature")
+                    }
+                    
+                    
                     divider
                     MenuRow(title: "Donate", leftIcon: "heart")
                         .onTapGesture {
@@ -136,19 +142,22 @@ struct ProfileView: View {
                 openCameraRoll = true
                 cameraType = .camera
             }) {
-                Text("Open Camera")
+                Text("Camera")
             }
             Button(action: {
                 openCameraRoll = true
                 cameraType = .photoLibrary
             }) {
-                Text("Open Gallery")
+                Text("Photo Gallery")
             }
             Button("Cancel", role: .cancel) {
                 openActionSheet = false
             }
         } message: {
             Text("What do you want to open?")
+        }
+        .fullScreenCover(isPresented: $openDeveloperSheet) {
+            DevelopersView()
         }
     }
     

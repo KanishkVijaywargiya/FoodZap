@@ -84,9 +84,20 @@
 		FD1573332753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
 		FD404FF2272304BE004754EA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF1272304BE004754EA /* ListRow.swift */; };
 		FD404FF4272304D0004754EA /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF3272304D0004754EA /* RecipeList.swift */; };
+		FD5032C52771ED2B0054C3D1 /* DevelopersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */; };
+		FD5032C62771ED2B0054C3D1 /* DevelopersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */; };
+		FD5032C82772009D0054C3D1 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C72772009D0054C3D1 /* Developer.swift */; };
+		FD5032C92772009D0054C3D1 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C72772009D0054C3D1 /* Developer.swift */; };
+		FD5032CB277202360054C3D1 /* DeveloperCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032CA277202360054C3D1 /* DeveloperCard.swift */; };
+		FD5032CC277202360054C3D1 /* DeveloperCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032CA277202360054C3D1 /* DeveloperCard.swift */; };
+		FD5032CE2772185E0054C3D1 /* DeveloperDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032CD2772185E0054C3D1 /* DeveloperDetailView.swift */; };
+		FD5032CF2772185E0054C3D1 /* DeveloperDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032CD2772185E0054C3D1 /* DeveloperDetailView.swift */; };
+		FD5032D127721A3A0054C3D1 /* DeveloperDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032D027721A390054C3D1 /* DeveloperDetailViewModel.swift */; };
+		FD5032D227721A3A0054C3D1 /* DeveloperDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032D027721A390054C3D1 /* DeveloperDetailViewModel.swift */; };
 		FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */; };
 		FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */; };
 		FD57EF942737A7D7007072FA /* NavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */; };
+		FD6BA57C27738AE400BA7F5D /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6BA57B27738AE300BA7F5D /* EmailHelper.swift */; };
 		FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */; };
 		FD99043A271C643700F725FC /* AwesomeToast in Frameworks */ = {isa = PBXBuildFile; productRef = FD990439271C643700F725FC /* AwesomeToast */; };
 		FDF235AE2726F38500EAE8D3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */; };
@@ -160,7 +171,13 @@
 		FD1573312753903600272532 /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FD404FF3272304D0004754EA /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersView.swift; sourceTree = "<group>"; };
+		FD5032C72772009D0054C3D1 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		FD5032CA277202360054C3D1 /* DeveloperCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperCard.swift; sourceTree = "<group>"; };
+		FD5032CD2772185E0054C3D1 /* DeveloperDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailView.swift; sourceTree = "<group>"; };
+		FD5032D027721A390054C3D1 /* DeveloperDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailViewModel.swift; sourceTree = "<group>"; };
 		FD57EF922737A7D7007072FA /* NavigationControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExt.swift; sourceTree = "<group>"; };
+		FD6BA57B27738AE300BA7F5D /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
 		FDF235AD2726F38500EAE8D3 /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		FDF235B02726F39C00EAE8D3 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FDF235B32726F3AC00EAE8D3 /* SeeMoreButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
@@ -197,6 +214,7 @@
 		048244F8271C382400E27160 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD5032C32771ED0B0054C3D1 /* Profile */,
 				04F0291D276F436200AAC1C8 /* NetworkCheckView */,
 				FDF235C82726F56300EAE8D3 /* DetailView */,
 				FDF235C12726F40600EAE8D3 /* Filters */,
@@ -213,6 +231,7 @@
 				0482450B271C3EAB00E27160 /* DummyData.swift */,
 				04EFCFDA27205CDB009795CC /* QuickNEasy.swift */,
 				04EFCFE7272164DD009795CC /* FoodsCollections.json */,
+				FD5032C72772009D0054C3D1 /* Developer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +250,7 @@
 				04EC143C274266A200CF4DD6 /* CategoryLogo.swift */,
 				04FF22FD2770A03E00B81A98 /* MenuRow.swift */,
 				04FF23002770A16A00B81A98 /* GradientIcon.swift */,
+				FD5032CA277202360054C3D1 /* DeveloperCard.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -242,7 +262,6 @@
 				048244FC271C3B9900E27160 /* ProfileButton.swift */,
 				048244FF271C3BD100E27160 /* QuickAndEasy.swift */,
 				04824529271C4A1B00E27160 /* WorldCusines.swift */,
-				04EDF0D827621ABA0094B51D /* ProfileView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -348,6 +367,7 @@
 				04E113A72737EF7F003CAC4B /* RecipeListViewModel.swift */,
 				04D525CC273FC0AB0011DD13 /* FullListViewModel.swift */,
 				04A53C8F275BA6E600A64BDD /* HapticViewModel.swift */,
+				FD5032D027721A390054C3D1 /* DeveloperDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -367,6 +387,7 @@
 				043612A32765E88B00FA0632 /* ImagePicker.swift */,
 				043612A62765FBBB00FA0632 /* ProfileImageStorage.swift */,
 				04F02920276F43FE00AAC1C8 /* NetworkReachability.swift */,
+				FD6BA57B27738AE300BA7F5D /* EmailHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -378,6 +399,16 @@
 				FD404FF3272304D0004754EA /* RecipeList.swift */,
 			);
 			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		FD5032C32771ED0B0054C3D1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04EDF0D827621ABA0094B51D /* ProfileView.swift */,
+				FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */,
+				FD5032CD2772185E0054C3D1 /* DeveloperDetailView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		FD51D5E92736A00500B66D91 /* Frameworks */ = {
@@ -562,6 +593,7 @@
 				04D8E4882737B46800F2524A /* ImageLoader.swift in Sources */,
 				FDF235B42726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				04D09578275F922800E497F1 /* NextButton.swift in Sources */,
+				FD5032CE2772185E0054C3D1 /* DeveloperDetailView.swift in Sources */,
 				FDF235BF2726F3F000EAE8D3 /* Colors.swift in Sources */,
 				04D09572275F8AFC00E497F1 /* AppModel.swift in Sources */,
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
@@ -573,6 +605,7 @@
 				048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */,
 				0407A7DF272D5BF400F0F209 /* GlassButton.swift in Sources */,
 				04D8E48A2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */,
+				FD5032D127721A3A0054C3D1 /* DeveloperDetailViewModel.swift in Sources */,
 				04824506271C3C8E00E27160 /* HorizontalScrollCards.swift in Sources */,
 				FDFA67AE2737FA9400844B4D /* Snapshots.swift in Sources */,
 				04824509271C3D3100E27160 /* BlurView.swift in Sources */,
@@ -584,14 +617,18 @@
 				04EC143D274266A200CF4DD6 /* CategoryLogo.swift in Sources */,
 				FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				04D0956F275F88C000E497F1 /* OnBoarding.swift in Sources */,
+				FD6BA57C27738AE400BA7F5D /* EmailHelper.swift in Sources */,
 				043612A72765FBBB00FA0632 /* ProfileImageStorage.swift in Sources */,
 				FDF235CB2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */,
 				04824530271C52FE00E27160 /* BigCards.swift in Sources */,
 				04E113A82737EF7F003CAC4B /* RecipeListViewModel.swift in Sources */,
 				04D0957C275F9D0800E497F1 /* OnBoardingScrollView.swift in Sources */,
 				04EFCFDB27205CDB009795CC /* QuickNEasy.swift in Sources */,
+				FD5032CB277202360054C3D1 /* DeveloperCard.swift in Sources */,
+				FD5032C82772009D0054C3D1 /* Developer.swift in Sources */,
 				04FF23012770A16A00B81A98 /* GradientIcon.swift in Sources */,
 				FDF235BD2726F3F000EAE8D3 /* Texts.swift in Sources */,
+				FD5032C52771ED2B0054C3D1 /* DevelopersView.swift in Sources */,
 				049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
 				FDF235B12726F39C00EAE8D3 /* DetailView.swift in Sources */,
 				0482450F271C411800E27160 /* Gradient.swift in Sources */,
@@ -614,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04824504271C3C4100E27160 /* SearchButton.swift in Sources */,
+				FD5032C62771ED2B0054C3D1 /* DevelopersView.swift in Sources */,
 				0482452E271C4A5A00E27160 /* Cards.swift in Sources */,
 				049BE68A271C2B0B0008F8ED /* Persistence.swift in Sources */,
 				04EC143E274266A200CF4DD6 /* CategoryLogo.swift in Sources */,
@@ -626,12 +664,15 @@
 				0482450A271C3D3100E27160 /* BlurView.swift in Sources */,
 				04824501271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
 				04E113A92737EF7F003CAC4B /* RecipeListViewModel.swift in Sources */,
+				FD5032CC277202360054C3D1 /* DeveloperCard.swift in Sources */,
 				0407A7E9272D78C600F0F209 /* FirebaseConstants.swift in Sources */,
 				FD0FA1252736B4C600FFD28D /* FoodZaps.xcdatamodeld in Sources */,
+				FD5032CF2772185E0054C3D1 /* DeveloperDetailView.swift in Sources */,
 				0482452B271C4A1B00E27160 /* WorldCusines.swift in Sources */,
 				04824531271C52FE00E27160 /* BigCards.swift in Sources */,
 				04D525CE273FC0AB0011DD13 /* FullListViewModel.swift in Sources */,
 				0407A7E0272D5BF400F0F209 /* GlassButton.swift in Sources */,
+				FD5032D227721A3A0054C3D1 /* DeveloperDetailViewModel.swift in Sources */,
 				04EFCFDC27205CDB009795CC /* QuickNEasy.swift in Sources */,
 				04D8E4892737B46800F2524A /* ImageLoader.swift in Sources */,
 				049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
@@ -646,6 +687,7 @@
 				04FF22FF2770A03E00B81A98 /* MenuRow.swift in Sources */,
 				04E65828274290760022C3F3 /* RoundedCorners.swift in Sources */,
 				FDF235BE2726F3F000EAE8D3 /* Texts.swift in Sources */,
+				FD5032C92772009D0054C3D1 /* Developer.swift in Sources */,
 				FDF235B52726F3AC00EAE8D3 /* SeeMoreButton.swift in Sources */,
 				FDF235B82726F3DA00EAE8D3 /* Tag.swift in Sources */,
 				04A53C91275BA6E600A64BDD /* HapticViewModel.swift in Sources */,
@@ -778,13 +820,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow $(PRODUCT_NAME) to access camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow FoodZap to access camera";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FoodZap wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -816,13 +858,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow $(PRODUCT_NAME) to access camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow FoodZap to access camera";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "FoodZap wants to save image to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
