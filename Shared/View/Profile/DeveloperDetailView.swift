@@ -115,6 +115,7 @@ struct DeveloperDetailView: View {
                     
                     Button(action: {
                         EmailHelper.shared.sendEmail(subject: "FoodZap | Feedback", body: "", to: "blacenova@gmail.com")
+                        
                     }) {
                         Image(systemName: "bubble.left")
                             .font(.system(size: 30))
