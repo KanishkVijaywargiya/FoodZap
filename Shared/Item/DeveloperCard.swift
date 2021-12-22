@@ -1,52 +1,34 @@
 //
-//  BigCards.swift
+//  DeveloperCard.swift
 //  FoodZap
 //
-//  Created by KANISHK VIJAYWARGIYA on 17/10/21.
+//  Created by MANAS VIJAYWARGIYA on 21/12/21.
 //
 
 import SwiftUI
 
-struct BigCards: View {
-    @StateObject var imageLoader = ImageLoader()
-    var dummyData: QuickNEasy
+struct DeveloperCard: View {
+    var dev: Developer
+    @Environment(\.colorScheme) var color
+    
     var gradient1: [Color] = [
         Color(#colorLiteral(red: 0.007843137255, green: 0.1058823529, blue: 0.4745098039, alpha: 1)), Color(#colorLiteral(red: 0.007843137255, green: 0.1058823529, blue: 0.4745098039, alpha: 1)), Color(#colorLiteral(red: 0.4156862745, green: 0.1882352941, blue: 0.5764705882, alpha: 1))
     ]
     
+    var animation: Namespace.ID
+    
     var body: some View {
-        VStack(spacing: 0) {
-            Group{
-                if imageLoader.image != nil {
-                    Image(uiImage: imageLoader.image!)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 265)
-                } else if imageLoader.errorMessage != nil {
-//                    Text(imageLoader.errorMessage!)
-                    Image("swiftuihandbook")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 265)
-                } else {
-                    ZStack {
-                        Color.randomColor()
-                        ProgressView()
-                            .scaleEffect(2, anchor: .center)
-                            .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                    }
-                    .frame(height: 265)
-                }
-            }
-            .onAppear {
-                imageLoader.fetch(for: dummyData.backgroundImg)
-            }
+        VStack {
+            Image(dev.profileImg)
+                .resizable()
+                .scaledToFill()
+                .matchedGeometryEffect(id: dev.profileImg, in: animation)
+                .frame(height: 265)
             
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(dummyData.title)
-                        .font(.system(size: 24, weight:.bold))
-                        .bold()
+                    Text(dev.name)
+                        .font(.custom("American Typewriter", size: 15).bold())
                         .foregroundColor(.white)
                         .frame(maxWidth: 250, alignment: .leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -55,7 +37,7 @@ struct BigCards: View {
                         .multilineTextAlignment(.leading)
                         .lineLimit(1)
                     
-                    Text(dummyData.time)
+                    Text(dev.category)
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.white)
@@ -65,16 +47,17 @@ struct BigCards: View {
                         .lineLimit(1)
                 }
                 
-                Image(systemName: "chevron.right.circle")
-                    .frame(width: 25, height: 25)
-                    .font(.system(size: 25, weight: .thin))
-                    .foregroundColor(.white)
-                    .padding(12)
+                Image(dev.logo)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(15)
+                    .padding(.trailing, 16)
+                
             }
             .frame(width: UIScreen.main.bounds.width - 40)
+            .matchedGeometryEffect(id: dev.id, in: animation)
             .background(BlurView(style: .light))
-            
-            Spacer()
         }
         .frame(height: 335)
         .background(
@@ -86,9 +69,9 @@ struct BigCards: View {
     }
 }
 
-struct BigCards_Previews: PreviewProvider {
-    static var dummyData = QuickNEasy.quickNEasy[0]
+struct DeveloperCard_Previews: PreviewProvider {
+    @Namespace static var namespace
     static var previews: some View {
-        BigCards(dummyData: dummyData)
+        DeveloperCard(dev: developers[1], animation: namespace)
     }
 }
