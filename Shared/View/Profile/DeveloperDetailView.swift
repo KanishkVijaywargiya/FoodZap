@@ -11,7 +11,7 @@ import MessageUI
 struct DeveloperDetailView: View {
     @ObservedObject var developerDetailViewModel: DeveloperDetailViewModel
     @StateObject var hapticVM = HapticViewModel()
-    var animation: Namespace.ID
+    //    var animation: Namespace.ID
     
     @State private var result: Result<MFMailComposeResult, Error>? = nil
     @State private var isShowingMailView = false
@@ -23,7 +23,7 @@ struct DeveloperDetailView: View {
                     Image(developerDetailViewModel.selectedItem.profileImg)
                         .resizable()
                         .scaledToFill()
-                        .matchedGeometryEffect(id: developerDetailViewModel.selectedItem.profileImg, in: animation)
+                    //                        .matchedGeometryEffect(id: developerDetailViewModel.selectedItem.profileImg, in: animation)
                         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
                     
                     HStack {
@@ -74,7 +74,7 @@ struct DeveloperDetailView: View {
                     
                 }
                 .padding(.top, 20)
-                .matchedGeometryEffect(id: developerDetailViewModel.selectedItem.id, in: animation)
+                //                .matchedGeometryEffect(id: developerDetailViewModel.selectedItem.id, in: animation)
                 
                 Text(developerDetailViewModel.selectedItem.hello)
                     .bold()
@@ -154,6 +154,6 @@ struct DeveloperDetailView_Previews: PreviewProvider {
     @Namespace static var namespace
     
     static var previews: some View {
-        DeveloperDetailView(developerDetailViewModel: DeveloperDetailViewModel(), animation: namespace)
+        DeveloperDetailView(developerDetailViewModel: DeveloperDetailViewModel())
     }
 }

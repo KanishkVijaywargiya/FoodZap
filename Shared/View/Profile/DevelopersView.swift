@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DevelopersView: View {
-    @Namespace var animation
+    //    @Namespace var animation
     
     @StateObject var developerDetailViewModel = DeveloperDetailViewModel()
     
@@ -26,13 +26,13 @@ struct DevelopersView: View {
                     Spacer()
                     
                     DismissButton()
-                        .opacity(developerDetailViewModel.show ? 0 : 1)
+                    //                        .opacity(developerDetailViewModel.show ? 0 : 1)
                 }
                 
                 ScrollView {
                     LazyVGrid(columns: [GridItem()], content: {
                         ForEach(developers) { developer in
-                            DeveloperCard(dev: developer, animation: animation)
+                            DeveloperCard(dev: developer)
                                 .onTapGesture {
                                     withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6)) {
                                         developerDetailViewModel.selectedItem = developer
@@ -44,13 +44,16 @@ struct DevelopersView: View {
                 }
             }
             .padding(.top, 40)
-            .opacity(developerDetailViewModel.show ? 0 : 1)
+            //            .opacity(developerDetailViewModel.show ? 0 : 1)
             
             
-            if developerDetailViewModel.show {
-                DeveloperDetailView(developerDetailViewModel: developerDetailViewModel, animation: animation)
-            }
+            //            if developerDetailViewModel.show {
+            //                DeveloperDetailView(developerDetailViewModel: developerDetailViewModel, animation: animation)
+            //            }
         }
+        .fullScreenCover(isPresented: $developerDetailViewModel.show, content: {
+            DeveloperDetailView(developerDetailViewModel: developerDetailViewModel)
+        })
         .ignoresSafeArea()
     }
 }
