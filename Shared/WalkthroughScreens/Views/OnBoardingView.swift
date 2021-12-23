@@ -48,7 +48,7 @@ struct OnBoardingView: View {
                                 .blur(radius: 6)
                                 .frame(width: 200, height: 200)
                                 .scaleEffect(appModel.scale)
-                                .animation(Animation.easeInOut(duration: 0.2).delay(0.2))
+                                .animation(Animation.easeInOut(duration: 0.2).delay(0.2), value: appModel.scale)
                         }
                         .offset(x: width * 0.6, y: height * 0.775)
                     }

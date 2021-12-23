@@ -37,7 +37,7 @@ struct OnboardingPage: View {
                         .frame(height: self.viewAppeared ? 150 : CGFloat.zero, alignment: .center)
                         .frame(minHeight: 150)
                         .multilineTextAlignment(.center)
-                        .animation(Animation.spring(response: 0.5, dampingFraction: 0.7).delay(0.25))
+                        .animation(Animation.spring(response: 0.5, dampingFraction: 0.7).delay(0.25), value: self.viewAppeared)
                 }
             }
         }

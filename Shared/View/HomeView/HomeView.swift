@@ -79,7 +79,7 @@ struct HomeView: View {
         }
         .fullScreenCover(isPresented: $viewAppeared) {
             ProfileView(saveName: $name, imageSelected: $profileImage)
-                .animation(Animation.spring())
+                .animation(Animation.spring(), value: name)
         }
     }
 }

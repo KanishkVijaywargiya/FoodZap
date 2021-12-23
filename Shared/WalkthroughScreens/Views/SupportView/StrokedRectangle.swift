@@ -25,7 +25,7 @@ struct StrokedRectangle: View {
                 .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round))
                 .foregroundColor(background)
                 .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                .animation(Animation.easeInOut(duration: animationDuration))
+                .animation(Animation.easeInOut(duration: animationDuration), value: self.appModel.currentStep)
             
             RoundedRectangle(cornerRadius: self.appModel.currentStep == 2 ? 45 : 24)
                 .trim(from: 0.1, to: 0.4)
@@ -36,7 +36,7 @@ struct StrokedRectangle: View {
                 .trim(from: 0.1, to: self.appModel.passedSteps.contains(1) ? 0.4 : 0.1)
                 .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round))
                 .foregroundColor(background)
-                .animation(Animation.easeInOut(duration: animationDuration))
+                .animation(Animation.easeInOut(duration: animationDuration), value: self.appModel.currentStep)
             
             RoundedRectangle(cornerRadius: self.appModel.currentStep == 2 ? 45 : 24)
                 .trim(from: 0.43, to: 0.73)
@@ -47,7 +47,7 @@ struct StrokedRectangle: View {
                 .trim(from: 0.43, to: self.appModel.passedSteps.contains(2) ? 0.73 : 0.43)
                 .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round))
                 .foregroundColor(background)
-                .animation(Animation.easeInOut(duration: animationDuration))
+                .animation(Animation.easeInOut(duration: animationDuration), value: self.appModel.currentStep)
             
         }
         .frame(width: 78, height: 78)
