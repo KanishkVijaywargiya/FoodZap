@@ -21,7 +21,6 @@ struct DevelopersView: View {
                     Text("Developers")
                         .font(.largeTitle).bold()
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 16)
                     
                     Spacer()
                     
@@ -43,7 +42,7 @@ struct DevelopersView: View {
                     })
                 }
             }
-            .padding(.top, 40)
+            .padding(.top, 80)
             //            .opacity(developerDetailViewModel.show ? 0 : 1)
             
             
@@ -70,7 +69,7 @@ struct DismissButton: View {
     
     var body: some View {
         GlassButton(iconName: "xmark", iconSize: 14)
-            .padding(.trailing, 8)
+            .padding(.trailing, 16)
             .onTapGesture {
                 hapticVM.impact(style: .heavy)
                 hapticVM.haptic(type: .warning)

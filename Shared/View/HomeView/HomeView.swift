@@ -18,9 +18,6 @@ struct HomeView: View {
     @State var viewAppeared = false
     @State var profileImage: UIImage = retrieveImage(forKey: "ProfileImage", inStorageType: .userDefaults)
     
-    @Environment(\.managedObjectContext) var viewContext
-    @FetchRequest(entity: QuickEasy.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \QuickEasy.title, ascending: true)]) var results: FetchedResults<QuickEasy>
-    
     var body: some View {
         ZStack {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
@@ -78,7 +75,7 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            quickNEasyVM.fetchQuickNEasyData(context: viewContext)
+            quickNEasyVM.fetchQuickNEasyData()
         }
         .fullScreenCover(isPresented: $viewAppeared) {
             ProfileView(saveName: $name, imageSelected: $profileImage)
