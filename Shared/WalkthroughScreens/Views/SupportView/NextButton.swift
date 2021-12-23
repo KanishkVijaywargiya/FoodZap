@@ -24,11 +24,11 @@ struct NextButton: View {
                 .foregroundColor(appModel.currentStep == 2 ? Color.green : Color.black)
                 .font(.system(size: 24, weight: self.appModel.currentStep == 2 ? .black : .semibold))
                 .scaleEffect(self.appModel.currentStep == 2 ? 1.2 : 1)
-                .animation(.default)
+                .animation(.default, value: self.appModel.currentStep)
         }
         .frame(width: 90, height: 90)
         .scaleEffect(self.appModel.currentStep == 2 ? 0.9 : 1)
-        .animation(.default)
+        .animation(.default, value: self.appModel.currentStep)
     }
 }
 
