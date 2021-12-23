@@ -15,14 +15,14 @@ struct DeveloperCard: View {
         Color(#colorLiteral(red: 0.007843137255, green: 0.1058823529, blue: 0.4745098039, alpha: 1)), Color(#colorLiteral(red: 0.007843137255, green: 0.1058823529, blue: 0.4745098039, alpha: 1)), Color(#colorLiteral(red: 0.4156862745, green: 0.1882352941, blue: 0.5764705882, alpha: 1))
     ]
     
-    var animation: Namespace.ID
+    //    var animation: Namespace.ID
     
     var body: some View {
         VStack {
             Image(dev.profileImg)
                 .resizable()
                 .scaledToFill()
-                .matchedGeometryEffect(id: dev.profileImg, in: animation)
+            //                .matchedGeometryEffect(id: dev.profileImg, in: animation)
                 .frame(height: 265)
             
             HStack {
@@ -56,7 +56,7 @@ struct DeveloperCard: View {
                 
             }
             .frame(width: UIScreen.main.bounds.width - 40)
-            .matchedGeometryEffect(id: dev.id, in: animation)
+            //            .matchedGeometryEffect(id: dev.id, in: animation)
             .background(BlurView(style: .light))
         }
         .frame(height: 335)
@@ -72,6 +72,6 @@ struct DeveloperCard: View {
 struct DeveloperCard_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        DeveloperCard(dev: developers[1], animation: namespace)
+        DeveloperCard(dev: developers[1])
     }
 }
