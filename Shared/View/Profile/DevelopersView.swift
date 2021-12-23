@@ -30,17 +30,17 @@ struct DevelopersView: View {
                 }
                 
                 ScrollView {
-                    VStack {
+                    LazyVGrid(columns: [GridItem()], content: {
                         ForEach(developers) { developer in
                             DeveloperCard(dev: developer, animation: animation)
                                 .onTapGesture {
-                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0.8)) {
+                                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.6)) {
                                         developerDetailViewModel.selectedItem = developer
                                         developerDetailViewModel.show.toggle()
                                     }
                                 }
                         }
-                    }
+                    })
                 }
             }
             .padding(.top, 40)

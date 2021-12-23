@@ -36,7 +36,7 @@ struct DeveloperDetailView: View {
                             .onTapGesture {
                                 hapticVM.impact(style: .soft)
                                 hapticVM.haptic(type: .success)
-                                withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.8, blendDuration: 0.8)) {
+                                withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.9)) {
                                     developerDetailViewModel.show.toggle()
                                 }
                             }
