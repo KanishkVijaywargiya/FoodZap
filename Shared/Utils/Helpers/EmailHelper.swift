@@ -6,40 +6,59 @@
 //
 
 import Foundation
+import SwiftUI
 import MessageUI
+import UIKit
 
-class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
-    public static let shared = EmailHelper()
-    private override init() {
-        //
-    }
+public struct MailView: UIViewControllerRepresentable {
     
-    func sendEmail(subject:String, body:String, to:String){
-        if !MFMailComposeViewController.canSendMail() {
-            print("No mail account found")
-            // Todo: Add a way to show banner to user about no mail app found or configured
-            // Utilities.showErrorBanner(title: "No mail account found", subtitle: "Please setup a mail account")
-            return //EXIT
+    @Environment(\.presentationMode) var presentation
+    @Binding var result: Result<MFMailComposeResult, Error>?
+    public var configure: ((MFMailComposeViewController) -> Void)?
+    
+    let newSubject : String
+    
+    public class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        
+        @Binding var presentation: PresentationMode
+        @Binding var result: Result<MFMailComposeResult, Error>?
+        
+        init(presentation: Binding<PresentationMode>,
+             result: Binding<Result<MFMailComposeResult, Error>?>) {
+            _presentation = presentation
+            _result = result
         }
         
-        let picker = MFMailComposeViewController()
-        
-        picker.setSubject(subject)
-        picker.setMessageBody(body, isHTML: true)
-        picker.setToRecipients([to])
-        picker.mailComposeDelegate = self
-        
-        EmailHelper.getRootViewController()?.present(picker, animated: true, completion: nil)
+        public func mailComposeController(_ controller: MFMailComposeViewController,
+                                          didFinishWith result: MFMailComposeResult,
+                                          error: Error?) {
+            defer {
+                $presentation.wrappedValue.dismiss()
+            }
+            guard error == nil else {
+                self.result = .failure(error!)
+                return
+            }
+            self.result = .success(result)
+        }
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        EmailHelper.getRootViewController()?.dismiss(animated: true, completion: nil)
+    public func makeCoordinator() -> Coordinator {
+        return Coordinator(presentation: presentation,
+                           result: $result)
     }
     
-    static func getRootViewController() -> UIViewController? {
-        UIApplication.shared.windows.first?.rootViewController
-        
-        // OR If you use SwiftUI 2.0 based WindowGroup try this one
-        // UIApplication.shared.windows.first?.rootViewController
+    public func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
+        let vc = MFMailComposeViewController()
+        vc.mailComposeDelegate = context.coordinator
+        vc.setToRecipients(["kanishkvijaywargiya99@gmail.com", "21094manas@gmail.com"])
+        vc.setSubject(newSubject)
+        return vc
     }
+    
+    public func updateUIViewController(
+        _ uiViewController: MFMailComposeViewController,
+        context: UIViewControllerRepresentableContext<MailView>) {
+            
+        }
 }
