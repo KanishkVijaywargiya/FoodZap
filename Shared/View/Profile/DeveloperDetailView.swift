@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct DeveloperDetailView: View {
     @ObservedObject var developerDetailViewModel: DeveloperDetailViewModel
     var animation: Namespace.ID
+    
+    @State private var result: Result<MFMailComposeResult, Error>? = nil
+    @State private var isShowingMailView = false
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -114,8 +118,12 @@ struct DeveloperDetailView: View {
                     .padding(.trailing, 6)
                     
                     Button(action: {
-                        EmailHelper.shared.sendEmail(subject: "FoodZap | Feedback", body: "", to: "blacenova@gmail.com")
-                        
+                        if MFMailComposeViewController.canSendMail() {
+                            self.isShowingMailView = true
+                        } else {
+                            print("Error sending mail")
+                            // Alert : Unable to send the mail
+                        }
                     }) {
                         Image(systemName: "bubble.left")
                             .font(.system(size: 30))
@@ -126,6 +134,9 @@ struct DeveloperDetailView: View {
             }
         }
         .ignoresSafeArea(.all)
+        .sheet(isPresented: $isShowingMailView) {
+            MailView(result: self.$result, newSubject: "FoodZap | Feedback")
+        }
     }
 }
 
