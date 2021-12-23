@@ -18,7 +18,6 @@ struct OnBoardingScrollView: View {
     @State var nextButtonScale: CGFloat = 0
     @State var viewOffset: CGFloat = 0
     
-    let persistenceController = PersistenceController.shared
     let appWidth: CGFloat = UIScreen.main.bounds.width
     let appHeight: CGFloat = UIScreen.main.bounds.height
     let detectDirectionalDrags = DragGesture(minimumDistance: 0, coordinateSpace: .local)
@@ -71,7 +70,6 @@ struct OnBoardingScrollView: View {
         }
         .fullScreenCover(isPresented: $viewAppeared) {
             HomeView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .foregroundColor(.black)
         }
     }

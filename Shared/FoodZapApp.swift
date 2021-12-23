@@ -11,7 +11,6 @@ import Firebase
 @main
 struct FoodZapApp: App {
     @AppStorage("currentPage") var currentPage = 0
-    let persistenceController = PersistenceController.shared
     
     init() {
         FirebaseApp.configure()
@@ -23,7 +22,6 @@ struct FoodZapApp: App {
                 NavigationView {
                     VStack {
                         HomeView()
-                            .environment(\.managedObjectContext, persistenceController.container.viewContext)
                             .foregroundColor(.black)
                     }
                     .navigationBarTitleDisplayMode(.inline)

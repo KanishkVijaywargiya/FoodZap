@@ -14,7 +14,6 @@ struct OnBoardingView: View {
     @StateObject var hapticVM = HapticViewModel()
     @State var background: Color
     @State var viewAppeared = false
-    let persistenceController = PersistenceController.shared
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
@@ -91,7 +90,6 @@ struct OnBoardingView: View {
         }
         .fullScreenCover(isPresented: $viewAppeared) {
             HomeView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .foregroundColor(.black)
         }
     }
