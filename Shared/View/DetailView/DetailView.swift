@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -13,6 +14,7 @@ struct DetailView: View {
     @StateObject var hapticVM = HapticViewModel()
     @State private var isSharingSheetShowing: Bool = false
     var dishesData: QuickNEasy
+    @State var uiTabarController: UITabBarController?
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -23,7 +25,7 @@ struct DetailView: View {
                         if imageLoader.image != nil {
                             Image(uiImage: imageLoader.image!)
                                 .resizable()
-    //                                .aspectRatio(contentMode: .fill)
+                            //                                .aspectRatio(contentMode: .fill)
                                 .scaledToFill()
                                 .frame(width: geo.size.width, height: self.getHeightForHeaderImage(geo))
                                 .clipped()
@@ -31,7 +33,7 @@ struct DetailView: View {
                         } else if imageLoader.errorMessage != nil {
                             Rectangle()
                                 .foregroundColor(.gray.opacity(0.2))
-    //                            .frame(width: UIScreen.main.bounds.width, height: 300)
+                            //                            .frame(width: UIScreen.main.bounds.width, height: 300)
                                 .frame(width: geo.size.width, height: self.getHeightForHeaderImage(geo))
                                 .clipped()
                                 .offset(x: 0, y: self.getOffsetForHeaderImage(geo))
@@ -39,7 +41,7 @@ struct DetailView: View {
                             ZStack {
                                 Rectangle()
                                     .foregroundColor(.gray.opacity(0.2))
-    //                                .frame(width: UIScreen.main.bounds.width, height: 300)
+                                //                                .frame(width: UIScreen.main.bounds.width, height: 300)
                                     .frame(width: geo.size.width, height: self.getHeightForHeaderImage(geo))
                                     .clipped()
                                     .offset(x: 0, y: self.getOffsetForHeaderImage(geo))
@@ -48,14 +50,14 @@ struct DetailView: View {
                             }
                         }
                     }
-    //                .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
+                    //                .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                     .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 6)
                     .overlay(
                         FavButton(icon: "heart.fill")
                             .position(x: UIScreen.main.bounds.width - 35, y: 300)
-    //                        .onTapGesture {
-    //                            dishesData.isFav ? fullListVM.addToFav(favoriteType, of: dishesData.id) : fullListVM.removeFav(favoriteType, of: dishesData.id)
-    //                        }
+                        //                        .onTapGesture {
+                        //                            dishesData.isFav ? fullListVM.addToFav(favoriteType, of: dishesData.id) : fullListVM.removeFav(favoriteType, of: dishesData.id)
+                        //                        }
                     )
                 }.frame(height: 300)
                 
@@ -318,6 +320,12 @@ struct DetailView: View {
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .introspectTabBarController { (UITabBarController) in
+            UITabBarController.tabBar.isHidden = true
+            uiTabarController = UITabBarController
+        }.onDisappear{
+            uiTabarController?.tabBar.isHidden = false
+        }
     }
     
     func shareBtn() {

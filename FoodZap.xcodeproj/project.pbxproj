@@ -17,6 +17,7 @@
 		043612A52765E88B00FA0632 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043612A32765E88B00FA0632 /* ImagePicker.swift */; };
 		043612A72765FBBB00FA0632 /* ProfileImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043612A62765FBBB00FA0632 /* ProfileImageStorage.swift */; };
 		043612A82765FBBB00FA0632 /* ProfileImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043612A62765FBBB00FA0632 /* ProfileImageStorage.swift */; };
+		045B0C80277609E20001B182 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 045B0C7F277609E20001B182 /* Introspect */; };
 		048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FF271C3BD100E27160 /* QuickAndEasy.swift */; };
@@ -37,6 +38,9 @@
 		0482452E271C4A5A00E27160 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452C271C4A5A00E27160 /* Cards.swift */; };
 		04824530271C52FE00E27160 /* BigCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452F271C52FE00E27160 /* BigCards.swift */; };
 		04824531271C52FE00E27160 /* BigCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482452F271C52FE00E27160 /* BigCards.swift */; };
+		048D007F2775D8F9005771A8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D007E2775D8F9005771A8 /* CalendarView.swift */; };
+		048D00812775D90A005771A8 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D00802775D90A005771A8 /* TodoListView.swift */; };
+		048D00882775D993005771A8 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048D00872775D993005771A8 /* BottomTabView.swift */; };
 		049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE672271C2B080008F8ED /* FoodZapApp.swift */; };
 		049BE686271C2B0B0008F8ED /* FoodZapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE672271C2B080008F8ED /* FoodZapApp.swift */; };
 		049BE687271C2B0B0008F8ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049BE673271C2B080008F8ED /* HomeView.swift */; };
@@ -134,6 +138,9 @@
 		04824529271C4A1B00E27160 /* WorldCusines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCusines.swift; sourceTree = "<group>"; };
 		0482452C271C4A5A00E27160 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		0482452F271C52FE00E27160 /* BigCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCards.swift; sourceTree = "<group>"; };
+		048D007E2775D8F9005771A8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		048D00802775D90A005771A8 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		048D00872775D993005771A8 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
 		049BE672271C2B080008F8ED /* FoodZapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodZapApp.swift; sourceTree = "<group>"; };
 		049BE673271C2B080008F8ED /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		049BE675271C2B0B0008F8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				045B0C80277609E20001B182 /* Introspect in Frameworks */,
 				FD99043A271C643700F725FC /* AwesomeToast in Frameworks */,
 				FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */,
 			);
@@ -208,6 +216,8 @@
 		048244F8271C382400E27160 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048D007D2775D8DD005771A8 /* CalendarView */,
+				048D007C2775D8C9005771A8 /* GroceriesListView */,
 				FD5032C32771ED0B0054C3D1 /* Profile */,
 				04F0291D276F436200AAC1C8 /* NetworkCheckView */,
 				FDF235C82726F56300EAE8D3 /* DetailView */,
@@ -260,6 +270,22 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		048D007C2775D8C9005771A8 /* GroceriesListView */ = {
+			isa = PBXGroup;
+			children = (
+				048D00802775D90A005771A8 /* TodoListView.swift */,
+			);
+			path = GroceriesListView;
+			sourceTree = "<group>";
+		};
+		048D007D2775D8DD005771A8 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				048D007E2775D8F9005771A8 /* CalendarView.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		049BE66A271C2B070008F8ED = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +307,7 @@
 				048244F9271C382B00E27160 /* Model */,
 				048244F8271C382400E27160 /* View */,
 				04D8E4852737B41F00F2524A /* ViewModel */,
+				048D00872775D993005771A8 /* BottomTabView.swift */,
 				049BE672271C2B080008F8ED /* FoodZapApp.swift */,
 				0407A7E1272D69C000F0F209 /* GoogleService-Info.plist */,
 				049BE675271C2B0B0008F8ED /* Assets.xcassets */,
@@ -486,6 +513,7 @@
 				FD990439271C643700F725FC /* AwesomeToast */,
 				FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */,
 				FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */,
+				045B0C7F277609E20001B182 /* Introspect */,
 			);
 			productName = "FoodZap (iOS)";
 			productReference = 049BE67A271C2B0B0008F8ED /* FoodZap.app */;
@@ -538,6 +566,7 @@
 			packageReferences = (
 				FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */,
 				FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				045B0C7E277609E20001B182 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 049BE67B271C2B0B0008F8ED /* Products */;
 			projectDirPath = "";
@@ -606,6 +635,7 @@
 				04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */,
 				0482452A271C4A1B00E27160 /* WorldCusines.swift in Sources */,
 				04EC143D274266A200CF4DD6 /* CategoryLogo.swift in Sources */,
+				048D007F2775D8F9005771A8 /* CalendarView.swift in Sources */,
 				FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				04D0956F275F88C000E497F1 /* OnBoarding.swift in Sources */,
 				FD6BA57C27738AE400BA7F5D /* EmailHelper.swift in Sources */,
@@ -618,6 +648,7 @@
 				FD5032CB277202360054C3D1 /* DeveloperCard.swift in Sources */,
 				FD5032C82772009D0054C3D1 /* Developer.swift in Sources */,
 				04FF23012770A16A00B81A98 /* GradientIcon.swift in Sources */,
+				048D00812775D90A005771A8 /* TodoListView.swift in Sources */,
 				FDF235BD2726F3F000EAE8D3 /* Texts.swift in Sources */,
 				FD5032C52771ED2B0054C3D1 /* DevelopersView.swift in Sources */,
 				049BE685271C2B0B0008F8ED /* FoodZapApp.swift in Sources */,
@@ -629,6 +660,7 @@
 				FD404FF2272304BE004754EA /* ListRow.swift in Sources */,
 				04EDF0D927621ABA0094B51D /* ProfileView.swift in Sources */,
 				FDF235B72726F3DA00EAE8D3 /* Tag.swift in Sources */,
+				048D00882775D993005771A8 /* BottomTabView.swift in Sources */,
 				04F0291F276F438D00AAC1C8 /* NetworkCheckView.swift in Sources */,
 				04D525CD273FC0AB0011DD13 /* FullListViewModel.swift in Sources */,
 				04A53C90275BA6E600A64BDD /* HapticViewModel.swift in Sources */,
@@ -971,6 +1003,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		045B0C7E277609E20001B182 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 		FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -990,6 +1030,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		045B0C7F277609E20001B182 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 045B0C7E277609E20001B182 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
 		FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

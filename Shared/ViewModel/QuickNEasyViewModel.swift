@@ -12,6 +12,10 @@ import Firebase
 final class QuickNEasyViewModel: ObservableObject {
     @Published var quickNEasy = [QuickNEasy]()
     
+    init() {
+        self.fetchQuickNEasyData()
+    }
+    
     func fetchQuickNEasyData() {
         QUICK_AND_EASY
 //            .order(by: "title", descending: false)
