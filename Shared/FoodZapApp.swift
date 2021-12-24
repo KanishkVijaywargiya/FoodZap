@@ -11,6 +11,7 @@ import Firebase
 @main
 struct FoodZapApp: App {
     @AppStorage("currentPage") var currentPage = 0
+    @State var selectedIndex = 0
     
     init() {
         FirebaseApp.configure()
@@ -19,14 +20,7 @@ struct FoodZapApp: App {
     var body: some Scene {
         WindowGroup {
             if currentPage == 4 {
-                NavigationView {
-                    VStack {
-                        HomeView()
-                            .foregroundColor(.black)
-                    }
-                    .navigationBarTitleDisplayMode(.inline)
-                    .accentColor(Color(Colors.accentColors))
-                }
+                BottomTabView(currentTab: $selectedIndex)
             } else {
                 OnBoardingView(background: .green)
             }
