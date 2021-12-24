@@ -24,7 +24,7 @@ struct DeveloperDetailView: View {
                     Image(developerDetailViewModel.selectedItem.profileImg)
                         .resizable()
                         .scaledToFill()
-                        .shadow(color: Color.black, radius: 20)
+                        .shadow(color: Color.black, radius: 8)
                     //                        .matchedGeometryEffect(id: developerDetailViewModel.selectedItem.profileImg, in: animation)
                         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
                     
