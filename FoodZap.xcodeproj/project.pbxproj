@@ -17,7 +17,6 @@
 		043612A52765E88B00FA0632 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043612A32765E88B00FA0632 /* ImagePicker.swift */; };
 		043612A72765FBBB00FA0632 /* ProfileImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043612A62765FBBB00FA0632 /* ProfileImageStorage.swift */; };
 		043612A82765FBBB00FA0632 /* ProfileImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043612A62765FBBB00FA0632 /* ProfileImageStorage.swift */; };
-		045B0C80277609E20001B182 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 045B0C7F277609E20001B182 /* Introspect */; };
 		048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		048244FE271C3B9900E27160 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FC271C3B9900E27160 /* ProfileButton.swift */; };
 		04824500271C3BD100E27160 /* QuickAndEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048244FF271C3BD100E27160 /* QuickAndEasy.swift */; };
@@ -197,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				045B0C80277609E20001B182 /* Introspect in Frameworks */,
 				FD99043A271C643700F725FC /* AwesomeToast in Frameworks */,
 				FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */,
 			);
@@ -513,7 +511,6 @@
 				FD990439271C643700F725FC /* AwesomeToast */,
 				FD8C10DF272D6B1A005531D1 /* FirebaseFirestore */,
 				FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */,
-				045B0C7F277609E20001B182 /* Introspect */,
 			);
 			productName = "FoodZap (iOS)";
 			productReference = 049BE67A271C2B0B0008F8ED /* FoodZap.app */;
@@ -566,7 +563,6 @@
 			packageReferences = (
 				FD990438271C643600F725FC /* XCRemoteSwiftPackageReference "AwesomeToastPackage" */,
 				FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				045B0C7E277609E20001B182 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 049BE67B271C2B0B0008F8ED /* Products */;
 			projectDirPath = "";
@@ -1003,14 +999,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		045B0C7E277609E20001B182 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
 		FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1030,11 +1018,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		045B0C7F277609E20001B182 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 045B0C7E277609E20001B182 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
 		FD51D5EA2736A00500B66D91 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD8C10DE272D6B1A005531D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
