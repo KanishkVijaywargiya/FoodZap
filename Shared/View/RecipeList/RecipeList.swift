@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Introspect
 
 struct RecipeList: View {
     @Environment(\.presentationMode) var presentationMode
@@ -22,7 +21,6 @@ struct RecipeList: View {
     @State var isSelectedTime: String = ""
     @State var isSelectedLevel: String = ""
     @State var isSelectedCusine: String = ""
-    @State var uiTabarController: UITabBarController?
     
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
@@ -84,12 +82,6 @@ struct RecipeList: View {
         }
         .sheet(isPresented: $filterSheet) {
             Filters(isSelectedTime: $isSelectedTime, isSelectedLevel: $isSelectedLevel, isSelectedCusine: $isSelectedCusine)
-        }
-        .introspectTabBarController { (UITabBarController) in
-            UITabBarController.tabBar.isHidden = true
-            uiTabarController = UITabBarController
-        }.onDisappear{
-            uiTabarController?.tabBar.isHidden = false
         }
     }
     

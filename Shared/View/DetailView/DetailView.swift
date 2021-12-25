@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Introspect
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -14,7 +13,6 @@ struct DetailView: View {
     @StateObject var hapticVM = HapticViewModel()
     @State private var isSharingSheetShowing: Bool = false
     var dishesData: QuickNEasy
-    @State var uiTabarController: UITabBarController?
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -292,6 +290,7 @@ struct DetailView: View {
                     .padding(.top, -16)
                 }
                 .foregroundColor(.black)
+                .padding(.bottom, 75)
             }
             .onAppear {
                 imageLoader.fetch(for: dishesData.backgroundImg)
@@ -320,12 +319,6 @@ struct DetailView: View {
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-        .introspectTabBarController { (UITabBarController) in
-            UITabBarController.tabBar.isHidden = true
-            uiTabarController = UITabBarController
-        }.onDisappear{
-            uiTabarController?.tabBar.isHidden = false
-        }
     }
     
     func shareBtn() {
