@@ -10,9 +10,12 @@ import SwiftUI
 struct BottomTabView: View {
     @Binding var currentTab: Int
     @ObservedObject var monitor = NetworkReachability()
+    @StateObject var quickNEasyVM = QuickNEasyViewModel()
+    @StateObject var RecipeListVM = RecipeListViewModel()
     
     var body: some View {
         if monitor.isConnected {
+            if (RecipeListVM.recipeList.count > 0 && quickNEasyVM.quickNEasy.count > 0) {
             TabView(selection: $currentTab) {
                 NavigationView {
                     VStack {
@@ -54,6 +57,11 @@ struct BottomTabView: View {
                 }.tag(2)
             }
             .accentColor(Color(hex: Colors.accentColors))
+            } else {
+                ProgressView()
+                    .scaleEffect(1, anchor: .center)
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
+            }
         } else {
             NetworkCheckView()
         }

@@ -12,6 +12,8 @@ struct DetailView: View {
     @StateObject var imageLoader = ImageLoader()
     @StateObject var hapticVM = HapticViewModel()
     @State private var isSharingSheetShowing: Bool = false
+    @State private var isScheduledSheet: Bool = false
+    
     var dishesData: QuickNEasy
     
     var body: some View {
@@ -265,6 +267,22 @@ struct DetailView: View {
                                     }
                                     .padding(.horizontal, 16)
                                 }
+                                
+                                Button(action: {
+                                    hapticVM.impact(style: .soft)
+                                    hapticVM.haptic(type: .success)
+                                    self.isScheduledSheet.toggle()
+                                }) {
+                                    Text("Schedule your food")
+                                        .frame(maxWidth: .infinity)
+                                        .foregroundColor(.green)
+                                }
+                                .tint(.green)
+                                .buttonStyle(.bordered)
+                                .buttonBorderShape(.capsule)
+                                .controlSize(.large)
+                                .padding()
+                                
                                 // ring circle design
                                 ZStack {
                                     Rectangle()
@@ -295,6 +313,7 @@ struct DetailView: View {
             .onAppear {
                 imageLoader.fetch(for: dishesData.backgroundImg)
             }
+            
             // back & share button
             HStack(alignment: .top) {
                 GlassButton(iconName: "chevron.backward")
@@ -319,6 +338,10 @@ struct DetailView: View {
         .edgesIgnoringSafeArea(.all)
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
+        .sheet(isPresented: $isScheduledSheet) {
+            CalendarFormView(title: dishesData.title)
+                .environmentObject(CalendarVM())
+        }
     }
     
     func shareBtn() {

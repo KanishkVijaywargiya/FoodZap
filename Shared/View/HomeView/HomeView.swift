@@ -21,7 +21,7 @@ struct HomeView: View {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
             
             
-            if (RecipeListVM.recipeList.count > 0 && quickNEasyVM.quickNEasy.count > 0) {
+//            if (RecipeListVM.recipeList.count > 0 && quickNEasyVM.quickNEasy.count > 0) {
                 ScrollView(showsIndicators: false) {
                     VStack(alignment: .leading, spacing: 0) {
                         // hello username
@@ -63,11 +63,12 @@ struct HomeView: View {
                     }
                 }
                 .navigationBarHidden(true)
-            } else {
-                    ProgressView()
-                        .scaleEffect(1, anchor: .center)
-                        .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
-                }
+//            }
+//            else {
+//                    ProgressView()
+//                        .scaleEffect(1, anchor: .center)
+//                        .progressViewStyle(CircularProgressViewStyle(tint: Color.black))
+//                }
                 
             }
             
