@@ -24,8 +24,12 @@ final class CalendarVM: ObservableObject {
     func getCalendarList() {
         if let savedItems = UserDefaults.standard.data(forKey: "Items") {
             if let decodedItems = try? JSONDecoder().decode([CalendarModal].self, from: savedItems) {
-                let result = decodedItems.sorted {
-                    $0.todayDate < $1.todayDate
+                let newData = decodedItems.filter {
+                    $0.todayDate.formatted(.dateTime.month().day().year()) >= Date().formatted(.dateTime.month().day().year())
+                }
+                
+                let result = newData.sorted {
+                    $0.todayDate > $1.todayDate
                 }
                 items = result
                 return
