@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AwesomeToast
 
 struct DetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -13,6 +14,7 @@ struct DetailView: View {
     @StateObject var hapticVM = HapticViewModel()
     @State private var isSharingSheetShowing: Bool = false
     @State private var isScheduledSheet: Bool = false
+    @State private var scheduleFoodToast = false
     
     var dishesData: QuickNEasy
     
@@ -339,9 +341,10 @@ struct DetailView: View {
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .sheet(isPresented: $isScheduledSheet) {
-            CalendarFormView(title: dishesData.title)
+            CalendarFormView(title: dishesData.title, scheduleFoodToast: $scheduleFoodToast)
                 .environmentObject(CalendarVM())
         }
+        .showToast(title: "Food Saved", "\(dishesData.title) has been schedule", isPresented: $scheduleFoodToast, color: Color(hex: "#7CEC9F").opacity(1), alignment: .top)
     }
     
     func shareBtn() {
