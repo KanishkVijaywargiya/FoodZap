@@ -21,6 +21,7 @@ struct CalendarFormView: View {
     @EnvironmentObject var calendarDt: CalendarVM
     @Environment(\.dismiss) var dismissMode
     
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -31,7 +32,7 @@ struct CalendarFormView: View {
                             Text($0)
                         }
                     }
-                    DatePicker("Select date for cooking food", selection: $birthdatefu, in: Date()..., displayedComponents: .date)
+                    DatePicker("Select date for cooking food", selection: $birthdatefu, in: Date()...addDate(.day, value: 7)!, displayedComponents: .date)
                 }
                 
                 Button(action: {
@@ -56,6 +57,9 @@ struct CalendarFormView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+    func addDate(_ unit: Calendar.Component, value: Int) -> Date? {
+        return Calendar.current.date(byAdding: unit, value: value, to: Date())
+    }
 }
 
 struct CalendarFormView_Previews: PreviewProvider {
@@ -63,5 +67,3 @@ struct CalendarFormView_Previews: PreviewProvider {
         CalendarFormView(title: "", scheduleFoodToast: .constant(false))
     }
 }
-
-
