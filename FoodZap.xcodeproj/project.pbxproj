@@ -877,7 +877,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
@@ -898,7 +898,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.blacenova.FoodZap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blacenovas.FoodZap;
 				PRODUCT_NAME = FoodZap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -916,7 +916,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
@@ -937,7 +937,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.blacenova.FoodZap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blacenovas.FoodZap;
 				PRODUCT_NAME = FoodZap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
