@@ -20,6 +20,7 @@ struct CalendarView: View {
                 }
                 .onDelete(perform: removeItems)
                 .listRowBackground(Color(hex: Colors.backgroundCol))
+                .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
         }
