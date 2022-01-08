@@ -14,15 +14,20 @@ struct CalendarView: View {
         ZStack {
             Color(hex: Colors.backgroundCol).ignoresSafeArea()
             
-            List {
-                ForEach(scheduleFoods.items) { item in
-                    CalendarCell(title: item.title, label: item.label, time: item.todayDate, bgCols: Color(hex: item.bgColor))
+            if scheduleFoods.items.isEmpty {
+                NoScheduleFoodsView()
+                    .transition(AnyTransition.opacity.animation(.easeIn))
+            } else {
+                List {
+                    ForEach(scheduleFoods.items) { item in
+                        CalendarCell(title: item.title, label: item.label, time: item.todayDate, bgCols: Color(hex: item.bgColor))
+                    }
+                    .onDelete(perform: removeItems)
+                    .listRowBackground(Color(hex: Colors.backgroundCol))
+                    .listRowSeparator(.hidden)
                 }
-                .onDelete(perform: removeItems)
-                .listRowBackground(Color(hex: Colors.backgroundCol))
-                .listRowSeparator(.hidden)
+                .listStyle(.plain)
             }
-            .listStyle(.plain)
         }
         .onAppear {
             scheduleFoods.getCalendarList()
