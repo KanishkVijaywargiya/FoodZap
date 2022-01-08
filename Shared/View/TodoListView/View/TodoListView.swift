@@ -27,6 +27,7 @@ struct TodoListView: View {
                                 hapticVM.haptic(type: .warning)
                                 listVM.updateItem(item: item)
                             }
+//                            .listRowBackground(BlurView(style: .systemMaterial))
                     }
                     .onDelete(perform: listVM.deleteItem)
                     .onMove(perform: listVM.moveItem)
