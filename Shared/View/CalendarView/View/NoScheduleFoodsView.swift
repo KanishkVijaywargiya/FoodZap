@@ -18,11 +18,11 @@ struct NoScheduleFoodsView: View {
                 Text("There are no items!")
                     .font(.title)
                     .fontWeight(.semibold)
-                Text("Do you want to schedule foods? Click on add button and add a bunch of items to your todo list!.")
+                Text("Do you want to schedule foods? Click on add button and add a bunch of items to your schedule list!.")
                     .padding(.bottom, 20)
                 
                 NavigationLink(destination: RecipeList()) {
-                    Text("Add Something 🥳")
+                    Text("Schedule Something 🥳")
                         .foregroundColor(.white)
                         .font(.headline)
                         .frame(height: 55)
