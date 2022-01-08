@@ -11,6 +11,7 @@ struct BottomTabView: View {
     @ObservedObject var monitor = NetworkReachability()
     @StateObject var quickNEasyVM = QuickNEasyViewModel()
     @StateObject var RecipeListVM = RecipeListViewModel()
+    @StateObject var listVM: ListViewModel = ListViewModel()
     
     @State private var home = UUID()
     @State private var todo = UUID()
@@ -64,6 +65,7 @@ struct BottomTabView: View {
                             .renderingMode(.original)
                         Text("Grocery List")
                     }.tag(2)
+                        .environmentObject(listVM)
                     
                     NavigationView {
                         CalendarView()
