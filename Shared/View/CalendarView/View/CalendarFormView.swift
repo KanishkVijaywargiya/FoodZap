@@ -9,6 +9,7 @@ import SwiftUI
 import AwesomeToast
 
 struct CalendarFormView: View {
+    @AppStorage("name") var name = ""
     let title: String
     @State private var label = "Breakfast"
     @State private var birthdatefu = Date()
@@ -41,6 +42,7 @@ struct CalendarFormView: View {
                     self.scheduleFoodToast = true
                     let item = CalendarModal(title: title, label: label, todayDate: birthdatefu, bgColor: bgColors ?? "#EA425C")
                     calendarDt.items.append(item)
+                    NotificationManagerViewModel.instance.scheduleNotification(title: title, label: label, userName: name, selectedDate: birthdatefu)
                     dismissMode()
                 }) {
                     Text("Save")

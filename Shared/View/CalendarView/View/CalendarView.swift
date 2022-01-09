@@ -31,8 +31,9 @@ struct CalendarView: View {
         }
         .onAppear {
             scheduleFoods.getCalendarList()
+            UIApplication.shared.applicationIconBadgeNumber = 0
         }
-        .navigationTitle("Food Schedule")
+        .navigationTitle("Food Schedule ⏰")
     }
     
     func removeItems(at offsets: IndexSet) {
