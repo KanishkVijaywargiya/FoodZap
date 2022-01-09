@@ -73,6 +73,7 @@
 		04D8E48B2737B46800F2524A /* QuickNEasyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */; };
 		04E113A82737EF7F003CAC4B /* RecipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E113A72737EF7F003CAC4B /* RecipeListViewModel.swift */; };
 		04E113A92737EF7F003CAC4B /* RecipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E113A72737EF7F003CAC4B /* RecipeListViewModel.swift */; };
+		04E45390278AEA7C00340999 /* NotificationManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E4538F278AEA7C00340999 /* NotificationManagerViewModel.swift */; };
 		04E65827274290760022C3F3 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E65826274290760022C3F3 /* RoundedCorners.swift */; };
 		04E65828274290760022C3F3 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E65826274290760022C3F3 /* RoundedCorners.swift */; };
 		04EC143D274266A200CF4DD6 /* CategoryLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC143C274266A200CF4DD6 /* CategoryLogo.swift */; };
@@ -179,6 +180,7 @@
 		04D8E4862737B46800F2524A /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		04D8E4872737B46800F2524A /* QuickNEasyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickNEasyViewModel.swift; sourceTree = "<group>"; };
 		04E113A72737EF7F003CAC4B /* RecipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModel.swift; sourceTree = "<group>"; };
+		04E4538F278AEA7C00340999 /* NotificationManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManagerViewModel.swift; sourceTree = "<group>"; };
 		04E65826274290760022C3F3 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		04EC143C274266A200CF4DD6 /* CategoryLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLogo.swift; sourceTree = "<group>"; };
 		04EDF0D827621ABA0094B51D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				041E1344277864110066055E /* CalendarVM.swift */,
+				04E4538F278AEA7C00340999 /* NotificationManagerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				0482452D271C4A5A00E27160 /* Cards.swift in Sources */,
 				04FF22FE2770A03E00B81A98 /* MenuRow.swift in Sources */,
 				FD404FF4272304D0004754EA /* RecipeList.swift in Sources */,
+				04E45390278AEA7C00340999 /* NotificationManagerViewModel.swift in Sources */,
 				FDF235C42726F40600EAE8D3 /* ChipButton.swift in Sources */,
 				04D0957E275F9FA600E497F1 /* OnboardingPage.swift in Sources */,
 				048244FD271C3B9900E27160 /* ProfileButton.swift in Sources */,
