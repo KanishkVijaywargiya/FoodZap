@@ -89,10 +89,12 @@
 		04FF22FF2770A03E00B81A98 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF22FD2770A03E00B81A98 /* MenuRow.swift */; };
 		04FF23012770A16A00B81A98 /* GradientIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF23002770A16A00B81A98 /* GradientIcon.swift */; };
 		04FF23022770A16A00B81A98 /* GradientIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF23002770A16A00B81A98 /* GradientIcon.swift */; };
+		A454A6C01DB0AA844996D146 /* Pods_FoodZap__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA80B942078646AB4EDFCAC2 /* Pods_FoodZap__iOS_.framework */; };
 		FD1573322753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
 		FD1573332753903600272532 /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1573312753903600272532 /* TrackableScrollView.swift */; };
 		FD404FF2272304BE004754EA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF1272304BE004754EA /* ListRow.swift */; };
 		FD404FF4272304D0004754EA /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD404FF3272304D0004754EA /* RecipeList.swift */; };
+		FD4F8C2D278AEAB9000B234A /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F8C2C278AEAB9000B234A /* BannerAd.swift */; };
 		FD5032C52771ED2B0054C3D1 /* DevelopersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */; };
 		FD5032C62771ED2B0054C3D1 /* DevelopersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */; };
 		FD5032C82772009D0054C3D1 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5032C72772009D0054C3D1 /* Developer.swift */; };
@@ -129,6 +131,7 @@
 		FDF235CC2726F7ED00EAE8D3 /* CuisineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF235CA2726F7EC00EAE8D3 /* CuisineLabel.swift */; };
 		FDFA67AE2737FA9400844B4D /* Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA67AD2737FA9400844B4D /* Snapshots.swift */; };
 		FDFA67AF2737FA9400844B4D /* Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA67AD2737FA9400844B4D /* Snapshots.swift */; };
+		FE6403985AB8840EA166EAC5 /* Pods_FoodZap__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F385826D9176A3B5F4951C22 /* Pods_FoodZap__macOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,9 +191,16 @@
 		04F02920276F43FE00AAC1C8 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		04FF22FD2770A03E00B81A98 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		04FF23002770A16A00B81A98 /* GradientIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientIcon.swift; sourceTree = "<group>"; };
+		178670EFC8E1F2ABAC3D43F1 /* Pods-FoodZap (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodZap (iOS).release.xcconfig"; path = "Target Support Files/Pods-FoodZap (iOS)/Pods-FoodZap (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		49725E343D7E1BD92E5A62C3 /* Pods-FoodZap (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodZap (macOS).release.xcconfig"; path = "Target Support Files/Pods-FoodZap (macOS)/Pods-FoodZap (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		BA80B942078646AB4EDFCAC2 /* Pods_FoodZap__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodZap__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68616D13F892CF52FDAB883 /* Pods-FoodZap (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodZap (macOS).debug.xcconfig"; path = "Target Support Files/Pods-FoodZap (macOS)/Pods-FoodZap (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		D8A97013F77C935F9C34C692 /* Pods-FoodZap (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodZap (iOS).debug.xcconfig"; path = "Target Support Files/Pods-FoodZap (iOS)/Pods-FoodZap (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		F385826D9176A3B5F4951C22 /* Pods_FoodZap__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodZap__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1573312753903600272532 /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		FD404FF1272304BE004754EA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		FD404FF3272304D0004754EA /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		FD4F8C2C278AEAB9000B234A /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		FD5032C42771ED2B0054C3D1 /* DevelopersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersView.swift; sourceTree = "<group>"; };
 		FD5032C72772009D0054C3D1 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		FD5032CA277202360054C3D1 /* DeveloperCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperCard.swift; sourceTree = "<group>"; };
@@ -218,6 +228,7 @@
 				FD51D5EB2736A00500B66D91 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				FD99043A271C643700F725FC /* AwesomeToast in Frameworks */,
 				FD8C10E0272D6B1A005531D1 /* FirebaseFirestore in Frameworks */,
+				A454A6C01DB0AA844996D146 /* Pods_FoodZap__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6403985AB8840EA166EAC5 /* Pods_FoodZap__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +382,14 @@
 				049BE681271C2B0B0008F8ED /* macOS */,
 				049BE67B271C2B0B0008F8ED /* Products */,
 				FD51D5E92736A00500B66D91 /* Frameworks */,
+				BD813E8F2CDDDDEBCAA47B07 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		049BE66F271C2B070008F8ED /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FD4F8C2A278AEAA2000B234A /* BannerAds */,
 				04D0956C275F887C00E497F1 /* WalkthroughScreens */,
 				FDF235B92726F3F000EAE8D3 /* Utils */,
 				FDF235AC2726F38500EAE8D3 /* Extensions */,
@@ -475,6 +489,17 @@
 			path = NetworkCheckView;
 			sourceTree = "<group>";
 		};
+		BD813E8F2CDDDDEBCAA47B07 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8A97013F77C935F9C34C692 /* Pods-FoodZap (iOS).debug.xcconfig */,
+				178670EFC8E1F2ABAC3D43F1 /* Pods-FoodZap (iOS).release.xcconfig */,
+				C68616D13F892CF52FDAB883 /* Pods-FoodZap (macOS).debug.xcconfig */,
+				49725E343D7E1BD92E5A62C3 /* Pods-FoodZap (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FD1573302753900C00272532 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +521,22 @@
 			path = RecipeList;
 			sourceTree = "<group>";
 		};
+		FD4F8C2A278AEAA2000B234A /* BannerAds */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F8C2B278AEAA9000B234A /* View */,
+			);
+			path = BannerAds;
+			sourceTree = "<group>";
+		};
+		FD4F8C2B278AEAA9000B234A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F8C2C278AEAB9000B234A /* BannerAd.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FD5032C32771ED0B0054C3D1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +550,8 @@
 		FD51D5E92736A00500B66D91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA80B942078646AB4EDFCAC2 /* Pods_FoodZap__iOS_.framework */,
+				F385826D9176A3B5F4951C22 /* Pods_FoodZap__macOS_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -576,9 +619,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049BE68F271C2B0B0008F8ED /* Build configuration list for PBXNativeTarget "FoodZap (iOS)" */;
 			buildPhases = (
+				0B8FE43E0C70C65E318F7BD8 /* [CP] Check Pods Manifest.lock */,
 				049BE676271C2B0B0008F8ED /* Sources */,
 				049BE677271C2B0B0008F8ED /* Frameworks */,
 				049BE678271C2B0B0008F8ED /* Resources */,
+				EE89C7657B7368CEF2A3A349 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -598,6 +643,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049BE692271C2B0B0008F8ED /* Build configuration list for PBXNativeTarget "FoodZap (macOS)" */;
 			buildPhases = (
+				BD16E0209B3DE32EA88AD36D /* [CP] Check Pods Manifest.lock */,
 				049BE67C271C2B0B0008F8ED /* Sources */,
 				049BE67D271C2B0B0008F8ED /* Frameworks */,
 				049BE67E271C2B0B0008F8ED /* Resources */,
@@ -675,6 +721,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B8FE43E0C70C65E318F7BD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodZap (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD16E0209B3DE32EA88AD36D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodZap (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE89C7657B7368CEF2A3A349 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodZap (iOS)/Pods-FoodZap (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodZap (iOS)/Pods-FoodZap (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodZap (iOS)/Pods-FoodZap (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		049BE676271C2B0B0008F8ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -716,6 +826,7 @@
 				0482452A271C4A1B00E27160 /* WorldCusines.swift in Sources */,
 				04EC143D274266A200CF4DD6 /* CategoryLogo.swift in Sources */,
 				048D007F2775D8F9005771A8 /* CalendarView.swift in Sources */,
+				FD4F8C2D278AEAB9000B234A /* BannerAd.swift in Sources */,
 				FD57EF932737A7D7007072FA /* NavigationControllerExt.swift in Sources */,
 				04D0956F275F88C000E497F1 /* OnBoarding.swift in Sources */,
 				FD6BA57C27738AE400BA7F5D /* EmailHelper.swift in Sources */,
@@ -919,13 +1030,14 @@
 		};
 		049BE690271C2B0B0008F8ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A97013F77C935F9C34C692 /* Pods-FoodZap (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
@@ -946,7 +1058,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.blacenova.FoodZap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blacenovas.FoodZap;
 				PRODUCT_NAME = FoodZap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -958,13 +1070,14 @@
 		};
 		049BE691271C2B0B0008F8ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 178670EFC8E1F2ABAC3D43F1 /* Pods-FoodZap (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YHZVJQ792Q;
+				DEVELOPMENT_TEAM = XP6V4T4UU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FoodZap--iOS--Info.plist";
@@ -985,7 +1098,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.blacenova.FoodZap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blacenovas.FoodZap;
 				PRODUCT_NAME = FoodZap;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -998,6 +1111,7 @@
 		};
 		049BE693271C2B0B0008F8ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C68616D13F892CF52FDAB883 /* Pods-FoodZap (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1027,6 +1141,7 @@
 		};
 		049BE694271C2B0B0008F8ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49725E343D7E1BD92E5A62C3 /* Pods-FoodZap (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
