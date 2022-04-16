@@ -54,7 +54,7 @@ struct HomeView: View {
                         }.buttonStyle(FlatLinkStyle())
                         // ca-app-pub-3940256099942544/2934735716
                         // Orig: ca-app-pub-7244548441023789/8094137541
-                        BannerAd(unitID: "ca-app-pub-7244548441023789/2597928972")
+                        BannerAd(unitID: "ca-app-pub-3940256099942544/2934735716")
                         
                         // Indian specials
                         WorldCusines(recipeData: RecipeListVM.recipeList)
